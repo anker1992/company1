@@ -1,0 +1,210 @@
+<include file="Public/head"/>
+
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <link rel="stylesheet" href="/admin/Public/Jqurerymax/assets/css/styles.css" />
+                <link rel="stylesheet" href="/admin/Public/Jqurerymax/assets/touchTouch/touchTouch.css" />
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <div class="cf">
+                            <form class="form-inline" action="{:U('User/index')}" method="post">
+                                <input type="hidden" name="type" value="{$type}">
+                                <a class="btn btn-info" href="{:U('add')}" value="">新增</a>
+                                <br><br>
+                                <label class="inline">手机号</label>
+                                <input type="text" name="mobile" value="{:I('mobile')}" class="form-control">
+
+                                <label class="inline">&nbsp;&nbsp;所在公司：</label>
+                                <input type="text" name="company" value="{:I('company')}" class="form-control">
+
+                                <label class="inline">&nbsp;&nbsp;担任职务：</label>
+                                <input type="text" name="work" value="{:I('work')}" class="form-control">
+
+                                <!--<label class="inline">&nbsp;&nbsp;注册时间：</label>-->
+                                <!--<input type="text" name="create_time" value="{:I('create_time')}" class="form-control">-->
+                                <button type="submit" class="btn btn-purple btn-sm">
+                                    <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+                                    搜索
+                                </button>
+                            </form>
+                        </div>
+                        <br>
+                        <style>
+                            .chose-button{
+                                display: inline-block;
+                                width: 70px;
+                                height: 35px;
+                                background: #cccccc;
+                                text-align: center;
+                                color: #fff;
+                                font-size: 14px;
+                                line-height:35px;
+                            }
+                            .chose-button:hover{
+                                text-decoration: none;
+                                background: #6fb3e0;
+                            }
+                            .cur{
+                                background: #6fb3e0;
+                            }
+                        </style>
+                        <div>
+                            <if condition="$type eq 1">
+                                <a class="chose-button cur" href="{:U('index',array('type'=>1))}">项目方</a>
+                                <a class="chose-button" href="{:U('index',array('type'=>2))}">投资方</a>
+                                <else/>
+                                <a class="chose-button" href="{:U('index',array('type'=>1))}">项目方</a>
+                                <a class="chose-button cur" href="{:U('index',array('type'=>2))}">投资方</a>
+                            </if>
+                        </div>
+                        <div class="space-4"></div>
+                        <form id="form" method="post" action="{:U('del')}">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="center"><input class="check-all" type="checkbox" value=""></th>
+                                    <th>手机号</th>
+                                    <th>真实姓名</th>
+                                    <th>身份证号</th>
+                                    <th>所在公司</th>
+                                    <th>担任职务</th>
+                                    <th>用户类型</th>
+                                    <th>性别</th>
+                                    <th>出生日期</th>
+                                    <th>名片或执照</th>
+                                    <th>余额</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <volist name="list" id="val">
+                                    <tr>
+                                        <td style="vertical-align: middle;" class="center">
+                                            <input class="aids" type="checkbox" name="id[]" value="{$val['id']}"></td>
+                                        <td style="vertical-align: middle;">{$val['mobile']}</td>
+                                        <td style="vertical-align: middle;">{$val['realname']}</td>
+                                        <td style="vertical-align: middle;">{$val['idcard']}</td>
+                                        <td style="vertical-align: middle;">{$val['company']}</td>
+                                        <td style="vertical-align: middle;">{$val['work']}</td>
+                                        <td style="vertical-align: middle;">
+                                            <if condition="$val['user_type'] eq 1 "> 项目方
+                                                <elseif condition="$val['user_type'] eq 2"/>投资人
+                                                <else /> 浏览者
+                                            </if>
+                                        </td>
+                                        <td style="vertical-align: middle;">
+                                            <if condition="$val['sex'] eq 1">男
+                                                <elseif condition="$val['sex'] eq 2"/>女
+                                                <else/>未填写
+                                            </if>
+                                        </td>
+                                        <td style="vertical-align: middle;">{$val['birthday']}</td>
+                                        <td style="vertical-align: middle;">
+                                            <div id="thumbs">
+                                                <a href="{$val['app_card']}" style="background-image:url(<?php echo $val['app_card']; ?>)"></a>
+                                            </div>
+                                        </td>
+                                        <td style="vertical-align: middle;">{$val['balance']}</td>
+                                        <td style="vertical-align: middle;"><a href="{:U('edit',array('uid'=>$val['id']))}"><i
+                                                class="ace-icon fa fa-pencil bigger-100"></i>修改</a>&nbsp&nbsp;<a
+                                                href="javascript:;" val="{:U('del',array('uid'=>$val['id']))}" class="del"><i
+                                                class="ace-icon fa fa-trash-o bigger-100 red"></i>删除</a></td>
+                                    </tr>
+                                </volist>
+                                </tbody>
+                            </table>
+                        </form>
+                        <div class="cf">
+                            <input id="submit" class="btn btn-info" type="button" value="删除">
+                        </div>
+                        {$page}
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<script src="/admin/Public/Jqurerymax/js/jquery-1.7.1.min.js"></script>
+<script src="/admin/Public/Jqurerymax/assets/touchTouch/touchTouch.jquery.js"></script>
+<script src="/admin/Public/Jqurerymax/assets/js/script.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".check-all").click(function () {
+            $(".aids").prop("checked", this.checked);
+        });
+        $(".aids").click(function () {
+            var option = $(".ids");
+            option.each(function (i) {
+                if (!this.checked) {
+                    $(".check-all").prop("checked", false);
+                    return false;
+                } else {
+                    $(".check-all").prop("checked", true);
+                }
+            });
+        });
+        $("#submit").click(function () {
+            bootbox.confirm({
+                title: "系统提示",
+                message: "是否要删除所选文章？",
+                callback: function (result) {
+                    if (result) {
+                        $("#form").submit();
+                    }
+                },
+                buttons: {
+                    "cancel": {"label": "取消"},
+                    "confirm": {
+                        "label": "确定",
+                        "className": "btn-danger"
+                    }
+                }
+            });
+        });
+        $(".del").click(function () {
+            var url = $(this).attr('val');
+            bootbox.confirm({
+                title: "系统提示",
+                message: "是否要该文章？",
+                callback: function (result) {
+                    if (result) {
+                        window.location.href = url;
+                    }
+                },
+                buttons: {
+                    "cancel": {"label": "取消"},
+                    "confirm": {
+                        "label": "确定",
+                        "className": "btn-danger"
+                    }
+                }
+            });
+        });
+    })
+</script>
+</body>
+</html>

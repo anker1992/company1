@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="68298de8-e2ee-4e0f-a7f5-91defefec997" name="公司" url="http://h5.weihehuo.net">
+        <fileTransfer host="60.205.149.79" port="22" accessType="SFTP" password="dffddfefdfe3dfc2dfcfdfc2dfdfdfc5df92df92df92" username="root">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

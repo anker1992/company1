@@ -1,0 +1,364 @@
+<include file="Public/head"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <form class="form-horizontal" action="{:U('update')}" method="post" enctype="multipart/form-data">
+                            <input type="hidden" value="{$proj_id}" name="proj_id">
+                            <!--手机号-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 手机号 </label>
+                                <div class="col-sm-9">
+                                    <if condition="$list['proj_phone']">
+                                    <input type="text" name="proj_phone" id="title" class="rcol-xs-10 col-sm-5"
+                                           value="{$list.proj_phone}" readonly="readonly">
+                                    <else />
+                                        <input type="text" name="proj_phone" id="title" class="rcol-xs-10 col-sm-5"
+                                               placeholder="请输入手机号，必填">
+                                    </if>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--项目名称-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 项目名称 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="proj_name" id="name" placeholder="请输入项目名称"
+                                           class="col-xs-10 col-sm-5" value="{$list.proj_name}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--项目logo-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    项目logo </label>
+                                <div class="col-sm-9">
+                                    <span  class="col-xs-1"><img src="{$list.proj_logo}" alt="" style="height:75px;width:75px;"></span>
+                                    <input type="file" name="proj_logo" id="icon" placeholder="请上传项目的logo"
+                                           class="col-xs-10 col-sm-5" value="{$list.proj_logo}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--约见费用-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 约见费用 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="proj_yue_money" id="yuemoney" placeholder="请输入您被约见的费用"
+                                           class="col-xs-10 col-sm-5" value="{$list.proj_yue_money}">元/次<br /><br />
+                                            注：（约见费用=约见人所要的费用+平台佣金）
+                                            比如：约见人所要的费用是400元
+                                            平台佣金是200元
+                                            那此处的约见费用就是400+200=600元
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--融资金额-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 融资金额 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="proj_money" id="o" placeholder="请输入要融资的金额" class="col-xs-10 col-sm-5"
+                                           value="{$list.proj_money}">万元
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--项目所在地-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 项目所在地 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="proj_area" id="o" placeholder="请输入项目所在地" class="col-xs-10 col-sm-5"
+                                           value="{$list.proj_area}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--融资轮次-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 融资轮次 </label>
+                                <div class="col-sm-9" id="radio-proj_round">
+                                    <input type="hidden" value="{$list['proj_round']}" id="proj_round_hide">
+                                    <input type="radio" name="proj_round" id="tianshilun" value="天使轮">
+                                    <label for="tianshilun" style="padding-right:30px;">天使轮</label>
+                                    <input type="radio" name="proj_round" id="PreAlun" value="Pre-A轮">
+                                    <label for="PreAlun" style="padding-right:30px;">Pre-A轮</label>
+                                    <input type="radio" name="proj_round" id="Alun" value="A轮">
+                                    <label for="Alun" style="padding-right:30px;">A轮</label>
+                                    <input type="radio" name="proj_round" id="Ajia" value="A+轮">
+                                    <label for="Ajia" style="padding-right:30px;">A+轮</label>
+                                    <input type="radio" name="proj_round" id="Blun" value="B轮">
+                                    <label for="Blun" style="padding-right:30px;">B轮</label>
+                                    <input type="radio" name="proj_round" id="B+" value="B+轮">
+                                    <label for="B+" style="padding-right:30px;">B+轮</label>
+                                    <input type="radio" name="proj_round" id="Clun" value="C轮">
+                                    <label for="Clun" style="padding-right:30px;">C轮</label>
+                                    <input type="radio" name="proj_round" id="Dlun" value="D轮">
+                                    <label for="Dlun" style="padding-right:30px;">D轮</label>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--所属行业-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 所属行业 </label>
+                                <div class="col-sm-9" id="radio-proj_industry">
+                                    <input type="hidden" value="{$list['proj_industry']}" id="proj_industry_hide">
+                                    <input type="radio" name="proj_industry" id="car" value="汽车交通">
+                                    <label for="car" style="padding-right:30px;">汽车交通</label>
+                                    <input type="radio" name="proj_industry" id="hospital" value="医疗健康">
+                                    <label for="hospital" style="padding-right:30px;">医疗健康</label>
+                                    <input type="radio" name="proj_industry" id="B2B" value="B2B">
+                                    <label for="B2B" style="padding-right:30px;">B2B</label>
+                                    <input type="radio" name="proj_industry" id="service" value="企业服务">
+                                    <label for="service" style="padding-right:30px;">企业服务</label>
+                                    <input type="radio" name="proj_industry" id="house" value="房产家居">
+                                    <label for="house" style="padding-right:30px;">房产家居</label>
+                                    <input type="radio" name="proj_industry" id="trip" value="旅游户外">
+                                    <label for="trip" style="padding-right:30px;">旅游户外</label><br />
+                                    <input type="radio" name="proj_industry" id="social" value="社交">
+                                    <label for="social" style="padding-right:30px;">社交</label>
+                                    <input type="radio" name="proj_industry" id="logistics" value="物流">
+                                    <label for="logistics" style="padding-right:30px;">物流</label>
+                                    <input type="radio" name="proj_industry" id="agricultural" value="农业">
+                                    <label for="agricultural" style="padding-right:30px;">农业</label>
+                                    <input type="radio" name="proj_industry" id="edu" value="教育">
+                                    <label for="edu" style="padding-right:30px;">教育</label>
+                                    <input type="radio" name="proj_industry" id="O2O" value="O2O">
+                                    <label for="O2O" style="padding-right:30px;">O2O</label>
+                                    <input type="radio" name="proj_industry" id="shop" value="电商">
+                                    <label for="shop" style="padding-right:30px;">电商</label><br />
+                                    <input type="radio" name="proj_industry" id="entertainment" value="文娱">
+                                    <label for="entertainment" style="padding-right:30px;">文娱</label>
+                                    <input type="radio" name="proj_industry" id="Consumer" value="消费品">
+                                    <label for="Consumer" style="padding-right:30px;">消费品</label>
+                                    <input type="radio" name="proj_industry" id="sports" value="体育">
+                                    <label for="sports" style="padding-right:30px;">体育</label>
+                                    <input type="radio" name="proj_industry" id="financial" value="金融">
+                                    <label for="financial" style="padding-right:30px;">金融</label>
+                                    <input type="radio" name="proj_industry" id="yingjian" value="智能硬件">
+                                    <label for="yingjian" style="padding-right:30px;">智能硬件</label>
+                                    <input type="radio" name="proj_industry" id="youxi" value="游戏">
+                                    <label for="youxi" style="padding-right:30px;">游戏</label><br />
+                                    <input type="radio" name="proj_industry" id="gongju" value="工具">
+                                    <label for="gongju" style="padding-right:30px;">工具</label>
+                                    <input type="radio" name="proj_industry" id="VR-AR" value="VR-AR">
+                                    <label for="VR-AR" style="padding-right:30px;">VR-AR</label>
+                                    <input type="radio" name="proj_industry" id="rengong" value="人工智能">
+                                    <label for="rengong" style="padding-right:30px;">人工智能</label>
+                                    <input type="radio" name="proj_industry" id="media" value="媒体门户">
+                                    <label for="media" style="padding-right:30px;">媒体门户</label>
+                                    <input type="radio" name="proj_industry" id="ad" value="广告营销">
+                                    <label for="ad" style="padding-right:30px;">广告营销</label>
+                                    <input type="radio" name="proj_industry" id="other" value="">
+                                    <label for="other" style="padding-right:30px;">其他</label>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--项目类型-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 项目类型 </label>
+                                <div class="col-sm-9" id="radio-proj_type">
+                                    <input type="hidden" value="{$list['proj_type']}" id="proj_type_hide">
+                                    <input type="radio" name="proj_type" id="web" value="web产品">
+                                    <label for="web" style="padding-right:30px;">web产品</label>
+                                    <input type="radio" name="proj_type" id="app" value="app应用">
+                                    <label for="app" style="padding-right:30px;">app应用</label>
+                                    <input type="radio" name="proj_type" id="and" value="web及app均有">
+                                    <label for="and" style="padding-right:30px;">web及app均有</label>
+                                    <input type="radio" name="proj_type" id="weixin" value="微信公众号">
+                                    <label for="weixin" style="padding-right:30px;">微信公众号</label>
+                                    <input type="radio" name="proj_type" id="idea" value="idea阶段">
+                                    <label for="idea" style="padding-right:30px;">idea阶段</label>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--项目介绍-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 项目介绍</label>
+                                <div class="col-sm-9">
+                                    <textarea name="proj_ject" id="tips" placeholder="项目介绍" class="col-xs-10 col-sm-5"
+                                              rows="5">{$list.proj_ject}</textarea>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--CEO头像-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> CEO头像 </label>
+                                <div class="col-sm-9">
+                                    <span class="col-xs-1"><img src="{$list.proj_ceo_logo}" alt="" style="width:75px;height:75px;"></span>
+                                    <input type="file" name="proj_ceo_logo" class="col-xs-10 col-sm-5" value=""><br /><br />
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--CEO名字-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> CEO名字 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="proj_ceo_name" id="ceo_name" placeholder="CEO的名字"
+                                           class="col-xs-10 col-sm-5" value="{$list.proj_ceo_name}"><br /><br /><br />
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--CEO职位-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> CEO职位 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="proj_ceo_position" id="ceo_position" placeholder="CEO的职位"
+                                           class="col-xs-10 col-sm-5" value="{$list.proj_ceo_position}"><br /><br /><br />
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--CEO简介-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> CEO简介 </label>
+                                <div class="col-sm-9">
+                                    <textarea name="proj_ceo_introduce" id="tips" placeholder="CEO简介" class="col-xs-10 col-sm-5"
+                                              rows="5">{$list.proj_ceo_introduce}</textarea>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--项目官网-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 项目官网 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="proj_url" id="url" placeholder="项目官网"
+                                           class="col-xs-10 col-sm-5" value="{$list.proj_url}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--约见时间-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 约见时间 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="proj_yue_time" id="url" placeholder="约见时间"
+                                           class="col-xs-10 col-sm-5" value="{$list.proj_yue_time}" >
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--约见地点-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 约见地点 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="proj_yue_address" id="url" placeholder="约见地点"
+                                           class="col-xs-10 col-sm-5" value="{$list.proj_yue_address}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--商业计划书-->
+                            <!--<div class="form-group">-->
+                                <!--<label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 商业计划书 </label>-->
+                                <!--<div class="col-sm-9">-->
+                                    <!--<div class="col-xs-1">-->
+                                    <!--<if condition="$list['proj_pdf']">-->
+                                    <!--<a href="{:U('downfile',array('proj_pdf'=>$list['proj_pdf']))}">点击下载查看附件</a>-->
+                                    <!--</if>-->
+                                    <!--</div>-->
+                                    <!--<input type="file" name="proj_pdf" class="col-xs-8 col-sm-5" value=""><br /><br />-->
+                                    <!--<b>请上传PDF文档</b>-->
+                                <!--</div>-->
+                            <!--</div>-->
+                            <div class="space-4"></div>
+
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </form>
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    $(function () {
+        var radio_round= $('#proj_round_hide').val();
+//        alert(radio_round);
+        $("#radio-proj_round input[type=radio][name=proj_round][value='"+radio_round+"']").attr("checked",'checked');
+
+        var radio_industry= $('#proj_industry_hide').val();
+        $("#radio-proj_industry input[type=radio][name=proj_industry][value='"+radio_industry+"']").attr("checked",'checked');
+
+        var radio_type= $('#proj_type_hide').val();
+        $("#radio-proj_type input[type=radio][name=proj_type][value='"+radio_type+"']").attr("checked",'checked');
+
+        var editor = KindEditor.create('textarea[name="tips"]', {
+            resizeType: 1,
+            allowPreviewEmoticons: false,
+            allowImageUpload: false,
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist', '|', 'emoticons', 'link']
+        });
+        $(".btn.btn-info").click(function () {
+            var title = $("#title").val();
+            if (title == '') {
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: '确定',
+                            className: 'btn-myStyle'
+                        }
+                    },
+                    message: '手机号不能为空。',
+                    title: "友情提示",
+                });
+                return false;
+            }
+
+        })
+
+    })
+</script>
+
+</body>
+</html>

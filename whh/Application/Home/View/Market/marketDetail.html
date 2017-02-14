@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微合伙</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+    <link rel="stylesheet" href="__PUBLIC__/css/amazeui.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/commonHeader.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/concern.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/postDetail.css">
+</head>
+<body class="bg-gray">
+<div class="header clearfix">
+    <a href="javascript:history.go(-1);" class="header-left"></a>
+    <p class="title-bar-text">帖子详情</p>
+    <a href="javascript:;" class="header-right"></a>
+</div>
+<section>
+    <div class="concern-list-items">
+        <empty name="$list.user_logo">
+            <img src="__PUBLIC__/images/investorList-item-default.png" class="concern-list-items-left">
+        <else/>
+            <img class="concern-list-items-left" src="{$list.user_logo}" alt="">
+        </empty>
+        <div class="concern-list-items-right">
+            <h5>{$list.realname}</h5>
+            <p>发表于 {$list.free_time|date='Y-m-d H:i',###}</p>
+        </div>
+    </div>
+    <div class="post-detail-box">
+        <h2>{$list.free_title}</h2>
+        <p>{$list.free_content}</p>
+    </div>
+</section>
+<section>
+    <header class="pl-title-bar">全部评论（共{$list.free_com_num}条）</header>
+    <foreach name="comments" item="comments">
+    <div class="concern-list-items pl-items-box">
+        <empty name="$comments.user_logo">
+            <img src="__PUBLIC__/images/investorList-item-default.png" class="concern-list-items-left pl-items-icon">
+        <else/>
+            <img class="concern-list-items-left pl-items-icon" src="{$comments.user_logo}" alt="">
+        </empty>
+        <div class="concern-list-items-right pl-items-content">
+            <h5>{$comments.realname}</h5>
+            <span>{$comments.com_content}</span>
+            <p>{$comments.com_time|date='Y-m-d H:i',###}</p>
+        </div>
+    </div>
+    </foreach>
+    <div class="main-heart-fenye">
+        {$page}
+    </div>
+    <style type="text/css">
+        .main-heart-fenye{
+            text-align: center;
+        }
+        .main-heart-fenye a{
+            display: inline-block;
+            font-size: 12px;
+            /*width: 40px;*/
+            padding:0 10px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            margin: 5px;
+        }
+        .main-heart-fenye .current{
+            display: inline-block;
+            font-size: 12px;
+            /*width: 40px;*/
+            padding: 0 10px;
+            border: 1px solid #999;
+            border-radius: 5px;
+            margin: 5px;
+            color: #fff;
+            background: #999;
+        }
+
+    </style>
+</section>
+<div style="width: 100%;height:5rem;"></div>
+<footer>
+    <a href="{:U('comment',array('fid'=>$list['fid'],'token'=>$_GET['token']))}" class="footer-pl-button">
+        <img src="__PUBLIC__/images/icon-pl.png" alt="">我要评论
+    </a>
+</footer>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/amazeui.min.js"></script>
+</body>
+</html>

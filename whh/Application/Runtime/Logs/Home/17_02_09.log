@@ -1,0 +1,83 @@
+[ 2017-02-09T10:12:01+08:00 ] 127.0.0.1 /Home/Product/productList/token/OFH1axGzYbapmQ.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000039s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007192s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002625s ]
+SQL: SHOW COLUMNS FROM `whh_product` [ RunTime:0.0587s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `whh_product` WHERE (  prod_status = 1 and prod_uid != 23 ) LIMIT 1   [ RunTime:0.0047s ]
+SQL: SELECT `prod_id`,`prod_name`,`prod_logo`,`prod_rate`,`prod_term`,`prod_money` FROM `whh_product` WHERE (  prod_status = 1 and prod_uid != 23 ) ORDER BY prod_id desc LIMIT 0,10   [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `whh_follow` [ RunTime:0.0225s ]
+SQL: SELECT `he_id` FROM `whh_follow` WHERE ( my_id = '23' and follow_type = 2 )  [ RunTime:0.0008s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 23 行.
+NOTIC: [8] Undefined variable: collect D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 26 行.
+NOTIC: [2] array_flip() expects parameter 1 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 26 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000096s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054030s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054104s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.006314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.006360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001517s ]
+
+[ 2017-02-09T10:12:09+08:00 ] 127.0.0.1 /index.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000845s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.000676s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000584s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001021s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001065s ]
+
+[ 2017-02-09T10:12:49+08:00 ] 127.0.0.1 /Home/Product/productList/token/OFH1axGzYbapmQ.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000054s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000697s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000798s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: SHOW COLUMNS FROM `whh_product` [ RunTime:0.0068s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `whh_product` WHERE (  prod_status = 1 and prod_uid != 23 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `prod_id`,`prod_name`,`prod_logo`,`prod_rate`,`prod_term`,`prod_money` FROM `whh_product` WHERE (  prod_status = 1 and prod_uid != 23 ) ORDER BY prod_id desc LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `whh_follow` [ RunTime:0.0049s ]
+SQL: SELECT `he_id` FROM `whh_follow` WHERE ( my_id = '23' and follow_type = 2 )  [ RunTime:0.0004s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 23 行.
+NOTIC: [8] Undefined variable: collect D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 26 行.
+NOTIC: [2] array_flip() expects parameter 1 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 26 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\WWW\whh\Application\Home\Controller\ProductController.class.php 第 28 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000043s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000078s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007373s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007413s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000376s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000597s ]
+

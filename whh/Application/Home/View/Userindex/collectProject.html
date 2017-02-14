@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>微合伙</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+    <link rel="stylesheet" href="__PUBLIC__/css/amazeui.min.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/commonHeader.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/concern.css">
+
+</head>
+<body class="bg-gray">
+
+<div class="header clearfix">
+    <a href="{:U('userCenter',array('token'=>$_GET['token']))}" class="header-left"></a>
+    <p class="title-bar-text">收藏</p>
+    <a href="{:U('Product/productList',array('token'=>$_GET['token']))}" class="header-right"></a>
+</div>
+<header class="select-header">
+    <a href="javascript:;" class="select-header-a active">项目库</a>
+    <a href="{:U('collectProduct',array('token'=>$_GET['token']))}" class="select-header-a">产品库</a>
+    <a href="{:U('collectInvest',array('token'=>$_GET['token']))}" class="select-header-a">投资人</a>
+</header>
+<section>
+    <foreach name="data" item="data">
+        <if condition="$data['proj_status'] == 1">
+            <a href="{:U('Project/projectdetail',array('token'=>$_GET['token'],'proj_id'=>$data['proj_id']))}">
+                <div class="concern-list-items">
+                    <img class="concern-list-items-left" src="/admin/{$data.proj_logo}" alt="">
+                    <div class="concern-list-items-right">
+                        <h5>{$data.proj_name}</h5>
+                        <p class="line-ellipsis">{$data.proj_ject}</p>
+                        <p>{$data.proj_industry}/{$data.proj_round}</p>
+                        <p>融资金额￥{$data.proj_money}万</p>
+                    </div>
+                </div>
+            </a>
+        <else/>
+            <a href="javascript:;">
+                <div class="concern-list-items">
+                    <img class="concern-list-items-left" src="/admin/{$data.proj_logo}" alt="">
+                    <div class="concern-list-items-right">
+                        <h5>{$data.proj_name}</h5>
+                        <p class="line-ellipsis">{$data.proj_ject}</p>
+                        <p>{$data.proj_industry}/{$data.proj_round}</p>
+                        <p>融资金额￥{$data.proj_money}万</p>
+                        <p style="color:#f23030;">已下架</p>
+                    </div>
+                </div>
+            </a>
+        </if>
+    </foreach>
+</section>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/amazeui.min.js"></script>
+</body>
+</html>

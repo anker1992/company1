@@ -1,0 +1,210 @@
+<include file="Public/head"/>
+<style>
+    .no-pd-td{
+        padding: 0!important;
+    }
+    .td-div-box{
+        border-bottom: 1px solid #ddd;
+    }
+    .td-div-box:nth-last-child(1){
+        border-bottom: none;
+    }
+    .td-div-box img{
+        width:40px;
+        height:40px;
+        padding:5px;
+        border-right: 1px solid #ddd;
+    }
+</style>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <div class="cf" style="height:100px;">
+
+                            <form action="" method="post">
+                                <input type="hidden" name="p" value="{$Think.get.p}"/>
+                                <a class="btn btn-info col-xs-1" href="{:U('add')}" value="">新增</a>
+                                <div class="col-md-11">
+                                <div class="col-xs-3" style="margin-bottom:20px;">
+                                    <label class="inline">手机号：</label>
+                                    <input type="text" name="inv_phone" value="{:I('inv_phone')}" class="form-control">
+                                </div>
+                                <div class="col-xs-3">
+                                <label class="inline">真实姓名：</label>
+                                <input type="text" name="inv_name" value="{:I('inv_name')}" class="form-control">
+                                </div>
+                                <div class="col-xs-3">
+                                <label class="inline">单笔投资（最少）：</label>
+                                    <input type="text" name="inv_min_money" value="{:I('inv_min_money')}" class="form-control">
+                                </div>
+                                </div>
+                                <div class="col-xs-1" style="width:8.33%;height:30px;margin-top:30px;"></div>
+                                <div class="col-md-10" style="margin-bottom:20px;">
+                                <div class="col-xs-3">
+                                    <label class="inline">关注领域：</label>
+                                    <input type="text" name="inv_field" value="{:I('inv_field')}" class="form-control">
+                                </div>
+                                <div class="col-xs-3" style="margin-left:25px;">
+                                    <label class="inline">所在公司：</label>
+                                    <input type="text" name="inv_in_company" value="{:I('inv_in_company')}" class="form-control">
+                                </div>
+                                    <!--<input type="submit" value="搜索">-->
+                                <button type="submit" class="btn btn-purple btn-sm" style="margin-top:23px;">
+                                    <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+                                    搜索
+                                </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="space-4"></div>
+                        <form id="form" method="post" action="{:U('del')}">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="center"><input class="check-all" type="checkbox" value=""></th>
+                                    <th>头像</th>
+                                    <th class="col-xs-1">真实姓名</th>
+                                    <th>手机号</th>
+                                    <th colspan="3">所在公司</th>
+                                    <th>约见费用</th>
+                                    <th>担任职务</th>
+                                    <th>关注领域</th>
+                                    <th>单笔投资</th>
+                                    <!--<th>工作经历</th>
+                                    <th>约见时间</th>-->
+                                    <th>约见地点</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <foreach name="list" item="list">
+                                    <tr>
+                                        <td class="center"><input class="aids" type="checkbox" name="inv_ids[]"
+                                                                  value="{$list['inv_id']}"></td>
+                                        <td><img src="{$list.inv_logo}" alt="" style="height: 50px;width:50px;"></td>
+                                        <td><a href="{:U('index',array('inv_id'=>$list['inv_id']))}" title="{$list['inv_name']}">{$list['inv_name']}</a></td>
+                                        <td>{$list.inv_phone}</td>
+                                        <td><img src="{$list.inv_in_logo}" alt="" style="width:50px;height:50px;"></td>
+                                        <td>{$list.inv_in_company}</td>
+                                        <td>{$list.inv_in_com}</td>
+                                        <td>{$list.inv_yue_money}元/次</td>
+                                        <td>{$list.inv_type}</td>
+                                        <td>{$list.inv_field}</td>
+                                        <td>{$list.inv_min_money}-{$list.inv_max_money}万元</td>
+                                        <!--<td class="no-pd-td">
+                                            <div class="td-div-box">
+                                                <img src="{$list.inv_logo_one}" alt="">
+                                                <span>{$list.inv_company_one}</span>
+                                            </div>
+                                            <div class="td-div-box">
+                                                <img src="{$list.inv_logo_two}" alt="">
+                                                <span>{$list.inv_company_two}</span>
+                                            </div>
+                                        </td>
+                                        <td>{$list.inv_yue_time}</td>-->
+                                        <td>{$list.inv_yue_address}</td>
+                                        <td><if condition="$list['inv_status'] eq 2"><a href="{:U('recycle',array('inv_id'=>$list['inv_id'],'status'=>1))}"><i
+                                                class="ace-icon fa fa-arrow-up bigger-100"></i>上架</a>&nbsp;&nbsp;</if><if condition="$list['inv_status'] eq 1"><a href="{:U('recycle',array('inv_id'=>$list['inv_id'],'status'=>2))}"><i
+                                                class="ace-icon fa fa-arrow-down bigger-100"></i>下架</a>&nbsp;&nbsp;</if><a href="{:U('edit',array('inv_id'=>$list['inv_id']))}"><i
+                                                class="ace-icon fa fa-pencil bigger-100"></i>修改</a>&nbsp;&nbsp;<a
+                                                href="javascript:;" val="{:U('del',array('inv_ids'=>$list['inv_id']))}" class="del"><i
+                                                class="ace-icon fa fa-trash-o bigger-100 red"></i>删除</a></td>
+                                    </tr>
+                                </foreach>
+                                </tbody>
+                            </table>
+                        </form>
+                        <div class="cf">
+                            <input id="submit" class="btn btn-info" type="button" value="批量删除">
+                        </div>
+                        {$page}
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+
+<script type="text/javascript">
+    $(function () {
+        $(".check-all").click(function () {
+            $(".aids").prop("checked", this.checked);
+        });
+        $(".aids").click(function () {
+            var option = $(".ids");
+            option.each(function (i) {
+                if (!this.checked) {
+                    $(".check-all").prop("checked", false);
+                    return false;
+                } else {
+                    $(".check-all").prop("checked", true);
+                }
+            });
+        });
+        $("#submit").click(function () {
+            bootbox.confirm({
+                title: "系统提示",
+                message: "是否要删除所选项目？",
+                callback: function (result) {
+                    if (result) {
+                        $("#form").submit();
+                    }
+                },
+                buttons: {
+                    "cancel": {"label": "取消"},
+                    "confirm": {
+                        "label": "确定",
+                        "className": "btn-danger"
+                    }
+                }
+            });
+        });
+        $(".del").click(function () {
+            var url = $(this).attr('val');
+            bootbox.confirm({
+                title: "系统提示",
+                message: "是否要删除该项目？",
+                callback: function (result) {
+                    if (result) {
+                        window.location.href = url;
+                    }
+                },
+                buttons: {
+                    "cancel": {"label": "取消"},
+                    "confirm": {
+                        "label": "确定",
+                        "className": "btn-danger"
+                    }
+                }
+            });
+        });
+    })
+</script>
+</body>
+</html>

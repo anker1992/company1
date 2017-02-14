@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>微合伙</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+
+    <link rel="stylesheet" href="__PUBLIC__/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/css/commonHeader.css">
+    <link rel="stylesheet" href="__PUBLIC__/css/personalInfo.css"/>
+</head>
+<body>
+<div class="header clearfix">
+    <a href="{:U('userCenter',array('token'=>$_GET['token']))}" class="header-left"></a>
+    <p class="title-bar-text">编辑个人信息</p>
+    <a href="{:U('Product/productList',array('token'=>$_GET['token']))}" class="header-right"></a>
+</div>
+<div class="content">
+    <div class="head-portrait">
+        <img id="head-img" src="{$user.user_logo}" alt=""/>
+        <div id="avatar-img" class="head-portrait-shadow"></div>
+    </div>
+    <div class="personal-info">
+        <form action="{:U('personalInfo_save')}" method="post">
+            <input type="hidden" id="uid" name="uid" value="{$user.id}">
+            <input type="hidden" name="token" value="{$Think.get.token}">
+            <div class="personal-item">
+                <span>真实姓名</span>
+                <input type="text" name="realname" value="{$user.realname}"/>
+            </div>
+            <div class="personal-item">
+                <span>所在公司</span>
+                <input type="text" name="company" value="{$user.company}"/>
+            </div>
+            <div class="personal-item" id="abcd">
+                <span>性别</span>
+                <if condition="$user['sex'] eq 1 ">
+                    <input checked type="radio" name="sex" value="1" id="male"/><label class="sex-radio" for="male">男</label>
+                    <input type="radio" name="sex" value="2" id="female"/><label class="sex-radio" for="female">女</label>
+                    <elseif condition="$user['sex'] eq 2"/>
+                    <input type="radio" name="sex" value="1" id="male"/><label class="sex-radio" for="male">男</label>
+                    <input checked type="radio" name="sex" value="2" id="female"/><label class="sex-radio" for="female">女</label>
+                    <else />
+                    <input type="radio" name="sex" value="1" id="male"/><label class="sex-radio" for="male">男</label>
+                    <input type="radio" name="sex" value="2" id="female"/><label class="sex-radio" for="female">女</label>
+                </if>
+            </div>
+            <div class="personal-item">
+                <span>出生日期</span>
+                <input type="date" name="birthday" value="{$user.birthday}"/>
+            </div>
+            <div class="personal-item">
+                <span>担任职务</span>
+                <input type="text" name="work" value="{$user.work}"/>
+            </div>
+            <div class="personal-item personal-item1">
+                <span>个人简介</span>
+                <textarea name="introduce" id="introduction" placeholder="请输入">{$user.introduce}</textarea>
+            </div>
+
+            <div class="personal-item personal-phone">
+                <span>手机账号</span>
+                <input type="text"  value="{$user.mobile}" readonly="readonly"/>
+            </div>
+            <div class="personal-submit">
+                <input value="确定" type="submit"/>
+            </div>
+        </form>
+    </div>
+</div>
+
+<article class="htmleaf-container">
+    <div id="clipArea"></div>
+    <div class="foot-use">
+        <div class="uploader1 blue">
+            <input type="button" name="file" class="button" value="打开"/>
+            <input id="file" type="file" onchange="setImagePreview();" accept="image/*" multiple/>
+        </div>
+        <button id="clipBtn">截取</button>
+    </div>
+    <div id="view"></div>
+</article>
+
+
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/amazeui.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/iscroll-zoom.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/hammer.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/jquery.photoClip.js"></script>
+<script type="text/javascript">
+    $("#clipArea").photoClip({
+        width: 320,
+        height: 320,
+        file: "#file",
+        view: "#view",
+        ok: "#clipBtn"
+    });
+    function setImagePreview() {
+        var preview = document.getElementById("preview");
+        var file_head = document.getElementById("file");
+        var picture = file_head.value;
+        if (!picture.match(/.jpg|.gif|.png|.bmp|.jpeg/i))
+            return alert("您上传的图片格式不正确，请重新选择！");
+        if (preview && file_head.files && file_head.files[0])
+            preview.style.display = "block",
+                    preview.style.width = "63px",
+                    preview.style.height = "63px",
+                    preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);
+        //return document.getElementById("DivUp").style.display = "block";
+    }
+
+
+    $("#avatar-img").click(function () {
+        $(".htmleaf-container").show();
+    });
+    $(function () {
+        $("#clipBtn").click(function () {
+            var uid = $("#uid").val();
+            $("#head-img").attr("src", imgsource);
+            $(".htmleaf-container").hide();
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url: "{:U('add_user_logo')}",
+                data: {'src': imgsource,'uid':uid},
+                async: true,
+                error: function (request) {
+
+                },
+                success: function (data) {
+
+                }
+            });
+        });
+
+
+    });
+</script>
+</body>
+</html>

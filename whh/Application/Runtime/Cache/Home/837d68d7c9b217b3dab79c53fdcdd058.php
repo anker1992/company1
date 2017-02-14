@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>微合伙H5
