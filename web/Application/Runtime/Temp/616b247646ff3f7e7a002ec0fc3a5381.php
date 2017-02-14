@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:6:"蕾蕾";s:8:"workarea";s:6:"北京";s:6:"height";s:7:"160-165";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-12/584e72637ae2f.png";s:11:"best_person";s:59:"娇媚柔美,清纯可爱,气质优雅,正直,靠谱,韩剧";s:10:"best_movie";s:46:"喜剧,文艺爱情,奇幻魔幻,青春,动画";s:10:"best_music";s:39:"华语,流行,摇滚,民谣,jazz,清新";s:11:"best_writer";s:6:"金庸";s:9:"best_food";s:53:"川湘菜,江浙菜,火锅,烧烤,家常菜,北方菜";s:11:"best_sports";s:30:"羽毛球,骑行,爬山,跑步";s:14:"tweleveanimals";s:3:"猪";s:13:"constellation";s:9:"狮子座";s:10:"profession";s:12:"美容顾问";s:9:"education";s:6:"大专";s:8:"ifbuycar";s:6:"无车";s:10:"ifbuyhouse";s:0:"";s:6:"salary";s:13:"5000-10000元";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"10000-15000元";s:14:"zmaritalstatus";N;}
+?>

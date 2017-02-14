@@ -1,0 +1,108 @@
+@charset "utf-8";
+.container{
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.article-content{
+    min-width: 1230px;
+    padding-top: 55px;
+    border-top: 1px solid #ccc;
+    margin-bottom: 200px;
+}
+.article-content .article-content-left{
+    width: 805px;
+    padding-right: 50px;
+    border-right: 1px solid #ccc;
+}
+.article-content .article-content-left .article-title{
+    margin-bottom: 10px;
+}
+.article-content .article-content-left .article-title h3{
+    float: left;
+    padding-left: 5px;
+    font-weight: normal;
+    border-left: 7px solid #e50012;
+    font-size: 20px;
+    color: #000;
+}
+.article-content .article-content-left .article-title span{
+    color: #6c6c6c;
+    float: right;
+    margin: 10px 0 0 15px;
+}
+.article-content .article-content-left p{
+    color: #6c6c6c;
+    font-size: 18px;
+    line-height: 2em;
+    margin-top: 50px;
+    text-indent: 2em;
+}
+.article-content .article-content-left p.last{
+    padding-bottom: 35px;
+}
+
+.article-content .article-content-right{
+    width: 320px;
+}
+.article-content .article-content-right h3{
+    font-size: 20px;
+    font-weight: normal;
+    line-height: 25px;
+    color: #000;
+    padding-left: 5px;
+    border-left: 7px solid #e50012;
+    margin-bottom: 35px;
+    background: url("../images/article-title-bg1.png") no-repeat;
+}
+.article-content .article-content-right ul li{
+    line-height: 2.5em;
+    padding-left: 10px;
+}
+.article-content .article-content-right ul li a{
+    font-size: 18px;
+    color: #000;
+}
+.article-content .article-content-right .search-box{
+    width: 305px;
+    border: 1px solid #e50012;
+    border-radius: 8px;
+    margin: 20px 5px 10px 0;
+}
+.article-content .article-content-right .search-box .search-text{
+    width: 205px;
+    *width:201px;
+    height: 32px;
+    line-height: 32px;
+    padding-right: 10px;
+    margin-left: 10px;
+}
+.article-content .article-content-right .search-box .search-btn{
+    width: 74px;
+    height: 34px;
+    line-height: 34px;
+    *height: 35px;
+    background: #e50012;
+    border-radius: 8px;
+    color: #fff;
+    position: relative;
+    right: -2px;
+    *right:-5px;
+
+}
+.article-content .article-content-right .hot-keywords dt{
+    display: inline-block;
+    color: #000;
+    *float:left;
+}
+.article-content .article-content-right .hot-keywords dd{
+    display: inline-block;
+    margin-right: 10px;
+    *float:left;
+}
+.article-content .article-content-right .hot-keywords dd a{
+    color: #000;
+}
+.article-content .article-content-right .hot-keywords dd a:hover{
+    color: #e50012;
+}

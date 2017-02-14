@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:2:"97";s:8:"nickname";s:6:"茉茉";s:8:"workarea";s:6:"北京";s:6:"height";s:3:"170";s:12:"touxiang_src";s:54:"/Public/wx/wxuser-avatar/2016-12-29/5864d0458b84f.jpeg";s:11:"best_person";s:97:"娇媚柔美,气质优雅,活泼女汉子,正直,诚信,靠谱,孝顺,顾家,旅游,摄影,烹饪";s:10:"best_movie";s:85:"喜剧,文艺爱情,科幻,动作武侠,悬疑推理,家庭伦理,艺术电影,青春";s:10:"best_music";s:63:"华语,流行,轻音乐,古典音乐,影视原声,怀旧,清新";s:11:"best_writer";s:0:"";s:9:"best_food";s:0:"";s:11:"best_sports";s:20:"瑜伽,爬山,健身";s:14:"tweleveanimals";s:3:"龙";s:13:"constellation";s:9:"巨蟹座";s:10:"profession";s:6:"其他";s:9:"education";s:6:"大专";s:8:"ifbuycar";s:6:"无车";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:13:"5000-10000元";s:9:"zworkarea";N;s:7:"zsalary";N;s:14:"zmaritalstatus";N;}
+?>

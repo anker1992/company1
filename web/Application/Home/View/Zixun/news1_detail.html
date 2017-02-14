@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+        <meta charset="UTF-8">
+        <meta name="keywords" content="北京投融资最佳机构,投融资权威机构,金融社交平台,投融资综合服务平台" />
+        <meta name="description" content="微合伙是集金融社交、商务合作为一体的综合社交平台，通过“互联网+撮合”服务模式来增加融资成功概率，以解决投融资问题，同时整合项目方、资金方、资本机构的资源，形成融资产业链闭环。" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>{$news.news_title}_微合伙文化传媒有限公司</title>
+<link rel="stylesheet" href="__PUBLIC__/css/common.css"/>
+        <link rel="stylesheet" href="__PUBLIC__/css/news1.css"/>
+        <style>
+
+            /*.news-content-right .right dl dd p a:hover{
+             color: #e50012;
+             }
+             .news-content .news-content-left .more a:hover{
+             color: #e50012;
+             }*/
+        dl dd p a{
+    color: #000;
+}
+dl dd p a:hover{
+    color: #e50012;
+}
+</style>
+
+</head>
+<body>
+
+    <!--header开始-->
+    <include file="Public:header"/>
+
+
+<!--header结束-->
+<!--主体内容开始-->
+<div class="news-content clearfix">
+        <div class="container">
+            <!--主体内容左侧部分开始-->
+        <div class="news-content-left left">
+            <!--新闻内容操作部分开始--><!--
+            <div class="news-operation left"> -->
+        <div>
+        <ul>
+        <!-- <li class="collect"><span></span>收藏</li>
+        <li class="comment"><span></span>评论</li>
+        </ul>
+        <p>分享到</p> -->
+        <div class="news-share-article">
+        <ol>
+        <li class="qq">
+        <a href="javascript:void(0)"><i></i></a>
+        </li>
+        <li class="wx">
+        <a href="javascript:void(0)"><i></i></a>
+        </li>
+        <li class="sina">
+        <a href="javascript:void(0)"><i></i></a>
+        </li>
+        </ol>
+        </div>
+        </div>
+            <!--新闻内容操作部分结束-->
+            <!--新闻文章开始-->
+        <div class="news-article right">
+        <!-- <div class="article-img">
+        <img src="__PUBLIC__/images/news1-img1.jpg" alt=""/>
+        </div> -->
+            <!--新闻文章正文开始-->
+        <div class="article-text">
+        <h1 style="text-align: center;margin: 10px 0 10px 0;padding: 0px;font-size: 20px;padding: 40px 0 10px 0;color: #000;font-weight: 600;">{$news.news_title}</h1>
+
+<p style="padding: 0 0 0 15px;">{$news.news_content}</p>
+
+</div>
+    <!--新闻文章正文结束-->
+</div>
+    <!--新闻文章结束-->
+</div>
+    <!--主体内容左侧部分结束-->
+    <!--主体内容右侧部分开始-->
+<div class="news-content-right right">
+        <div class="news-content-circle">
+        <span></span>
+        </div>
+        <p class="zoezgt">Zoezgt</p>
+        <p class="today-recom">今日推荐</p>
+        <p class="content-title">为您的投资保驾护航</p>
+        <p class="more"><span></span>More></p>
+
+<div style="margin: 10px 0 0 30px" id="">
+        <h2 style="color: #000;
+font-size: 22px;
+font-weight: normal;
+padding-left: 10px;
+border-left: 7px solid #e50012;
+margin-bottom: 20px;">24小时 - 热文</h2>
+
+    <foreach name="hot_article" item="hot">
+<dl>
+    <dt style="width: 273px;
+    /*height: 192px;*/
+    overflow: hidden;/*margin: 0 0 0 0*/">
+    <a href="{:U('Zixun/news1_detail',array('news_id'=>$hot['news_id']))}" target="_blank">
+            <img src="__PUBLIC__/images_news/{$hot.news_imga}" alt="" style="max-width: 300px;max-height: 150px;width: 273px;height: 192px;"/>
+            </a>
+            </dt>
+            <dd style="margin: 0px 0 10px 0;">
+            <p style="padding: 0px 0 20px 0;"><a href="{:U('Zixun/news1_detail',array('news_id'=>$hot['news_id']))}" target="_blank" style="font-size: 20px;line-height: 2em;">{$hot.news_title}</a></p>
+            </dd>
+</dl>
+    </foreach>
+   
+</div>
+
+</div>
+    <!--主体内容右侧部分结束-->
+</div>
+</div>
+    <!--主体内容结束-->
+    <!--底部区域开始-->
+<div class="footer" id="footer">
+        <div class="container">
+        <div class="contact">
+        <ul>
+        <li class="tel"><span></span>400-245-8998</li>
+        <li class="email"><span></span>4002458998@163.com</li>
+<li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+        <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+</ul>
+</div>
+<div class="attention">
+        <img src="__PUBLIC__/images/weixin.png" alt=""/>
+        <p>关注微信公众号</p>
+        </div>
+        </div>
+        </div>
+            <!--底部区域结束-->
+
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    // $(document).ready(
+    //     $(".head-left li").click(
+    //         function(){
+    //             $(this).addClass("active").siblings().removeClass("active");
+    //         }
+    //     );
+    // );
+    $(function(){
+        $('dl dt img').hover(
+
+                function(){
+                    // alert();
+                    $(this).animate({
+                        width:290,
+                        height:210
+                    },300)
+                },function(){
+                    $(this).animate({
+                        width:273,
+                        height:192
+                    },300)
+                })
+    });
+
+    $(document).ready(
+            $(".head-left ul li").hover(function(){
+                if($(this).find("ol").size()!==0){
+                    $(this).find("ol").css({
+                        display:"block"
+                    })
+                }else{
+                    $(this).addClass("active").siblings().removeClass("active");
+                }
+            },function(){
+                if($(this).find("ol").size()!==0){
+                    $(this).find("ol").css({
+                        display:"none"
+                    })
+                }else{
+                    $(this).removeClass("active");
+                }
+            })
+
+
+    );
+    $(function(){
+        $(".head-left ul li ol li").hover(function(){
+            $(this).removeClass("active");
+        },function(){
+            $(this).removeClass("active");
+        })
+    })
+</script>
+</body>
+</html>

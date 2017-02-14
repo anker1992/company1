@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:9:"李海泉";s:8:"workarea";s:0:"";s:6:"height";s:7:"170-175";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-19/58577738ccca4.png";s:11:"best_person";s:19:"清纯可爱,顾家";s:10:"best_movie";s:6:"科幻";s:10:"best_music";s:13:"民谣,朋克";s:11:"best_writer";s:25:"马尔克斯,博尔赫斯";s:9:"best_food";s:23:"北方菜,粤菜,西餐";s:11:"best_sports";s:20:"台球,冲浪,瑜伽";s:14:"tweleveanimals";s:3:"鼠";s:13:"constellation";s:0:"";s:10:"profession";s:6:"金融";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"25000元以上";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:13:"5000-10000元";s:14:"zmaritalstatus";N;}
+?>

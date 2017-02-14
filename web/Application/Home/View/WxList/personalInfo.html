@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>个人资料</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="__PUBLIC__/csswx/amazeui.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/csswx/personalData.css"/>
+    <style>
+        .heart-box{
+            float: left;
+            margin:26px 10px;
+        }
+        .heart-box .icon-heart{
+            background: url("__PUBLIC__/imageswx/icon-hearts1.png")no-repeat;
+            width: 20px;
+            height: 16px;
+            display: block;
+            background-size: 40px 16px;
+            margin: 0 auto;
+            background-position: -20px 0;
+        }
+        .heart-box .heart-red{
+            background-position: 0 0;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <if condition="$_GET['heart']">
+        <h2><a href="{:U('WxUser/my_heart',array('uid'=>$uid,'phone'=>$phone))}" ><span></span>返回列表</a></h2>
+        <else/>
+        <h2><a href="javascript:history.go(-1)" ><span></span>返回列表</a></h2>
+    </if>
+</div>
+<div data-am-widget="slider" class="mySlider am-slider am-slider-a1" id="demo-slider-0" data-am-slider='{&quot;directionNav&quot;:false}' >
+    <ul class="mySliderUl am-slides">
+            <li><img src="{$info.touxiang_src}" alt=""/></li>
+        <foreach name="photo" item="photo">
+            <li><img src="{$photo.url}" alt=""/></li>
+        </foreach>
+    </ul>
+</div>
+<div class="basics clearfix">
+    <span class="name">{$info.nickname}</span>
+    <input type="hidden" name="my_id" id="my_id" value="{$uid}">
+    <div class="heart-box">
+        <?php if($heart){ ?>
+        <i class="icon-heart heart-red" id="{$id}" value="{$id}"></i>
+        <?php }else{ ?>
+        <i class="icon-heart" id="{$id}" value="{$id}"></i>
+        <?php } ?>
+    </div>
+    <span class="city"><i></i>{$info.workarea}</span>
+</div>
+
+<div class="certification-box">
+    <h2>认证信息</h2>
+    <p class="certification-info">认证信息
+        <if condition="$renzheng['idstate']== 2">
+            <span>已认证</span>
+        <else/>
+            <span>未认证</span>
+        </if>
+    </p>
+    <p class="certification-edu">学历
+        <if condition="$renzheng['schoolname']">
+            <span>已认证</span>
+        <else/>
+            <span>未认证</span>
+        </if>
+    </p>
+    <p class="certification-house">资产认证(房)
+        <if condition="$renzheng['houseimg']">
+            <span>已认证</span>
+        <else/>
+            <span>未认证</span>
+        </if>
+    </p>
+    <p class="certification-car">资产认证(车)
+        <if condition="$renzheng['carimg']">
+            <span>已认证</span>
+        <else/>
+            <span>未认证</span>
+        </if>
+    </p>
+</div>
+<!--个人信息-->
+<div class="personal-box">
+    <h2>个人信息</h2>
+    <div class="personal-box1">
+        <if condition="!empty($info['tweleveanimals'])">
+            <span>{$info.tweleveanimals}</span>
+        </if>
+        <if condition="!empty($info['constellation'])">
+            <span>{$info.constellation}</span>
+        </if>
+        <if condition="!empty($info['workarea'])">
+            <span>{$info.workarea}</span>
+        </if>
+        <if condition="!empty($info['education'])">
+            <span>{$info.education}</span>
+        </if>
+    </div>
+    <div class="personal-box2">
+        <p><i>职业</i><span>{$info.profession}</span></p>
+        <p><i>经济</i><span>{$info.ifbuyhouse}</span><span>{$info.ifbuycar}</span></p>
+        <p><i>月薪</i><span>{$info.salary}</span></p>
+        <p><i>择偶</i><span>{$info.zworkarea}</span><span>{$info.zmaritalstatus}</span><span>{$info.zsalary}</span></p>
+    </div>
+</div>
+<!--兴趣爱好-->
+<div class="interest-box">
+    <h2>兴趣爱好</h2>
+    <div class="content">
+        <div class="item item1">
+            <div class="item-top">
+                <h3><i></i>个人标签</h3>
+            </div>
+            <div class="icon icon1">
+                <if condition="empty($info['best_person'])">
+                    <span>无</span>
+                <else/>
+                    <foreach name="best_person" item="person">
+                        <span>{$person}</span>
+                    </foreach>
+                </if>
+            </div>
+        </div>
+        <div class="item item2">
+            <div class="item-top">
+                <h3><i></i>我喜欢的电影</h3>
+            </div>
+            <div class="icon icon2">
+                <if condition="empty($info['best_movie'])">
+                    <span>无</span>
+                <else/>
+                    <foreach name="best_movie" item="movie">
+                        <span>{$movie}</span>
+                    </foreach>
+                </if>
+            </div>
+        </div>
+        <div class="item item3">
+            <div class="item-top">
+                <h3><i></i>我喜欢的音乐</h3>
+            </div>
+            <div class="icon icon3">
+                <if condition="empty($info['best_music'])">
+                    <span>无</span>
+                    <else/>
+                    <foreach name="best_music" item="music">
+                        <span>{$music}</span>
+                    </foreach>
+                </if>
+            </div>
+        </div>
+        <div class="item item4">
+            <div class="item-top">
+                <h3><i></i>我喜欢的作家</h3>
+            </div>
+            <div class="icon icon4">
+                <if condition="empty($info['best_writer'])">
+                    <span>无</span>
+                    <else/>
+                    <foreach name="best_writer" item="writer">
+                        <span>{$writer}</span>
+                    </foreach>
+                </if>
+            </div>
+        </div>
+        <div class="item item5">
+            <div class="item-top">
+                <h3><i></i>我喜欢的美食</h3>
+            </div>
+            <div class="icon icon5">
+                <if condition="empty($info['best_food'])">
+                    <span>无</span>
+                    <else/>
+                    <foreach name="best_food" item="food">
+                        <span>{$food}</span>
+                    </foreach>
+                </if>
+            </div>
+        </div>
+        <div class="item item6">
+            <div class="item-top">
+                <h3><i></i>我喜欢的运动</h3>
+            </div>
+            <div class="icon icon6">
+                <if condition="empty($info['best_sports'])">
+                    <span>无</span>
+                    <else/>
+                    <foreach name="best_sports" item="sports">
+                        <span>{$sports}</span>
+                    </foreach>
+                </if>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/jswx/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jswx/amazeui.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var my_id = $("#my_id").val();
+        var he_id;
+        $(".icon-heart").click(function(){
+            he_id = $(this).attr("id");
+            if($(this).hasClass("heart-red")){
+                //已经动心
+                //传过去修改为不动心
+                $.ajax({
+                    cache: true,
+                    type: "POST",
+                    url:"{:U('do_heart')}",
+                    data:{'my_id':my_id,'he_id':he_id,'status':'-1'},
+                    async: false,
+                    error: function(request) {
+                        alert("Connection error");
+                    },
+                    success: function(data) {
+                        $("#"+he_id+"").removeClass("heart-red");
+                    }
+                });
+
+            }else{
+                //还未动心
+                //修改为动心状态
+                $.ajax({
+                    cache: true,
+                    type: "POST",
+                    url:"{:U('do_heart')}",
+                    data:{'my_id':my_id,'he_id':he_id,'status':'1'},
+                    async: false,
+                    error: function(request) {
+                        alert("Connection error");
+                    },
+                    success: function(data) {
+                        $("#"+he_id+"").addClass("heart-red");
+                    }
+                });
+            }
+        });
+    });
+</script>
+</body>
+</html>

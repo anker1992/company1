@@ -1,0 +1,159 @@
+@charset "utf-8";
+/*nav1链接样式开始*/
+.nav1{
+    min-width: 1230px;
+    height: 60px;
+}
+.nav1 ul li{
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 0;
+}
+.nav1 ul li a{
+    padding: 20px 20px 15px 20px;
+}
+.nav1 ul li:first-child a{
+    padding-left: 0;
+}
+.nav1 ul li.cur a{
+    border-bottom: none;
+}
+/*nav1超链接样式结束*/
+
+.findResume-content ul li.last{
+    margin-bottom: 50px;
+}
+
+.resume-list-content{
+    min-width: 1230px;
+}
+.resume-list-content .container{
+    width: 1230px;
+    margin: 0 auto;
+}
+.resume-list-content .resume-top{
+    height: 30px;
+    background-color: #f7f7f7;
+    line-height: 30px;
+    margin-bottom: 25px;
+}
+.resume-list-content .resume-top span,.resume-list-content .resume-top label{
+    color: #908f8f;
+}
+.ml35{
+    margin-left: 35px;
+}
+.ml40{
+    margin-left: 40px;
+}
+.ml50{
+    margin-left: 50px;
+}
+.resume-list-content .resume-top span em{
+    color: #e60012;
+}
+.resume-list-content .resume-top label input{
+    /*display: none;*/
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.resume-list-content .resume-top label i{
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    /*margin-right: 8px;*/
+    vertical-align: middle;
+    background: url("../images/hairPost-icon1.png") no-repeat;
+    background-position: 0 -16px;
+}
+.resume-list-content .resume-top label.cur i{
+    background-position: 0 0;
+}
+.resume-list-content .resume-top span.age,.resume-list-content .resume-top span.edu{
+    cursor: pointer;
+}
+
+
+.resume-list-content .resume-list ul li{
+    position: relative;
+    width: 1160px;
+    border-bottom: 2px solid #ededed;
+    margin-left: 70px;
+}
+.resume-list-content .resume-list ul li .resume-up{
+    margin: 50px 0 10px;
+}
+.resume-list-content .resume-list ul li .resume-portrait{
+    position: absolute;
+    left: -70px;
+    top: -5px;
+}
+.resume-list-content .resume-list ul li .resume-list-left{
+    float: left;
+    width: 435px;
+    padding-left: 15px;
+    border-right: 2px solid #ededed;
+}
+.resume-list-content .resume-list ul li .resume-list-right{
+    float: left;
+    width: 660px;
+    margin-left: 40px;
+}
+.resume-list-content .resume-list ul li p{
+    color: #000;
+    line-height: 32px;
+}
+.resume-list-content .resume-list ul li span{
+    color: #000;
+    font-size: 16px;
+    margin: 0 10px;
+}
+.resume-list-content .resume-list ul li .update-time{
+    font-size: 16px;
+    line-height: 35px;
+    float: right;
+}
+.resume-list-content .resume-list ul li .update-time span{
+    margin: 0;
+}
+
+.resume-list-content .paging-list{
+    margin: 100px 0;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    *clear:both;
+}
+.resume-list-content .paging-list a{
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+    color: #8e8e8e;
+}
+.resume-list-content .paging-list ul{
+    display:inline;
+    *position:relative;
+    *top: -10px;
+    /* display: inline-block;*/
+}
+.resume-list-content .paging-list ul li{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    color: #8e8e8e;
+    *width:40px;
+    *height:40px;
+    *line-height:40px;
+    *display:inline;
+    margin-right: 10px;
+}
+.resume-list-content .paging-list a:hover,.resume-list-content .paging-list ul li:hover,.resume-list-content .paging-list ul li.cur,.resume-list-content .financeList-list a.cur{
+    background-color: #e50012;
+    color: #fff;
+}
+

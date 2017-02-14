@@ -1,0 +1,159 @@
+@charset "utf-8";
+.login{
+    width: 100%;
+    min-width: 1200px;
+    height: 710px;
+    background: url("../images/login-bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.login .container{
+    position: relative;
+    width: 1200px;
+    min-width: 1200px;
+    height: 710px;
+}
+
+.login .outer{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -270px;
+    width: 470px;
+    height: 540px;
+    background-color: #fff;
+}
+.login .outer ul li{
+    color: #6c6c6c;
+    font-size: 16px;
+    width: 50%;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    background-color: #faf9f9;
+}
+.login .outer ul li.cur{
+    color: #fff;
+    background-color: #ff7800;
+}
+.login .outer .login-top{
+    width: 100%;
+    height: 145px;
+    text-align: center;
+}
+.login .outer .login-top img{
+    margin-top: 25px;
+}
+.login .outer .login-top h2{
+    color: #070707;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.login .outer p{
+    width: 365px;
+    height: 45px;
+    background-color: #faf9f9;
+    border: 1px solid #ecebeb;
+    margin: 0 auto 20px;
+}
+.login .outer p.w235{
+    position: relative;
+    width: 235px;
+    margin: 0 0 20px 51.5px;
+}
+.login .outer p i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url("../images/login-icon1.png") no-repeat;
+    vertical-align: middle;
+    margin: 12px 10px;
+}
+.login .outer p.phone i{
+    background-position: 0 0;
+}
+.login .outer p.pass i{
+    background-position: -20px 0;
+}
+.login .outer p.yzm i{
+    background-position: -40px 0;
+}
+.login .outer p span{
+    color: #606060;
+    padding-right: 15px;
+    border-right: 1px solid #e0e0e0;
+}
+.login .outer p.phone span{
+    color: #ff7800;
+}
+.login .outer p input{
+    width: 245px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #faf9f9;
+}
+.login .outer p.w235 input{
+    width: 221px;
+    padding: 0 7px;
+}
+.login .outer p.yzm input{
+    width: 181px;
+    padding: 0 7px;
+}
+.login .outer p.w235 label,.login .outer p.w235 button{
+    position: absolute;
+    top: 0;
+    right: -130px;
+    display: inline-block;
+    width: 112px;
+    height: 45px;
+    line-height: 45px;
+    color: #fff;
+    background-color: #38bbf2;
+    border: none;
+    text-align: center;
+}
+.login .outer p.w235 label{
+    /*background: url("../images/yzm-icon.jpg") no-repeat;*/
+}
+.login .outer p.w235 button.reGet-btn{
+    color: #646464;
+    background-color: #f0f0f0;
+}
+.login .outer p.yz label{
+    font-size: 24px;
+}
+.login .outer p.mb0{
+    margin-bottom: 0;
+}
+.login .outer p.reg .reg-btn,.login .outer p.log .log-btn{
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 45px;
+    text-align: center;
+    background-color: #fc0000;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-radius: 3px;
+    margin-right: 0;
+}
+.login .outer .two a{
+    float: right;
+    margin-right: 51.5px;
+}
+.login .outer .tip{
+    width: 365px;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 auto;
+    background-color: #fff;
+    border: none;
+}
+.login .outer .tip span{
+    color: #f00;
+    padding-right: 0;
+    border-right: none;
+}

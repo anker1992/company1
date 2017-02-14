@@ -1,0 +1,198 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <link rel="stylesheet" href="/Public/csswx/amazeui.min.css"/>
+    <link rel="stylesheet" href="/Public/csswx/registerInfo.css"/>
+    <link rel="stylesheet" href="/Public/csswx/personalData.css"/>
+
+</head>
+<body>
+<div class="main-content">
+    <form action="<?php echo U('registerInfo_add');?>" id="registerInfoForm" method="post" enctype="multipart/form-data">
+        <input type="hidden" name="phone" id="phone" value="<?php echo ($_GET['phone']); ?>">
+        <input type="hidden" name="uid" id='uid' value="<?php echo ($_GET['uid']); ?>">
+        <section class="reg-info-avatar">
+            <!--<img id="photo-image1" src="/Public/imageswx/touxiang-bg.png" alt=""/>-->
+            <!--<input class="user-avatar-input photo1" type="file" name="user-avatar" onchange="previewImage(this,1)">-->
+            <img id="avatar-img" src="/Public/imageswx/touxiang-bg.png" alt=""/>
+            <!--<textarea id="avatar-input" hidden="hidden" name="src" ></textarea>-->
+        </section>
+        <section class="reg-info-sex">
+            <input type="radio" id="male" checked="checked" name="sex" value="1">
+            <label name="male" class="checked" for="male">男</label>
+            <input type="radio" id="female" name="sex" value="0">
+            <label name="female" for="female">女</label>
+        </section>
+        <section class="reg-info-input">
+            <div class="input-items-box">
+                <aside class="item-left item-input-left-title1"><span class="reg-info-icon1"></span>昵称</aside>
+                <aside class="item-right">
+                    <input type="text" name="nickname"  id="name-input" placeholder="请输入昵称"/>
+                </aside>
+            </div>
+            <div class="input-items-box">
+                <aside class="item-left item-input-left-title2">
+                    <span class="reg-info-icon2"></span>月收入
+                </aside>
+                <aside class="item-right">
+                    <select class="edit-items-inputs" name="yueshouru" id="edit-yueshouru">
+                        <option value="2000元以下">2000元以下</option>
+                        <option value="2000-5000元">2000-5000元</option>
+                        <option value="5000-10000元">5000-10000元</option>
+                        <option value="10000-15000元">10000-15000元</option>
+                        <option value="15000-20000元">15000-20000元</option>
+                        <option value="20000-25000元">20000-25000元</option>
+                        <option value="25000元以上">25000元以上</option>
+                    </select>
+                </aside>
+            </div>
+            <div class="input-items-box">
+                <aside class="item-left item-input-left-title3">
+                    <span class="reg-info-icon3"></span>工作生活在
+                </aside>
+                <aside class="item-right">
+                    <select class="edit-items-inputs" name="suozaidi" id="edit-suozaidi">
+                        <option value="北京">北京</option>
+                        <option value="上海">上海</option>
+                        <option value="广州">广州</option>
+                        <option value="深圳">深圳</option>
+
+                        <option value="重庆">重庆</option>
+                        <option value="天津">天津</option>
+                        <option value="广东">广东</option>
+                        <option value="江苏">江苏</option>
+
+                        <option value="浙江">浙江</option>
+                        <option value="四川">四川</option>
+                        <option value="福建">福建</option>
+                        <option value="山东">山东</option>
+
+                        <option value="湖北">湖北</option>
+                        <option value="河北">河北</option>
+                        <option value="山西">山西</option>
+                        <option value="内蒙古">内蒙古</option>
+
+                        <option value="辽宁">辽宁</option>
+                        <option value="吉林">吉林</option>
+                        <option value="黑龙江">黑龙江</option>
+                        <option value="安徽">安徽</option>
+
+                        <option value="江西">江西</option>
+                        <option value="河南">河南</option>
+                        <option value="湖南">湖南</option>
+                        <option value="广西">广西</option>
+
+                        <option value="海南">海南</option>
+                        <option value="贵州">贵州</option>
+                        <option value="云南">云南</option>
+                        <option value="西藏">西藏</option>
+
+                        <option value="陕西">陕西</option>
+                        <option value="甘肃">甘肃</option>
+                        <option value="青海">青海</option>
+                        <option value="宁夏">宁夏</option>
+
+                        <option value="新疆">新疆</option>
+                    </select>
+                </aside>
+            </div>
+        </section>
+        <section class="reg-info-submit-button">
+            <input type="button" id="submit-button" value="保存"/>
+        </section>
+    </form>
+</div>
+<article class="htmleaf-container">
+    <div id="clipArea"></div>
+    <div class="foot-use">
+        <div class="uploader1 blue">
+            <input type="button" name="file" class="button" value="打开图库"/>
+            <input id="file" type="file" onchange="setImagePreview();" accept="image/*" multiple/>
+        </div>
+        <button id="clipBtn">保存</button>
+    </div>
+    <div id="view"></div>
+</article>
+
+<script type="text/javascript" src="/Public/jswx/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/Public/jswx/amazeui.min.js"></script>
+<script type="text/javascript" src="/Public/jswx/iscroll-zoom.js"></script>
+<script type="text/javascript" src="/Public/jswx/hammer.js"></script>
+<script type="text/javascript" src="/Public/jswx/jquery.photoClip.js"></script>
+<script type="text/javascript">
+
+    $("#clipArea").photoClip({
+        width: 320,
+        height: 320,
+        file: "#file",
+        view: "#view",
+        ok: "#clipBtn"
+    });
+    function setImagePreview() {
+        var preview = document.getElementById("preview");
+        var file_head = document.getElementById("file");
+        var picture = file_head.value;
+        if (!picture.match(/.jpg|.gif|.png|.bmp|.jpeg|.svg|.tlff|.psd|.swf|.pcx|.dxf|.wmf|.emf|.lic|.eps|.tga/i))
+            return alert("您上传的图片格式不正确，请重新选择！");
+        if (preview && file_head.files && file_head.files[0])
+            preview.style.display = "block",
+                    preview.style.width = "63px",
+                    preview.style.height = "63px",
+                    preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);
+        //return document.getElementById("DivUp").style.display = "block";
+    }
+
+
+    $("#avatar-img").click(function () {
+        $(".htmleaf-container").show();
+    });
+    $(function () {
+        $("#clipBtn").click(function () {
+
+            $("#avatar-img").attr("src", imgsource);
+//            $("#avatar-input").val(imgsource);
+            $(".htmleaf-container").hide();
+
+            var uid = $('#uid').val();
+            var phone = $('#phone').val();
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url: "<?php echo U('add_av_img');?>",
+                data:{src:imgsource,'uid':uid,'phone':phone},
+                async: true,
+                error: function (request) {
+                },
+                success: function (data) {
+
+                }
+            });
+
+        });
+    });
+    $(function () {
+        $('label').click(function () {
+            var radioId = $(this).attr('name');
+            $('label').removeAttr('class') && $(this).attr('class', 'checked');
+            $('input[type="radio"]').removeAttr('checked') && $('#' + radioId).attr('checked', 'checked');
+        });
+
+        $("#submit-button").click(function(){
+            if($("#name-input").val()==""){
+                alert('昵称不能为空');
+            }else{
+                $("#registerInfoForm").submit();
+            }
+        })
+    });
+</script>
+
+</body>
+</html>

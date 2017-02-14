@@ -1,0 +1,303 @@
+@charset "utf-8";
+.container{
+    width: 1210px;
+    margin: 0 auto;
+}
+/*nav样式开始*/
+.nav{
+    font-size: 12px;
+    color: #fdf9f9;
+    background-color: #ef000b;
+    min-width: 1230px;
+    height: 30px;
+}
+.nav .nav-left ul li,.nav .nav-right ul li{
+    float: left;
+    position: relative;
+    line-height: 30px;
+}
+.nav li a{
+    color: #fdf9f9;
+}
+.nav .nav-left ul li a{
+    margin: 0 5px;
+}
+.nav .nav-right ul li a{
+    margin: 0 10px;
+}
+.nav .nav-right ul li ol{
+    width: 76px;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -38px;
+    top: 30px;
+    z-index: 5;
+}
+.nav .nav-right ul li ol li{
+    line-height: 20px;
+    float: none;
+}
+.nav .nav-right ul li ol li a{
+    color: #3e3e3e;
+}
+.nav .nav-right ul li ol li a:hover{
+    color: #e60012;
+}
+/*nav导航样式结束*/
+/*nav1链接样式开始*/
+.nav1{
+    min-width: 1230px;
+    height: 60px;
+}
+.nav1 ul li{
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 35px;
+}
+.nav1 ul li a{
+    font-size: 18px;
+    color: #7b7b7b;
+    padding: 20px 0 15px 0;
+}
+.nav1 ul li.cur a{
+    color: #000;
+    border-bottom: 3px solid #e50012;
+}
+/*nav1超链接样式结束*/
+
+.post-content{
+    min-width: 1230px;
+    margin: 15px 0 50px 0;
+}
+.post-content .post-content-left{
+    width: 760px;
+}
+.post-content .post-content-left .post-require{
+    width: 745px;
+    height: 130px;
+    padding: 30px 0 0 15px;
+    border-bottom: 1px dashed #ccc;
+    background: url("../images/position-bg01.png") no-repeat;
+}
+.post-content .post-content-left .post-require h2{
+    color: #000;
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: normal;
+}
+.post-content .post-content-left .post-require p{
+    color: #000;
+}
+.post-content .post-content-left .post-require p.salary{
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.post-content .post-content-left .post-info{
+    margin-top: 40px;
+}
+.post-content .post-content-left .post-info img{
+    float: left;
+    margin: -20px 25px 0 0;
+}
+.post-content .post-content-left .post-info .post-name{
+
+}
+.post-content .post-content-left .post-info .post-name h3{
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.post-content .post-content-left .post-info .post-name h3 a{
+    font-size: 20px;
+    color: #000;
+}
+.post-content .post-content-left .post-info .post-name p{
+    color: #000;
+}
+.post-content .post-content-left .post-info .post-save .contact a{
+    display: block;
+    padding: 5px 6px;
+    background-color: #e50012;
+    border-radius: 5px;
+    font-size: 16px;
+    color: #fff;
+}
+.post-content .post-content-left .post-info .post-save .save a{
+    color: #000;
+    line-height: 3em;
+}
+.post-content .post-content-left .post-info .post-save .save i{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin:0 5px 0 15px;
+    vertical-align: middle;
+    background: url("../images/position-icon-01.png") no-repeat;
+}
+
+.post-content .post-content-left .post-desc{
+    margin-top: 40px;
+}
+.post-content .post-content-left .post-desc h3{
+    color: #000;
+    font-size: 22px;
+    font-weight: normal;
+    padding-left: 5px;
+    border-left: 5px solid #e50012;
+}
+.post-content .post-content-left .post-desc .post-desc-con dl{
+    margin-top: 30px;
+}
+.post-content .post-content-left .post-desc .post-desc-con dl dt{
+    color: #000;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+.post-content .post-content-left .post-desc .post-desc-con dl dd{
+    color: #000;
+    font-size: 16px;
+    line-height: 2em;
+}
+
+.post-content .post-content-right{
+    width: 270px;
+    margin-right: 10px;
+}
+.post-content .post-content-right .post-right-contact{
+    margin-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed #ccc;
+}
+.post-content .post-content-right .post-right-contact img{
+    margin-bottom: 10px;
+}
+.post-content .post-content-right .post-right-contact p{
+    color: #000;
+    line-height: 2em;
+}
+.post-content .post-content-right .post-right-contact span a{
+    display: inline-block;
+    padding: 3px 5px;
+    color: #fff;
+    margin-top: 8px;
+    background-color: #e50012;
+}
+
+.post-content .post-content-right .post-right-info .attention{
+    margin: 25px 0 15px 0;
+}
+.post-content .post-content-right .post-right-info .attention h4{
+    color: #000;
+    font-size: 16px;
+    float: left;
+}
+.post-content .post-content-right .post-right-info .attention a{
+    float: right;
+    display: inline-block;
+    padding: 2px 3px;
+    color: #fff;
+    background-color: #e50012;
+}
+.post-content .post-content-right .post-right-info ul{
+    padding-left: 15px;
+}
+.post-content .post-content-right .post-right-info ul li{
+    color: #000;
+    font-size: 12px;
+    list-style: disc;
+    line-height: 3em;
+}
+.post-content .post-content-right .post-right-info p{
+    color: #000;
+    width: 280px;
+}
+
+.post-content .post-content-right .post-right-order{
+    margin-top: 35px;
+    padding-bottom: 30px;
+    border-bottom: 1px dashed #ccc;
+}
+.post-content .post-content-right .post-right-order h3{
+    font-size: 22px;
+    font-weight: normal;
+    color: #000;
+    padding-left: 5px;
+    border-left: 5px solid #e50012;
+    margin-bottom: 25px;
+}
+.post-content .post-content-right .post-right-order .order-text{
+    width: 200px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    border: 1px solid #e50012;
+}
+.post-content .post-content-right .post-right-order .order-btn{
+    width: 48px;
+    height: 27px;
+    line-height: 25px;
+    text-align: center;
+    color: #fff;
+    background-color: #e50012;
+    position: relative\0;
+    top: -1px\0;
+}
+.post-content .post-content-right .post-right-order span{
+    color:#000000;
+    font-size: 12px;
+    display: block;
+    margin: 20px 0 10px 0;
+}
+.post-content .post-content-right .post-right-order .order{
+    padding: 0 20px;
+}
+.post-content .post-content-right .post-right-order .order img{
+    margin-right: 20px;
+    float: left;
+}
+.post-content .post-content-right .post-right-order .order p{
+    width: 124px;
+    float: left;
+    line-height: 2em;
+    font-size: 12px;
+    color: #000;
+}
+.post-content .post-content-right .post-right-resume{
+     margin: 30px 0 35px 0;
+}
+.post-content .post-content-right .post-right-resume img{
+    float: left;
+    margin-right: 5px;
+}
+.post-content .post-content-right .post-right-resume .resume{
+    float: left;
+}
+.post-content .post-content-right .post-right-resume .resume p{
+    color: #000;
+    margin-bottom: 5px;
+}
+.post-content .post-content-right .post-right-resume .resume p a{
+    color: #e50012;
+    text-decoration: underline;
+}
+.post-content .post-content-right .post-right-resume .resume p.time,.post-content .post-content-right .post-right-resume .resume p.time span{
+    font-size: 12px;
+}
+.post-content .post-content-right .post-right-resume .resume p.time a{
+    font-size: 12px;
+    color: #fff;
+    background-color: #e50012;
+    float: right;
+    padding: 2px;
+    text-decoration: none;
+    *position:relative;
+    *top: -20px;
+}
+.post-content .post-content-right .post-right-tip p{
+    color: #e50012;
+    line-height: 2em;
+}

@@ -1,0 +1,498 @@
+@charset "utf-8";
+.container {
+    width: 1202px;
+    min-width: 1202px;
+}
+.datingIndex-top{
+    width: 100%;
+    min-width: 1230px;
+    height: 578px;
+    background: url("../images/datingIndex-top.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.datingIndex-top .container{
+    position: relative;
+}
+.datingIndex-top .datingIndex-reg{
+    position: absolute;
+    right: 15px;
+    top: 145px;
+    width: 260px;
+    height: 230px;
+    padding: 30px 50px 0;
+    background: rgba(0,0,0,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#33000000,endColorstr=#33000000);
+}
+.datingIndex-top .datingIndex-reg ul li{
+    text-align: center;
+    margin-bottom: 15px;
+}
+.datingIndex-top .datingIndex-reg input{
+    color: #000;
+    font-size: 16px;
+    letter-spacing: 2px;
+    width: 235px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    background: rgba(255,255,255,0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#80ffffff,endColorstr=#80ffffff);
+}
+input::-webkit-input-placeholder {
+    color: #3e3e3e !important; /* WebKit browsers */
+}
+input:-moz-placeholder {
+color: #3e3e3e !important; /* Mozilla Firefox 4 to 18 */
+}
+input::-moz-placeholder {
+color: #3e3e3e !important; /* Mozilla Firefox 19+ */
+}
+input:-ms-input-placeholder {
+color: #3e3e3e !important; /* Internet Explorer 10+ */
+}
+.datingIndex-top .datingIndex-reg .choose{
+    color: #fff;
+}
+.datingIndex-top .datingIndex-reg .choose .auto{
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    opacity: 0;
+    filter:alpha(opacity = 0);
+}
+.datingIndex-top .datingIndex-reg .choose .autoReg i{
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    background: url("../images/datingIndex-icon.png") no-repeat;
+    background-position: 0 0;
+}
+.datingIndex-top .datingIndex-reg .choose .autoReg i.cur{
+    background-position: 0 -15px;
+}
+.datingIndex-top .datingIndex-reg  span{
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    color: #3e3e3e;
+    font-size: 16px;
+    display: inline-block;
+    margin-top: 20px;
+}
+.datingIndex-top .datingIndex-reg  span:hover{
+    color: #fff;
+    background-color: #e60012;
+}
+
+.datingIndex-part1{
+    padding: 50px 0 75px 0;
+    text-align: center;
+}
+.datingIndex-part1 h2{
+    color: #3e3e3e;
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: 7px;
+}
+.datingIndex-part1 h4{
+    color: #3e3e3e;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin: 25px 0 40px;
+}
+.datingIndex-part1 .datingIndex-part1-con{
+    width: 1202px;
+    overflow: hidden;
+}
+.datingIndex-part1 .datingIndex-part1-con ul{
+    width: 1248px;
+}
+.datingIndex-part1 .datingIndex-part1-con ul li{
+    float: left;
+    width: 266px;
+    height: 245px;
+    margin-right: 46px;
+    overflow: hidden;
+}
+.datingIndex-part1 .datingIndex-part1-con ul li div{
+    display: block;
+    width: 206px;
+    height: 195px;
+    text-align: left;
+    overflow: hidden;
+    padding: 50px 30px 0 30px;
+}
+.datingIndex-part1 .datingIndex-part1-con ul li div h3{
+    color: #fff;
+    font-size: 24px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    font-weight: normal;
+}
+.datingIndex-part1 .datingIndex-part1-con ul li div p{
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    line-height: 40px;
+}
+.datingIndex-part1 .datingIndex-part1-con ul li .datingIndex-part1-item01{
+    background: url("../images/datingIndex-part1-item01.jpg") no-repeat;
+}
+.datingIndex-part1 .datingIndex-part1-con ul li .datingIndex-part1-item02{
+    background: url("../images/datingIndex-part1-item02.jpg") no-repeat;
+}
+.datingIndex-part1 .datingIndex-part1-con ul li .datingIndex-part1-item03{
+    background: url("../images/datingIndex-part1-item03.jpg") no-repeat;
+}
+.datingIndex-part1 .datingIndex-part1-con ul li .datingIndex-part1-item04{
+    background: url("../images/datingIndex-part1-item04.jpg") no-repeat;
+}
+
+
+.datingIndex-part2{
+    width: 100%;
+    min-width: 1202px;
+    height: 70px;
+    line-height: 70px;
+    background-color: #f2f2f2;
+}
+.datingIndex-part2 .mr15{
+    margin-right: 15px;
+}
+.datingIndex-part2 .mlr15{
+    margin: 0 15px;
+}
+.datingIndex-part2 .vip,.datingIndex-part2 .friend-outer,.datingIndex-part2 .age-outer,.datingIndex-part2 .area-outer,.datingIndex-part2 .search{
+    float: left;
+    display: inline-block;
+    margin: 0 40px 0 20px;
+}
+.datingIndex-part2 .vip span,.datingIndex-part2 .friend-outer span,.datingIndex-part2 .age-outer span,.datingIndex-part2 .area-outer span,.datingIndex-part2 .search{
+    color: #3e3e3e;
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+.datingIndex-part2 .common-box{
+    position: relative;
+    top: 13px;
+    display: inline-block;
+    width: 85px;
+    height: 35px;
+    border: 1px solid #bbb;
+}
+.datingIndex-part2 .common-box .common-con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 85px;
+    height: 35px;
+}
+.datingIndex-part2 .common-box input{
+    position: absolute;
+    font-size: 18px;
+    letter-spacing: 2px;
+    width: 65px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 10px;
+    background-color: transparent;
+}
+.datingIndex-part2 .common-box i{
+    position: absolute;
+    right: 7px;
+    top: 13px;
+    width: 0;
+    height: 0;
+    border-color: #bebebe transparent transparent;
+    border-width: 8px 5px;
+    border-style: solid;
+}
+.datingIndex-part2 .common-box .common-list{
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: -1px;
+    height: 60px;
+    border: 1px solid #bbb;
+}
+.datingIndex-part2 .common-box .common-list a{
+    font-size: 18px;
+    color: #3e3e3e;
+    display: block;
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    padding-left: 10px;
+    background-color: #fff;
+}
+.datingIndex-part2 .common-box .common-list a:hover{
+    background-color: #e5e5e5;
+}
+.datingIndex-part2 .age1-box .age1-list,.datingIndex-part2 .age2-box .age2-list{
+    width: 85px;
+    height: 125px;
+    overflow: auto;
+}
+.datingIndex-part2 .age1-box .age1-list a,.datingIndex-part2 .age2-box .age2-list a{
+    font-size: 16px;
+    width: 58px;
+    height: 25px;
+}
+.datingIndex-part2 .area-box{
+    width: 120px;
+}
+.datingIndex-part2 .area-box .area-con{
+    width: 120px;
+}
+.datingIndex-part2 .area-box input{
+    width: 100px;
+}
+.datingIndex-part2 .area-box .area-list{
+    width: 120px;
+    height: 125px;
+    overflow: auto;
+}
+.datingIndex-part2 .area-box .area-list a{
+    font-size: 16px;
+    width: 90px;
+    height: 25px;
+}
+.datingIndex-part2 .search{
+    cursor: pointer;
+    float: right;
+    font-size: 18px;
+    color: #3e3e3e;
+    letter-spacing: 3px;
+    width: 85px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 7px;
+    margin-top: 18px;
+    background-color: #ffbdc2;
+}
+
+
+.datingIndex-part3{
+    width: 100%;
+    min-width: 1201px;
+    text-align: center;
+    padding: 30px 0 100px;
+}
+.datingIndex-part3 h2{
+    color: #3e3e3e;
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: 8px;
+}
+.datingIndex-part3 p span{
+    cursor: pointer;
+    color: #3e3e3e;
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+    margin: 25px 11px 0;
+}
+.datingIndex-part3 p span.cur{
+    color: #fff;
+    background-color: #e60012;
+}
+.datingIndex-part3 .datingIndex-part3-con{
+    width: 1201px;
+    margin-top: 60px;
+    overflow: hidden;
+}
+.datingIndex-part3 .datingIndex-part3-con ul{
+    width: 1210px;
+}
+.datingIndex-part3 .datingIndex-part3-con ul li{
+    position: relative;
+    float: left;
+    width: 292px;
+    height: 365px;
+    overflow: hidden;
+    margin-right: 9px;
+}
+.datingIndex-part3 .datingIndex-part3-con ul li.two{
+    width: 295px;
+}
+.datingIndex-part3 .datingIndex-part3-con ul li ol {
+    width: 304px;
+    float: left;
+}
+.datingIndex-part3 .datingIndex-part3-con ul li ol li{
+    float: left;
+    width: 143px;
+    height: 178px;
+    margin: 0 9px 9px 0;
+}
+.datingIndex-part3 .datingIndex-part3-con ul li .shade{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255,255,255,0.3);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#4cffffff,endColorstr=#4cffffff);
+}
+
+
+.datingIndex-part4{
+    width: 100%;
+    min-width: 1201px;
+    text-align: center;
+    height: 633px;
+    padding-top: 40px;
+    background: url("../images/datingIndex-part4-bg.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.datingIndex-part4 h2{
+    color: #3e3e3e;
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: 8px;
+}
+.datingIndex-part4 h3{
+    color: #3e3e3e;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin: 15px 0 25px;
+}
+.datingIndex-part4 .datingIndex-part4-con{
+    width: 1204px;
+    height: 469px;
+    overflow: hidden;
+    margin-top: 35px;
+}
+.datingIndex-part4 .datingIndex-part4-con .first{
+    position: relative;
+    width: 469px;
+    height: 469px;
+    margin-right: 22px;
+}
+.datingIndex-part4 .datingIndex-part4-con .first .shade{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#4c000000,endColorstr=#4c000000);
+}
+.datingIndex-part4 .datingIndex-part4-con .second{
+    width: 713px;
+    height: 469px;
+    overflow: hidden;
+}
+.datingIndex-part4 .datingIndex-part4-con .second ul{
+    width: 735px;
+}
+.datingIndex-part4 .datingIndex-part4-con .second ul li{
+    position: relative;
+    float: left;
+    width: 223px;
+    height: 223px;
+    margin: 0 22px 22px 0;
+}
+.datingIndex-part4 .datingIndex-part4-con .second ul li .shade{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.3);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#4c000000,endColorstr=#4c000000);
+}
+
+
+.datingIndex-part5{
+    text-align: center;
+    padding: 50px 0 150px;
+}
+.datingIndex-part5 h2{
+    color: #3e3e3e;
+    font-size: 38px;
+    font-weight: normal;
+    letter-spacing: 8px;
+}
+.datingIndex-part5 h3{
+    color: #3e3e3e;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    margin: 15px 0 25px;
+}
+.datingIndex-part5 .datingIndex-part5-con{
+    width: 1200px;
+    height: 243px;
+    margin-top: 60px;
+    position: relative;
+}
+.datingIndex-part5 .datingIndex-part5-con .part5-outer{
+    position: absolute;
+    left: 36px;
+    top: 0;
+    width: 1128px;
+    overflow: hidden;
+}
+.datingIndex-part5 .datingIndex-part5-con dl dt{
+    position: relative;
+    float: left;
+    width: 316px;
+    height: 243px;
+    overflow: hidden;
+    margin: 0 30px;
+}
+.datingIndex-part5 .datingIndex-part5-con dl dt div{
+    position: absolute;
+    left: 0;
+    bottom: -50px;
+    width: 316px;
+    height: 50px;
+    text-align: left;
+    background: rgba(255,255,255,.6);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#99ffffff,endColorstr=#99ffffff);
+    display: table;
+}
+.datingIndex-part5 .datingIndex-part5-con dl dt p{
+    display: table-cell;
+    vertical-align: middle;
+    color: #3e3e3e;
+    font-size: 14px;
+    letter-spacing: 2px;
+    padding: 0 10px;
+    line-height: 25px;
+}
+.datingIndex-part5 .datingIndex-part5-con .btnLeft,.datingIndex-part5 .datingIndex-part5-con .btnRight{
+    cursor: pointer;
+    width: 25px;
+    height: 49px;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    background: url("../images/datingIndex-part5-icon.jpg") no-repeat;
+}
+.datingIndex-part5 .datingIndex-part5-con .btnLeft{
+    left: 0;
+}
+.datingIndex-part5 .datingIndex-part5-con .btnRight{
+    right: 0;
+    background-position: -25px 0;
+}
+

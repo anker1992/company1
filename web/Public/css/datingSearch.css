@@ -1,0 +1,301 @@
+@charset "utf-8";
+.condition{
+
+}
+.condition .condition-box{
+    width: 1168px;
+    padding: 30px;
+    margin: 15px 0 30px;
+    border: 1px solid #dbdbdb;
+}
+
+.condition .filter-conditions .selected-conditions{
+    line-height: 26px;
+    margin-right: 10px;
+}
+.condition .filter-conditions .selected-wrap-in .selected-item{
+    position: relative;
+    float: left;
+    height: 26px;
+    margin: 0 15px 15px 0;
+}
+.condition .filter-conditions .selected-wrap-in .selected-item a{
+    color: #fff;
+    font-size: 16px;
+    padding: 0 10px 5px;
+    background-color: #ff6269;
+}
+.condition .filter-conditions .selected-wrap-in .selected-item a i{
+    width: 12px;
+    height: 6px;
+    display: inline-block;
+    margin-left: 5px;
+    background: url("../images/datingSearch-icon01.png") no-repeat;
+    background-position: 0 0;
+}
+.condition .filter-conditions .selected-wrap-in .selected-item dl{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    color: #acacac;
+    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #ff6269;
+    z-index: 5;
+}
+.condition .filter-conditions .selected-wrap-in .selected-item dl dt,.condition .filter-conditions .selected-wrap-in .selected-item dl dd{
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+.condition .filter-conditions .selected-wrap-in .selected-item dl dd .selectBox{
+    display: inline;
+}
+.condition .filter-conditions .selected-wrap-in .selected-item dl dd label{
+    color: #3e3e3e;
+    white-space: nowrap;
+    display: block;
+}
+
+.condition .filter-conditions .more-txt{
+    position: relative;
+    cursor: pointer;
+    color: #adadad;
+    font-size: 12px;
+    margin-top: 3px;
+}
+.condition .filter-conditions .more-txt i{
+    position: absolute;
+    top: 6px;
+    width: 10px;
+    height: 5px;
+    display: inline-block;
+    margin-left: 5px;
+    background: url("../images/datingSearch-icon01.png") no-repeat;
+    background-position: -1px -14px;
+}
+
+.condition .filter-conditions .selected-byId{
+    width: 110px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    background-color: #ff6269;
+    border-radius: 7px;
+}
+.condition .filter-conditions .selected-byId a{
+    color: #fff;
+    font-size: 14px;
+}
+/*.condition .filter-conditions .selected-byId input{
+    position: absolute;
+    font-size: 12px;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    border-right: 1px solid #d2d2d2;
+}
+.condition .filter-conditions .selected-byId .btn-search-id{
+    position: absolute;
+    right: 0;
+    width: 34px;
+    height: 25px;
+    display: inline-block;
+    background-color: #e9e9e9;
+}
+.condition .filter-conditions .selected-byId .btn-search-id i{
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 20px;
+    height: 18px;
+    display: inline-block;
+    background: url("../images/datingSearch-icon01.png") no-repeat;
+    background-position: -28px 0;
+}*/
+
+
+.condition .more-conditions{
+    display: none;
+    margin: 15px 0 0 70px;
+}
+.condition .more-conditions .selected-wrap{
+
+}
+.condition .more-conditions .selected-wrap .selected-item{
+    position: relative;
+    float: left;
+    height: 28px;
+    margin: 0 15px 15px 0;
+}
+.condition .more-conditions .selected-wrap .selected-item a{
+    color: #ff6269;
+    font-size: 16px;
+    padding: 0 9px 5px;
+    border: 1px solid #ff6269;
+}
+.condition .more-conditions .selected-wrap .selected-item a i{
+    width: 12px;
+    height: 6px;
+    display: inline-block;
+    margin-left: 5px;
+    background: url("../images/datingSearch-icon01.png") no-repeat;
+    background-position: -14px 0;
+}
+.condition .more-conditions .selected-wrap .selected-item dl{
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 25px;
+    z-index: 5;
+    color: #acacac;
+    background-color: #fff;
+    padding: 12px;
+    border: 1px solid #ff6269;
+}
+.condition .more-conditions .selected-wrap .selected-item dl dt,.condition .filter-conditions .selected-wrap-in .selected-item dl dd{
+    margin-bottom: 10px;
+    white-space: nowrap;
+}
+.condition .more-conditions .selected-wrap .selected-item dl dd .selectBox{
+    display: inline;
+}
+.condition .more-conditions .selected-wrap .selected-item dl dd label{
+    color: #3e3e3e;
+    white-space: nowrap;
+    display: block;
+}
+.condition .selected-wrap .selected-item dl dd .btn-gray{
+    background-color: #bdbdbd;
+    display: block;
+    width: 50px;
+    height: 25px;
+    padding: 0;
+    border: none;
+    color: #fff;
+    text-align: center;
+    line-height: 24px;
+    margin: 10px auto 0;
+}
+
+
+.condition .hot-tags{
+    padding-top: 25px;
+    border-top: 2px dashed #eaeaea;
+    margin-top: 15px;
+}
+.condition .hot-tags label{
+    float: left;
+    line-height: 28px;
+    margin-right: 10px;
+}
+.condition .hot-tags ul li{
+    cursor: pointer;
+    color: #ff6269;
+    font-size: 16px;
+    width: 85px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+    border: 1px solid #ff6269;
+    border-radius: 5px;
+}
+.condition .hot-tags ul li.cur{
+    color: #fff;
+    background-color: #ff6269;
+}
+.condition .hot-tags .btn-search{
+    color: #fff;
+    font-size: 16px;
+    width: 65px;
+    height: 27px;
+    text-align: center;
+    line-height: 26px;
+    float: right;
+    background-color: #ff6269;
+    border-radius: 5px;
+}
+
+
+.condition .list-outer{
+    width: 1230px;
+    overflow: hidden;
+}
+.condition .list-outer .list-inner{
+    width: 1260px;
+}
+.condition .list-outer .list-inner ul li{
+    width: 200px;
+    height: 308px;
+    padding: 12px 12px 0;
+    float: left;
+    border: 1px solid #d9d9d9;
+    margin: 0 25px 25px 0;
+}
+.condition .list-outer .list-inner ul li h4{
+    color: #ff6269;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 30px;
+}
+.condition .list-outer .list-inner ul li p span{
+    color: #bdbdbd;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.condition .list-outer .list-inner ul li p.description{
+    color: #bdbdbd;
+    font-size: 12px;
+    line-height: 18px;
+    padding-top: 4px;
+    border-top: 1px dashed #bdbdbd;
+    margin-top: 6px;
+}
+
+.condition .list-outer .paging-list{
+    margin: 100px 0;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    *clear:both;
+}
+
+.condition .list-outer .paging-list a{
+
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+    color: #8e8e8e;
+}
+
+.condition .list-outer .paging-list ul{
+
+    display:inline;
+    *position:relative;
+    *top: -10px;
+    /* display: inline-block;*/
+}
+.condition .list-outer .paging-list ul li{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    color: #8e8e8e;
+    *width:40px;
+    *height:40px;
+    *line-height:40px;
+    *display:inline;
+    margin-right: 10px;
+}
+.condition .list-outer .paging-list a:hover,.condition .list-outer .paging-list ul li:hover,.condition .list-outer .paging-list ul li.cur,.condition .list-outer .paging-list a.cur{
+    background-color: #e50012;
+    color: #fff;
+}
+
+    

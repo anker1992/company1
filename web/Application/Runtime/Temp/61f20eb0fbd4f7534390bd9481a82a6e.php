@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:9:"田明鑫";s:8:"workarea";s:0:"";s:6:"height";s:7:"175-180";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-19/58577bdf2cb06.png";s:11:"best_person";s:22:"活泼女汉子,逛街";s:10:"best_movie";s:19:"动作武侠,动画";s:10:"best_music";s:13:"华语,电子";s:11:"best_writer";s:16:"张爱玲,余华";s:9:"best_food";s:9:"川湘菜";s:11:"best_sports";s:6:"篮球";s:14:"tweleveanimals";s:3:"猪";s:13:"constellation";s:0:"";s:10:"profession";s:6:"金融";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"25000元以上";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:13:"5000-10000元";s:14:"zmaritalstatus";N;}
+?>

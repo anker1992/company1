@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:6:"周生";s:8:"workarea";s:0:"";s:6:"height";s:7:"180-185";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-19/585773f6bfe83.png";s:11:"best_person";s:13:"摄影,韩剧";s:10:"best_movie";s:22:"悬疑推理,纪录片";s:10:"best_music";s:6:"电子";s:11:"best_writer";s:12:"博尔赫斯";s:9:"best_food";s:19:"北方菜,葡萄酒";s:11:"best_sports";s:6:"滑雪";s:14:"tweleveanimals";s:3:"虎";s:13:"constellation";s:9:"天蝎座";s:10:"profession";s:6:"金融";s:9:"education";s:9:"研究生";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"25000元以上";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"20000-25000元";s:14:"zmaritalstatus";N;}
+?>

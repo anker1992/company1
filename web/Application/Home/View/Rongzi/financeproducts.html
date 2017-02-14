@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title></title>
+    <link rel="stylesheet" href="__PUBLIC__/css/common.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/css/financeProducts.css"/>
+</head>
+<body>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<!--header 开始-->
+
+<include file="Public:header"/>
+
+<!--header结束-->
+
+<div class="part1">
+    <div class="container clearfix">
+        <span class="left">所有产品</span>
+        <div class="left"><input type="text"/><i></i></div>
+        <!--<a class="right" href="productSubclasses1.php">免费发布信息</a>-->
+    </div>
+</div>
+<div class="part2">
+    <div class="container">
+        <div class="part2-con">
+            <dl class="clearfix cplx">
+                <form action="financeProducts.php" method="post" id='myform'>
+                </form>
+
+                <dt>产品类型：</dt>
+                <dd><a <?php if(!isset($cplx) || empty($cplx)){ echo "class='cur'";}?> href="?m=Home&c=Rongzi&a=financeproducts&cplx=<?php if($yqsy){ echo '&yqsy='.$yqsy;} if($zje){ echo '&zje='.$zje; } ?>">不限</a></dd>
+                <foreach name="cplx_list" item="cplx_list">
+                    <dd class="ceshi">
+                        <a <?php if(isset($cplx)){ if($cplx==$cplx_list['cplx_name']){ echo "class='cur'";}} ?> href="?m=Home&c=Rongzi&a=financeproducts&cplx={$cplx_list.cplx_name}<?php if($yqsy){ echo '&yqsy='.$yqsy;} if($zje){ echo '&zje='.$zje; } ?>">{$cplx_list.cplx_name}</a>
+                    </dd>
+                </foreach>
+                </dl>
+            <dl class="clearfix yqsy">
+                <dt>预期收益率：</dt>
+                <dd><a <?php if(!isset($yqsy) || empty($yqsy)){ echo "class='cur'";}?> href="?m=Home&c=Rongzi&a=financeproducts&yqsy=<?php if($cplx){ echo '&cplx='.$cplx;} if($zje){ echo '&zje='.$zje; } ?>">不限</a></dd>
+                <foreach name="yqsy_list" item="yqsy_list">
+                    <dd><a <?php if(isset($yqsy)){ if($yqsy==$yqsy_list['yqsy_name']){ echo "class='cur'";}} ?> href="?m=Home&c=Rongzi&a=financeproducts&yqsy={$yqsy_list.yqsy_name}<?php if($cplx){ echo '&cplx='.$cplx;} if($zje){ echo '&zje='.$zje; } ?>">{$yqsy_list.yqsy_name}</a></dd>
+                </foreach>
+            </dl>
+            <dl class="clearfix zje">
+                <dt>资金额：</dt>
+                <dd><a <?php if(!isset($zje) || empty($zje)){ echo "class='cur'";}?> href="?m=Home&c=Rongzi&a=financeproducts&zje=<?php if($cplx){ echo '&cplx='.$cplx;} if($yqsy){ echo '&yqsy='.$yqsy;} ?>" >不限</a></dd>
+                <foreach name="zje_list" item="zje_list">
+                    <dd><a <?php if(isset($zje)){ if($zje==$zje_list['zje_name']){ echo "class='cur'";}} ?> href="?m=Home&c=Rongzi&a=financeproducts&zje={$zje_list.zje_name}<?php if($cplx){ echo '&cplx='.$cplx;} if($yqsy){ echo '&yqsy='.$yqsy; } ?>">{$zje_list.zje_name}</a></dd>
+                </foreach>
+            </dl>
+        </div>
+    </div>
+</div>
+</div>
+<div class="part4">
+    <div class="container clearfix">
+        <div class="part4-left">
+            <div class="part4-tab">
+                <ol class="clearfix">
+                   <li id="gxsj" class="cur">更新时间</li>
+                    <!--<li id="zhsx">综合顺序</li>-->
+                    <!--<li id="gxsj">更新时间</li>-->
+                </ol>
+                <div class="part4-tab-list">
+                    <ul>
+                        <foreach name="product" item="product">
+                        <li class="clearfix">
+                            <div class="left">
+                                <h3><a href="" target="_black">{$product.title}</a></h3>
+                                <p>投资门槛：<span class="red">{$product.threshold}</span></p>
+                                <p>
+                                    投资期限：<span>{$product.term}</span>
+                                    产品类型：<span>{$product.class}</span>
+                                </p>
+                                <p>预期收益率：<span class="red">{$product.expectedreturn}</span></p>
+                            </div>
+                            <div class="right">
+                                <?php if($cplx == '另类投资'){ ?>
+                                    <a href="{:U('Rongzi/inforelease',array('id'=>$product['id'],'cplx'=>'1'))}" target="_black">查看联系方式</a>
+                                <?php }elseif($cplx == '产品求购'){ ?>
+                                    <a href="{:U('Rongzi/inforelease',array('id'=>$product['id'],'cplx'=>'2'))}" target="_black">查看联系方式</a>
+                                <?php }elseif($cplx == '保险'){  ?>
+                                    <a href="{:U('Rongzi/inforelease',array('id'=>$product['id'],'cplx'=>'3'))}" target="_black">查看联系方式</a>
+                                <?php }else{ ?>
+                                    <a href="{:U('Rongzi/inforelease',array('id'=>$product['id']))}" target="_black">查看联系方式</a>
+                                <?php } ?>
+                            </div>
+                        </li>
+                        </foreach>
+                    </ul>
+                </div>
+            </div>
+            <link href="__PUBLIC__/css/mypage.css" rel="stylesheet" type="text/css"/>
+
+            <div class="part4">
+
+                <tr class="content">
+                    <!--<td colspan="3" bgcolor="#FFFFFF">&nbsp;{$page}</td>-->
+                    <td colspan="3" bgcolor="#FFFFFF"><div class="pages">
+                        {$page}
+                    </div></td>
+                </tr>
+             </div>
+
+    </div>
+    <div class="part4-right">
+        <h2>产品推荐</h2>
+        <ul>
+            <li><a href="infoRelease.php?id=<?php echo $tj_rows['id'] ?>">
+                <img src="__PUBLIC__/images/product-recom1.jpg" alt=""/>
+                <p><?php echo $tj_rows['name'] ?></p>
+                <p>规模：<?php echo $tj_rows['scale'] ?></p>
+                <p>期限：<?php echo $tj_rows['term'] ?></p>
+            </a>
+            </li>
+            <!-- <li>
+                <img src="__PUBLIC__/images/product-recom1.jpg" alt=""/>
+                <p>光大信托 长信1号镇宁城投资产管理计划</p>
+                <p>规模：2亿</p>
+                <p>期限：2年</p>
+            </li>
+            <li>
+                <img src="__PUBLIC__/images/product-recom1.jpg" alt=""/>
+                <p>光大信托 长信1号镇宁城投资产管理计划</p>
+                <p>规模：2亿</p>
+                <p>期限：2年</p>
+            </li>
+            <li class="last">
+                <img src="__PUBLIC__/images/product-recom1.jpg" alt=""/>
+                <p>光大信托 长信1号镇宁城投资产管理计划</p>
+                <p>规模：2亿</p>
+                <p>期限：2年</p>
+            </li> -->
+        </ul>
+    </div>
+</div>
+</div>
+
+<!--footer开始-->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="attention">
+            <img src="__PUBLIC__/images/weixin.png" alt=""/>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="tel"><span></span>010—58690663</li>
+                <li class="email"><span></span>weihehuo@163.com</li>
+                <li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+                <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer结束-->
+
+
+<script type="text/javascript" src="__PUBLIC__/js/financeProducts.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".head-left ul li").hover(function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"block"
+                })
+            }else{
+                $(this).addClass("active").siblings().removeClass("active");
+            }
+        },function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"none"
+                })
+            }else{
+                $(this).removeClass("active");
+            }
+        })
+    });
+
+    $(function(){
+        $(".part2-con a").click(function(){
+            $(this).addClass("cur").parent().siblings().find("a").removeClass("cur");
+        })
+
+        $(".part3 ul li").click(function(){
+            var index = $(this).index();
+            console.log(index);
+            $(this).addClass("cur").siblings().removeClass("cur");
+            $(".part3-list-con").children("div").eq(index).removeClass("hide").siblings().addClass("hide");
+        })
+    });
+
+    $(function(){
+        $(".part4 ol li").click(function(){
+            $(this).addClass("cur").siblings().removeClass("cur");
+        })
+    });
+
+    $(function(){
+        var num = $('.paging-list ul li.cur').text();
+        var oLi = $('.paging-list ul li');
+        var len = oLi.length;
+        $('.prev').css({ display:'none'});
+        oLi.click(function(){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            num = $('.paging-list ul li.cur').text();
+            if(num == 1){
+                $('.prev').css({ display:'none'});
+                $('.next').css({ display:'inline-block'});
+            }else if(num == len){
+                $('.next').css({ display:'none'});
+                $('.prev').css({ display:'inline-block'});
+            }else{
+                $('.prev').css({ display:'inline-block'});
+                $('.next').css({ display:'inline-block'});
+            }
+        });
+        $('.first').click(function(){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.prev').css({ display:'none'});
+            $('.next').css({ display:'inline-block'});
+            num = 1;
+            oLi.eq(num-1).addClass('cur').siblings().removeClass('cur')
+        });
+        $('.last').click(function(){
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.next').css({ display:'none'});
+            $('.prev').css({ display:'inline-block'});
+            num = 5;
+            oLi.eq(num-1).addClass('cur').siblings().removeClass('cur');
+        });
+        $('.prev').click(function(){
+            if(num<2){
+                $('.first').addClass('cur');
+                $('.prev').css({ display:'none'});
+                $('.next').css({ display:'inline-block'});
+                oLi.eq(0).addClass('cur').siblings().removeClass('cur');
+                return;
+            }else{
+                num--;
+                $('.prev').css({ display:'inline-block'});
+                $('.next').css({ display:'inline-block'});
+                oLi.eq(num).addClass('cur').siblings().removeClass('cur');
+            }
+        });
+        $('.next').click(function(){
+            if(num>len-1){
+                $('.last').addClass('cur');
+                $('.next').css({ display:'none'});
+                $('.prev').css({ display:'inline-block'});
+                oLi.eq(len).addClass('cur').siblings().removeClass('cur');
+                return;
+            }else{
+                $('.prev').css({ display:'inline-block'});
+                $('.next').css({ display:'inline-block'});
+                oLi.eq(num).addClass('cur').siblings().removeClass('cur');
+                num++;
+            }
+        })
+    });
+
+</script>
+</body>
+</html>

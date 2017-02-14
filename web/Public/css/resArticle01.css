@@ -1,0 +1,394 @@
+@charset "utf-8";
+.resArticle01-top{
+    height: 260px;
+    min-width: 1230px;
+    background: url("../images/resArticle01-top.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.resArticle01-top .resArticle01-top-left{
+    margin-top: 50px;
+    float: left;
+}
+.resArticle01-top p{
+    color: #fff;
+    line-height: 30px;
+}
+.resArticle01-top .resArticle01-top-right{
+    margin-top: 50px;
+    float: right;
+}
+.resArticle01-top .resArticle01-top-right h2{
+    color: #fff;
+    font-size: 24px;
+}
+
+.resArticle01-content{
+    width: 1120px;
+    min-width: 1120px;
+    background-color: #fff;
+    padding: 0 54px 70px;
+    border: 1px solid #b0b0b0;
+    margin: -100px auto 100px;
+}
+.resArticle01-content h3{
+    color: #000;
+    font-size: 16px;
+    padding: 2px 6px;
+    background-color: #fff3f3;
+    display: inline-block;
+    margin: 40px 0 30px;
+    *width:64px;
+}
+.resArticle01-content .resArticle01-part1{
+    padding-bottom: 35px;
+    border-bottom: 1px dashed #b0b0b0;
+}
+.resArticle01-content .resArticle01-part1 p{
+    line-height: 30px;
+    margin-left: -15px;
+}
+.resArticle01-content .resArticle01-part1 p span{
+    color: #000;
+    padding: 0 15px;
+}
+.resArticle01-content .resArticle01-part1 p span.col{
+    color: #e60012;
+}
+.resArticle01-content .resArticle01-part1 p.cursor span{
+    cursor: pointer;
+}
+.resArticle01-content .resArticle01-part1 .resArticle01-part1-right{
+    padding: 50px 80px 0 0;
+}
+.resArticle01-content .resArticle01-part1 .contact{
+    display: none;
+    position: relative;
+    padding: 5px 30px 0 0;
+    margin: 15px 0;
+    background-color: #fff3f3;
+}
+.resArticle01-content .resArticle01-part1 .contact i{
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.resArticle01-content .resArticle01-part1 .contact p{
+    color: #e60012;
+    font-size: 12px;
+    margin-left: 0;
+}
+.resArticle01-content .resArticle01-part1 .contact span{
+    padding: 0 15px;
+}
+.resArticle01-content .resArticle01-part1 .contact span.tel{
+    padding: 0 15px 0 0;
+}
+
+.resArticle01-content .resArticle01-part2 ul li{
+    color: #000;
+    line-height: 30px;
+}
+.resArticle01-content .resArticle01-part2 ul li span{
+    color: #000;
+}
+
+.resArticle01-content .resArticle01-part3 p{
+    color: #000;
+}
+
+.resArticle01-content .resArticle01-part4 h3{
+    margin-bottom: 0;
+}
+.resArticle01-content .resArticle01-part4 p,.resArticle01-content .resArticle01-part4 dd{
+    color: #000;
+    margin-left: -7px;
+    line-height: 30px;
+}
+.resArticle01-content .resArticle01-part4 dd,.resArticle01-content .resArticle01-part4 dt p.title{
+    margin-left: 0;
+}
+.resArticle01-content .resArticle01-part4 span{
+    color: #000;
+    padding: 0 7px;
+}
+.resArticle01-content .resArticle01-part4 dt{
+    margin: 30px 0 15px;
+}
+.resArticle01-content .resArticle01-part4 dt p,.resArticle01-content .resArticle01-part4 dt span{
+    font-weight: bold;
+}
+
+.resArticle01-content .resArticle01-part5 p{
+    color: #000;
+    line-height: 30px;
+    margin-left: -5px;
+}
+.resArticle01-content .resArticle01-part6 p,.resArticle01-content .resArticle01-part7 p{
+    color: #000;
+    line-height: 30px;
+}
+.resArticle01-content .resArticle01-part5 span,.resArticle01-content .resArticle01-part6 span,.resArticle01-content .resArticle01-part7 span{
+    color: #000;
+    padding: 0 5px;
+}
+
+.resArticle01-content span.download{
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    width: 100px;
+    height: 35px;
+    line-height: 35px;
+    margin: 75px auto 0;
+    text-align: center;
+    background-color: #ffbdc2;
+    border-radius: 5px;
+}
+
+.resArticle01-content .function-box{
+    position: fixed;
+    top: 420px;
+    width: 150px;
+    left: 50%;
+    margin-left: 625px;
+}
+.resArticle01-content .function-box ul li{
+    cursor: pointer;
+    width: 118px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #b0b0b0;
+    margin-bottom: 10px;
+}
+.resArticle01-content .function-box ul li i{
+    width: 30px;
+    height: 25px;
+    margin: 0 10px;
+    display: inline-block;
+    background: url("../images/resArticle01-icon01.png") no-repeat;
+    vertical-align: bottom;
+}
+.resArticle01-content .function-box ul li.check i{
+    background-position: 0 0;
+}
+.resArticle01-content .function-box ul li.down i{
+    background-position: -31px 0;
+}
+
+.check-shortage{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -170px;
+    margin-top: -100px;
+    width: 340px;
+    height: 200px;
+    padding: 40px 20px 0;
+    border: 1px solid #b0b0b0;
+    background-color: #fff;
+}
+.check-shortage span{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.check-shortage p{
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+}
+.check-shortage p.note{
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.check-shortage p.note i{
+    color: #e60012;
+    font-size: 12px;
+}
+
+.download-enough,.download-shortage{
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -220px;
+    margin-top: -165px;
+    width: 440px;
+    height: 330px;
+    border: 1px solid #b0b0b0;
+    background-color: #fff;
+}
+.download-enough span,.download-shortage span{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.download-enough h3,.download-shortage h3{
+    font-size: 16px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f4f4f4;
+    padding-left: 15px;
+    border-bottom: 1px solid #b0b0b0;
+}
+.download-enough ul,.download-shortage ul{
+    padding: 55px 75px 0;
+}
+.download-enough ul li .path-box,.download-shortage ul li .path-box{
+    width: 295px;
+    height: 30px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid #b0b0b0;
+}
+.download-enough ul li .path-con,.download-shortage ul li .path-con{
+    position: relative;
+}
+.download-enough ul li .path-box input,.download-shortage ul li .path-box input{
+    width: 245px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 10px;
+    display: inline-block;
+}
+.download-enough ul li .path-con i,.download-shortage ul li .path-con i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-left: 1px solid #b0b0b0;
+    display: inline-block;
+    background-color: #f4f4f4;
+}
+.download-enough ul li .path-con i::before,.download-shortage ul li .path-con i::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    border-width: 8px 5px;
+    border-style: solid;
+    border-color: #949494 transparent transparent;
+}
+.download-enough ul li .path-list,.download-shortage ul li .path-list{
+    display: none;
+    width: 295px;
+    height: 60px;
+    border: 1px solid #b0b0b0;
+    background-color: #fff;
+    position: absolute;
+    top: 30px;
+    left: -1px;
+}
+.download-enough ul li .path-list a,.download-shortage ul li .path-list a{
+    display: block;
+    padding-left: 10px;
+    line-height: 20px;
+}
+.download-enough ul li .path-list a:hover,.download-shortage ul li .path-list a:hover{
+    color: #e60012;
+}
+/*.download-enough ul li.path label,.download-shortage ul li.path label{
+    position: relative;
+    width: 295px;
+    height: 30px;
+    display: inline-block;
+    padding: 0 10px;
+    line-height: 30px;
+    border: 1px solid #b0b0b0;
+}
+.download-enough ul li.path i,.download-shortage ul li.path i{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    border-left: 1px solid #b0b0b0;
+    display: inline-block;
+    background-color: #f4f4f4;
+}
+.download-enough ul li.path i::before,.download-shortage ul li.path i::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 10px;
+    border-width: 8px 5px;
+    border-style: solid;
+    border-color: #949494 transparent transparent;
+}*/
+.download-enough ul li.state,.download-shortage ul li.state{
+    margin: 35px 0 50px 0;
+}
+.download-enough ul li.state p,.download-shortage ul li.state p{
+    color: #000;
+    font-size: 12px;
+}
+.download-enough ul li.state p i,.download-shortage ul li.state p i{
+    font-size: 12px;
+    color: #e60012;
+}
+.download-enough ul li.state p em,.download-shortage ul li.state p em{
+    color: #e60012;
+}
+.download-enough ul li.button,.download-shortage ul li.button{
+    text-align: center;
+}
+.download-enough ul li.button a,.download-shortage ul li.button a{
+    color: #000;
+    display: inline-block;
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border: 1px solid #b0b0b0;
+    margin-right: 40px;
+}
+.download-enough ul li a.cur,.download-shortage ul li a.cur{
+    background-color: #ffbdc2;
+    border: 1px solid #ffbdc2;
+}
+.download-enough ul li.button a:last-child,.download-shortage ul li.button a:last-child{
+    margin-right: 0;
+}
+
+.download-state{
+    display: none;
+    position: fixed;
+    width: 290px;
+    height: 190px;
+    top: 50%;
+    left: 50%;
+    margin-left: -195px;
+    margin-top: -120px;
+    padding: 55px 50px 0;
+    border: 1px solid #b0b0b0;
+    background-color: #fff;
+}
+.download-state span{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.download-state p{
+    color: #000;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+@charset "utf-8";
+#page_num{
+	height: 20px;
+	clear: both;/*取消浮动*/
+	padding: 20px 0;
+	position: relative;/*为了下面绝对定位*/
+}
+#page_num ul{
+	position: absolute;
+	right: 50px;
+	height: 20px;
+}
+#page_num ul li{
+	float: left;
+	width: 26px;
+	height: 20px;
+}
+#page_num ul li a{
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	border: 1px solid #333;
+	text-align: center;
+	text-decoration: none;
+}
+#page_num ul li a:hover,#page_num ul li a.selected{
+	background: #666;
+	font-weight: bolid;
+	color: #fff;
+}
+
+#page_text{
+	height: 20px;
+	clear: both;
+	padding: 20px 0;
+}
+#page_text ul{
+	text-align: center;
+}
+#page_text ul li{
+	display: inline;
+}
+#page_text ul li a {
+	color: red;
+	text-decoration: none;
+}
+#page_text ul li a:hover {
+	color:green ;
+	/*text-decoration: underline;*/
+}

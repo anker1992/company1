@@ -1,0 +1,301 @@
+@charset "utf-8";
+body{
+    background-color: #f8f8f8;
+}
+.header{
+    width: 100%;
+    min-width: 1200px;
+    height: 60px;
+    background-color: #fc0000;
+    line-height: 60px;
+}
+.container{
+    width: 1200px;
+    min-width: 1200px;
+}
+.header span,.header span img{
+    width: 89px;
+    height: 43px;
+    display: inline-block;
+}
+.header span{
+    float: left;
+    padding-right: 25px;
+    border-right: 2px solid #fff;
+    margin-top: 8px;
+}
+.header h3{
+    float: left;
+    color: #fff;
+    font-size: 18px;
+    font-weight: normal;
+    padding-left: 25px;
+}
+
+.part1 .container,.part2 .container{
+    margin-top: 120px;
+    height: 520px;
+    background-color: #fff;
+    border-top: 8px solid #ff7800;
+    border-radius: 5px;
+    box-shadow: 5px 5px 7px #eee,-6px 6px 7px #eee;
+}
+
+.part1 .part1-top{
+    width: 435px;
+    text-align: center;
+    margin: 45px auto 0;
+}
+.part1 .part1-top h3{
+    font-size: 18px;
+    color: #323232;
+    font-weight: normal;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #a6a6a6;
+}
+.part1 .part1-top h3 span{
+    font-size: 18px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #fa0000;
+}
+
+.part1 .part1-con{
+    width: 460px;
+    margin: 40px auto 0;
+}
+.part1 .part1-con .mb30{
+    position: relative;
+    margin-bottom: 30px;
+}
+.part1 .part1-con .mb30 span{
+    color: #323232;
+    position: relative;
+    width: 85px;
+    height: 45px;
+    line-height: 45px;
+    display: block;
+    float: left;
+}
+.part1 .part1-con .mb30 span i{
+    position: absolute;
+    left: -10px;
+    color: #fa0000;
+    font-size: 18px;
+}
+.part1 .part1-con .name-box input,.part1 .part1-con .organization-box input{
+    width: 350px;
+    height: 45px;
+    line-height: 45px;
+    padding: 0 10px;
+    background-color: #faf9f9;
+    border: 1px solid #ecebeb;
+    border-radius: 3px;
+}
+.part1 .part1-con .name-box label,.part1 .part1-con .organization-box label{
+    position: absolute;
+    top: 0;
+    right: -240px;
+    color: #fa0000;
+    width: 240px;
+    height: 45px;
+    line-height: 45px;
+}
+.part1 .part1-con .common-box{
+    position: relative;
+    width: 178px;
+    height: 45px;
+    border-radius: 3px;
+    float: left;
+    border: 1px solid #ecebeb;
+    background-color: #eae7e7;
+}
+.part1 .part1-con .province-box {
+    margin-right: 15px;
+}
+.part1 .part1-con .common-con{
+    position: relative;
+    width: 178px;
+    height: 45px;
+}
+.part1 .part1-con .common-con input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    background-color: #faf9f9;
+}
+.part1 .part1-con .common-con i{
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    border-width: 9px 8px;
+    border-style: solid;
+    border-color: #c0c0c0 transparent transparent;
+}
+.part1 .part1-con .common-list{
+    z-index: 3;
+    display: none;
+    position: absolute;
+    top: 47px;
+    left: 5px;
+    width: 170px;
+    height: 225px;
+    overflow: auto;
+}
+.part1 .part1-con .common-list a{
+    display: block;
+    text-align: center;
+    color: #646464;
+    height: 45px;
+    line-height: 45px;
+    background-color: #f7f7f7;
+}
+.part1 .part1-con .common-list a:hover{
+    color: #ff7800;
+    background-color: #eaeded;
+}
+.part1 .part1-con .btn{
+    text-align: center;
+}
+.part1 .part1-con .btn .next-btn{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    width: 370px;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    background-color: #ff7800;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+
+
+
+.part1 .part2-con{
+    width: 460px;
+    margin: 0 auto;
+    text-align: center;
+}
+.part1 .part2-con .pic-box1,.part1 .part2-con .pic-box2{
+    text-align: center;
+    margin: 40px auto 30px;
+}
+.part1 .part2-con .pic-box2{
+    width: 162px;
+    height: 122px;
+    background-color: #ecebeb;
+}
+.part1 .part2-con .upload{
+    position: relative;
+    width: 100px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #faf9f9;
+    border: 1px solid #ecebeb;
+    margin: 0 auto;
+}
+.part1 .part2-con .upload span{
+    color: #323232;
+}
+.part1 .part2-con .upload input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 25px;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+.part1 .part2-con .tip1{
+    position: relative;
+    font-size: 12px;
+    color: #646464;
+    margin: 15px 0 5px 0;
+}
+.part1 .part2-con .tip1 i{
+    position: absolute;
+    top: 0;
+    color: #fa0000;
+    font-size: 16px;
+    left: 100px;
+}
+.part1 .part2-con .tip2{
+    font-size: 12px;
+    color: #aeaeae;
+    margin-bottom: 30px;
+}
+.part1 .part2-con .btn .next-btn{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+    width: 370px;
+    height: 45px;
+    line-height: 45px;
+    border: none;
+    background-color: #ff7800;
+    border-radius: 3px;
+    margin: 0 auto;
+}
+
+.part1 .part2-con .pic-box1 img{
+    width: 118px;
+    height: 118px;
+    border-radius: 50%;
+    border: 1px solid #e0e0e0;
+}
+.part1 .part2-con .pic-box2 img{
+    width: 160px;
+    height: 120px;
+    border: 1px solid #e0e0e0;
+}
+
+
+.part2 .part2-top{
+    width: 345px;
+    margin: 45px auto 0;
+}
+.part2 .part2-top img{
+    margin-left: 120px;
+}
+.part2 .part2-top h3{
+    color: #323232;
+    font-size: 18px;
+    margin: 35px 0 50px;
+}
+.part2 .part2-con{
+    width: 345px;
+    margin: 0 auto;
+}
+.part2 .part2-con .part2-con-left,.part2 .part2-con .part2-con-right{
+    width: 160px;
+    float: left;
+}
+.part2 .part2-con .part2-con-right{
+    padding-top: 30px;
+    margin-left: 20px;
+}
+.part2 .part2-con .part2-con-left p{
+    color: #323232;
+    text-align: center;
+}
+
+.part2 .part2-con .part2-con-right ul li{
+    margin-bottom: 15px;
+}
+.part2 .part2-con .part2-con-right ul li i{
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #ff7800;
+    margin-right: 10px;
+}
+.part2 .part2-con .part2-con-right ul li a{
+    color: #323232;
+    font-weight: bold;
+}

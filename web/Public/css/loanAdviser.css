@@ -1,0 +1,154 @@
+@charset "utf-8";
+.part1{
+
+}
+.part1 .container{
+    display: block;
+    width: 1207px;
+    min-width: 1207px;
+    height: 315px;
+    margin: 90px auto 50px;
+    background: url("../images/loanAdviser-part1.jpg") no-repeat;
+}
+.part1 .part1-left{
+    float: left;
+    width: 565px;
+    padding: 40px 0 0 35px;
+}
+.part1 .part1-left h3{
+    color: #3e3e3e;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+.part1 .part1-left p{
+    color: #3e3e3e;
+    font-size: 18px;
+    line-height: 35px;
+}
+.part1 .part1-left p span{
+    color: #3e3e3e;
+    font-size: 18px;
+}
+.part1 .part1-left a{
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #ff6269;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+
+.part1 .part1-right{
+    float: left;
+    width: 600px;
+    padding-top: 40px;
+}
+.part1 .part1-right p{
+    color: #3e3e3e;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.part1 .part1-right p span{
+    color: #3e3e3e;
+    font-size: 18px;
+}
+.part1 .part1-right .part1-right-top img{
+    width: 84px;
+    height: 84px;
+    display: block;
+    float: left;
+    margin-right: 25px;
+}
+.part1 .part1-right .part1-right-top p{
+    margin-top: 0;
+    line-height: 84px;
+}
+.part1 .part1-right p i{
+    display: inline-block;
+    width: 23px;
+    height: 21px;
+    vertical-align: middle;
+    background: url("../images/loanAdviser-star.png") no-repeat;
+}
+
+.part2 .container{
+    width: 1210px;
+    min-width: 1210px;
+}
+.part2 ul{
+    padding-bottom: 15px;
+    border-bottom: 2px solid #ff6269;
+}
+.part2 ul li.ml10{
+    margin-left: -10px;
+}
+.part2 ul li{
+    color: #e2e2e2;
+    float: left;
+}
+.part2 ul li a{
+    color: #000;
+    font-size: 20px;
+    padding: 0 10px;
+}
+.part2 ul li.cur a{
+    color: #ff6269;
+}
+.part2 .box1,.part2 .box2{
+    padding: 25px 0;
+    margin-bottom: 35px;
+}
+.part2 .box1 p,.part2 .box2 p{
+    color: #3e3e3e;
+    font-size: 16px;
+    line-height: 2em;
+}
+.part2 .box2 h3{
+    color: #3e3e3e;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 2em;
+}
+.part2 .box2 p span{
+    color: #ff6269;
+    font-size: 18px;
+}
+.part2 .box2 .write{
+    width: 700px;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+.part2 .box2 .write h2{
+    color: #3e3e3e;
+    font-size: 24px;
+    font-weight: normal;
+}
+.part2 .box2 .write textarea{
+    color: #ccc;
+    font-size: 18px;
+    line-height: 30px;
+    width: 660px;
+    height: 265px;
+    display: block;
+    margin-top: 20px;
+    padding: 20px;
+    resize: none;
+    border: 1px solid #c9c9c9;
+}
+.part2 .box2 .write input{
+    color: #fff;
+    font-size: 16px;
+    width: 95px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #ff6269;
+    float: right;
+    margin-top: 30px;
+    border-radius: 5px;
+}

@@ -1,0 +1,1645 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta charset="utf-8"/>
+    <title>{$current['title']}-{$Think.CONFIG.sitename}</title>
+
+    <meta name="keywords" content="{$Think.CONFIG.keywords}"/>
+    <meta name="description" content="{$Think.CONFIG.description}"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+
+    <!-- bootstrap & fontawesome -->
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/jquery-ui.css"/>
+    <!-- page specific plugin styles -->
+
+    <!-- text fonts -->
+    <link rel="stylesheet" href="css/ace-fonts.css"/>
+
+    <!-- ace styles -->
+    <link rel="stylesheet" href="css/ace.css" class="ace-main-stylesheet" id="main-ace-style"/>
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="css/ace-part2.css" class="ace-main-stylesheet"/>
+    <![endif]-->
+
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="css/ace-ie.css"/>
+
+    <![endif]-->
+
+    <!-- inline styles related to this page -->
+
+    <!-- ace settings handler -->
+    <script src="js/ace-extra.js"></script>
+
+    <!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
+
+    <!--[if lte IE 8]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.js"></script>
+    <![endif]-->
+</head>
+<body class="no-skin">
+<!-- #section:basics/navbar.layout -->
+<div id="navbar" class="navbar navbar-default">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('navbar', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <div class="navbar-container" id="navbar-container">
+        <!-- #section:basics/sidebar.mobile.toggle -->
+        <button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
+            <span class="sr-only">Toggle sidebar</span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+
+            <span class="icon-bar"></span>
+        </button>
+
+        <!-- /section:basics/sidebar.mobile.toggle -->
+        <div class="navbar-header pull-left">
+            <!-- #section:basics/navbar.layout.brand -->
+            <a href="{:U('index/index')}" class="navbar-brand">
+                <small>
+                    <i class="fa fa-home"></i>
+                    {$Think.CONFIG.sitename}
+                </small>
+            </a>
+
+            <!-- /section:basics/navbar.layout.brand -->
+
+            <!-- #section:basics/navbar.toggle -->
+
+            <!-- /section:basics/navbar.toggle -->
+        </div>
+
+        <!-- #section:basics/navbar.dropdown -->
+        <div class="navbar-buttons navbar-header pull-right" role="navigation">
+            <ul class="nav ace-nav">
+                <!-- #section:basics/navbar.user_menu -->
+                <li class="red">
+                    <a href="{:U('cache/clear')}" title="清除缓存" target="_self">
+                        <i class="ace-icon fa glyphicon-trash"></i>
+                    </a>
+                </li>
+                <li class="red">
+                    <a href="/" title="前台首页" target="_blank">
+                        <i class="ace-icon fa fa-home"></i>
+                    </a>
+                </li>
+                <li class="light-blue">
+                    <a data-toggle="dropdown" href="#" class="dropdown-toggle">
+                        <img class="nav-user-photo" src="<if condition=" $user.head eq ''
+                        ">avatars/avatar2.png
+                        <else/>
+                        __ROOT__{$user.head}</if>" alt="{$user.user}" />
+                            <span class="user-info">
+                                <small>欢迎光临，</small>
+                                {$user.user}
+                            </span>
+
+                        <i class="ace-icon fa fa-caret-down"></i>
+                    </a>
+
+                    <ul class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
+                        <li>
+                            <a href="{:U('Setting/Setting')}">
+                                <i class="ace-icon fa fa-cog"></i>
+                                设置
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{:U('Personal/profile')}">
+                                <i class="ace-icon fa fa-user"></i>
+                                个人资料
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="{:U('logout/index')}">
+                                <i class="ace-icon fa fa-power-off"></i>
+                                退出
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- /section:basics/navbar.user_menu -->
+            </ul>
+        </div>
+
+        <!-- /section:basics/navbar.dropdown -->
+    </div><!-- /.navbar-container -->
+</div>
+
+<!-- /section:basics/navbar.layout -->
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+    <!-- #section:basics/sidebar -->
+    <div id="sidebar" class="sidebar responsive">
+        <script type="text/javascript">
+            try {
+                ace.settings.check('sidebar', 'fixed')
+            } catch (e) {
+            }
+        </script>
+
+        <div class="sidebar-shortcuts" id="sidebar-shortcuts">
+            <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
+                <button class="btn btn-success">
+                    <i class="ace-icon fa fa-signal"></i>
+                </button>
+
+                <button class="btn btn-info">
+                    <i class="ace-icon fa fa-pencil"></i>
+                </button>
+
+                <!-- #section:basics/sidebar.layout.shortcuts -->
+                <button class="btn btn-warning">
+                    <i class="ace-icon fa fa-users"></i>
+                </button>
+
+                <button class="btn btn-danger">
+                    <i class="ace-icon fa fa-cogs"></i>
+                </button>
+
+                <!-- /section:basics/sidebar.layout.shortcuts -->
+            </div>
+
+            <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+                <span class="btn btn-success"></span>
+
+                <span class="btn btn-info"></span>
+
+                <span class="btn btn-warning"></span>
+
+                <span class="btn btn-danger"></span>
+            </div>
+        </div><!-- /.sidebar-shortcuts -->
+
+        <ul class="nav nav-list">
+            <volist name="menu" id="v">
+                <li
+                <if condition="($v['id'] eq $current['id']) OR ($v['id'] eq $current['pid']) OR ($v['id'] eq $current['ppid'])">
+                    class="active
+                    <if condition="$current['pid'] neq '0'">open</if>
+                    "
+                </if>
+                >
+                <a href="<empty name="v.name">#
+                <else/>
+                {:U($v['name'])}</empty>"
+                <notempty name="v.children">class="dropdown-toggle"</notempty>
+                >
+                <i class="{$v.icon}"></i>
+                <span class="menu-text">
+                                    {$v.title}
+                                </span>
+                <notempty name="v.children">
+                    <b class="arrow fa fa-angle-down"></b>
+                </notempty>
+                </a>
+
+                <b class="arrow"></b>
+                <notempty name="v.children">
+                    <ul class="submenu">
+                        <volist name="v.children" id="vv">
+
+                            <li
+                            <if condition="($vv['id'] eq $current['id']) OR ($vv['id'] eq $current['pid'])">class="active
+                                <if condition="$current['ppid'] neq '0'">open</if>
+                                "
+                            </if>
+                            >
+                            <a href="<empty name="vv.children">{:U($vv['name'])}
+                            <else/>
+                            #</empty>"
+                            <notempty name="vv.children">class="dropdown-toggle"</notempty>
+                            >
+                            <i class="{$vv.icon}"></i>
+                            {$vv.title}
+                            <notempty name="vv.children"><b class="arrow fa fa-angle-down"></b></notempty>
+                            </a>
+
+                            <b class="arrow"></b>
+                            <notempty name="vv.children">
+                                <ul class="submenu">
+                                    <volist name="vv.children" id="vvv">
+                                        <li
+                                        <if condition="$vvv['id'] eq $current['id']">class="active"</if>
+                                        >
+                                        <a href="{:U($vvv['name'])}">
+                                            <i class="{$vvv.icon}"></i>
+                                            {$vvv.title}
+                                        </a>
+                                        <b class="arrow"></b>
+                                        </li>
+                                    </volist>
+                                </ul>
+                            </notempty>
+                            </li>
+
+                        </volist>
+                    </ul>
+                </notempty>
+                </li>
+            </volist>
+
+        </ul><!-- /.nav-list -->
+
+        <!-- #section:basics/sidebar.layout.minimize -->
+        <div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
+            <i class="ace-icon fa fa-angle-double-left" data-icon1="ace-icon fa fa-angle-double-left"
+               data-icon2="ace-icon fa fa-angle-double-right"></i>
+        </div>
+
+        <!-- /section:basics/sidebar.layout.minimize -->
+        <script type="text/javascript">
+            try {
+                ace.settings.check('sidebar', 'collapsed')
+            } catch (e) {
+            }
+        </script>
+    </div>
+
+    <!-- /section:basics/sidebar -->
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <div class="breadcrumbs" id="breadcrumbs">
+                <script type="text/javascript">
+                    try {
+                        ace.settings.check('breadcrumbs', 'fixed')
+                    } catch (e) {
+                    }
+                </script>
+
+                <ul class="breadcrumb">
+                    <li>
+                        <i class="ace-icon fa fa-home home-icon"></i>
+                        <a href="{:U('index/index')}">首页</a>
+                    </li>
+                    <present name="current['ptitle']">
+                        <li>
+                            <a href="#">{$current['ptitle']}</a>
+                        </li>
+                    </present>
+                    <li class="active">{$current['title']}</li>
+                </ul><!-- /.breadcrumb -->
+            </div>
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <!-- #section:settings.box -->
+                <if condition="$current.tips neq ''">
+                    <div class="alert alert-block alert-success">
+                        <button type="button" class="close" data-dismiss="alert">
+                            <i class="ace-icon fa fa-times"></i>
+                        </button>
+                        <!--i class="ace-icon fa fa-check green"></i-->
+                        {$current.tips}
+                    </div>
+                </if>
+                <div class="ace-settings-container" id="ace-settings-container">
+                    <div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+                        <i class="ace-icon fa fa-cog bigger-130"></i>
+                    </div>
+
+                    <div class="ace-settings-box clearfix" id="ace-settings-box">
+                        <div class="pull-left width-50">
+                            <!-- #section:settings.skins -->
+                            <div class="ace-settings-item">
+                                <div class="pull-left">
+                                    <select id="skin-colorpicker" class="hide">
+                                        <option data-skin="no-skin" value="#438EB9">#438EB9</option>
+                                        <option data-skin="skin-1" value="#222A2D">#222A2D</option>
+                                        <option data-skin="skin-2" value="#C6487E">#C6487E</option>
+                                        <option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+                                    </select>
+                                </div>
+                                <span>&nbsp; 选择皮肤</span>
+                            </div>
+
+                            <!-- /section:settings.skins -->
+
+                            <!-- #section:settings.navbar -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-navbar"/>
+                                <label class="lbl" for="ace-settings-navbar"> 固定导航条</label>
+                            </div>
+
+                            <!-- /section:settings.navbar -->
+
+                            <!-- #section:settings.sidebar -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-sidebar"/>
+                                <label class="lbl" for="ace-settings-sidebar"> 固定侧边栏</label>
+                            </div>
+
+                            <!-- /section:settings.sidebar -->
+
+                            <!-- #section:settings.breadcrumbs -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-breadcrumbs"/>
+                                <label class="lbl" for="ace-settings-breadcrumbs"> 固定面包屑</label>
+                            </div>
+
+                            <!-- /section:settings.breadcrumbs -->
+
+                            <!-- #section:settings.rtl -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl"/>
+                                <label class="lbl" for="ace-settings-rtl"> 切换至左边</label>
+                            </div>
+
+                            <!-- /section:settings.rtl -->
+
+                            <!-- #section:settings.container -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-add-container"/>
+                                <label class="lbl" for="ace-settings-add-container">
+                                    切换宽窄度
+                                </label>
+                            </div>
+
+                            <!-- /section:settings.container -->
+                        </div><!-- /.pull-left -->
+
+                        <div class="pull-left width-50">
+                            <!-- #section:basics/sidebar.options -->
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover"/>
+                                <label class="lbl" for="ace-settings-hover"> 子菜单收起</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact"/>
+                                <label class="lbl" for="ace-settings-compact"> 侧边栏紧凑</label>
+                            </div>
+
+                            <div class="ace-settings-item">
+                                <input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight"/>
+                                <label class="lbl" for="ace-settings-highlight"> 当前位置</label>
+                            </div>
+
+                            <!-- /section:basics/sidebar.options -->
+                        </div><!-- /.pull-left -->
+                    </div><!-- /.ace-settings-box -->
+                </div><!-- /.ace-settings-container -->
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form class="form-horizontal" id="form" method="post" action="{:U('update')}">
+
+                            <!-- PAGE CONTENT BEGINS -->
+
+                            <input type="hidden" name="aid" value="{$article.aid}" id="aid"/>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    姓名: </label>
+                                <div class="col-sm-9">
+                                    <!--<select id="sid" name="sid" class="col-xs-10 col-sm-5">-->
+                                    <!--<option value="0">&#45;&#45;姓名&#45;&#45;</option>-->
+                                    <!--{$category}-->
+                                    <!--</select>-->
+                                    <input type="text" name="truename" id="sid" class="col-xs-10 col-sm-5">
+                                    <!--<span class="help-inline col-xs-12 col-sm-7">-->
+                                    <!--<span class="middle">选择所属分类。</span>-->
+                                    <!--</span>-->
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    昵称:  </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="nickname" id="title" placeholder="昵称"
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    手机： </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="seotitle" placeholder="手机号"
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    工作地区： </label>
+                                <div class="col-sm-9">
+								<select class="col-xs-10 col-sm-5" name="workarea" id="keywords">
+									<option>北京</option>
+									<option>上海</option>
+									<option>广州</option>
+									<option>深圳</option>
+									<option>重庆</option>
+									<option>天津</option>
+									<option>广东</option>
+									<option>江苏</option>
+									<option>浙江</option>
+									<option>四川</option>
+									<option>福建</option>
+									<option>山东</option>
+									<option>湖北</option>
+									<option>河北</option>
+									<option>山西</option>
+									<option>内蒙古</option>
+									<option>辽宁</option>
+									<option>吉林</option>
+									<option>黑龙江</option>
+									<option>安徽</option>
+									<option>江西</option>
+									<option>河南</option>
+									<option>广西</option>
+									<option>海南</option>
+									<option>贵州</option>
+									<option>云南</option>
+									<option>西藏</option>
+									<option>陕西</option>
+									<option>甘肃</option>
+									<option>青海</option>
+									<option>宁夏</option>
+									<option>新疆</option>
+								</select>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+--------------------------------------------------------------------------------------------------------------------
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                    籍贯： </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5" name="workarea" id="keywords">
+										<option>北京</option>
+										<option>上海</option>
+										<option>广州</option>
+										<option>深圳</option>
+										<option>重庆</option>
+										<option>天津</option>
+										<option>广东</option>
+										<option>江苏</option>
+										<option>浙江</option>
+										<option>四川</option>
+										<option>福建</option>
+										<option>山东</option>
+										<option>湖北</option>
+										<option>河北</option>
+										<option>山西</option>
+										<option>内蒙古</option>
+										<option>辽宁</option>
+										<option>吉林</option>
+										<option>黑龙江</option>
+										<option>安徽</option>
+										<option>江西</option>
+										<option>河南</option>
+										<option>广西</option>
+										<option>海南</option>
+										<option>贵州</option>
+										<option>云南</option>
+										<option>西藏</option>
+										<option>陕西</option>
+										<option>甘肃</option>
+										<option>青海</option>
+										<option>宁夏</option>
+										<option>新疆</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-4">
+                                    月收入 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>2000元以下</option>
+										<option>2000-5000元</option>
+										<option>5000-10000元</option>
+										<option>10000-15000元</option>
+										<option>15000-20000元</option>
+										<option>20000-25000元</option>
+										<option>25000元以上</option>
+									</select> 
+                                </div>
+
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    身高 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>150以下</option>
+										<option>150-155</option>
+										<option>155-160</option>
+										<option>160-165</option>
+										<option>165-170</option>
+										<option>170-175</option>
+										<option>175-180</option>
+										<option>180-185</option>
+										<option>185-190</option>
+										<option>190以上</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    住房条件： </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    有无孩子 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>有子女</option>
+										<option>无子女</option>
+									</select> 
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    性别： </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>男</option>
+										<option>女</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    生日： </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5">
+										<option>1999</option>
+										<option>1998</option>
+										<option>1997</option>
+										<option>1996</option>
+										<option>1995</option>
+										<option>1994</option>
+										<option>1993</option>
+										<option>1992</option>
+										<option>1991</option>
+										<option>1990</option>
+										<option>1989</option>
+										<option>1988</option>
+										<option>1987</option>
+										<option>1986</option>
+										<option>1985</option>
+										<option>1984</option>
+										<option>1983</option>
+										<option>1982</option>
+										<option>1981</option>
+										<option>1980</option>
+										<option>1979</option>
+										<option>1978</option>
+										<option>1977</option>
+										<option>1976</option>
+										<option>1975</option>
+										<option>1974</option>
+										<option>1973</option>
+										<option>1972</option>
+										<option>1971</option>
+										<option>1970</option>
+										<option>1969</option>
+										<option>1968</option>
+										<option>1967</option>
+										<option>1966</option>
+										<option>1965</option>
+										<option>1964</option>
+										<option>1963</option>
+										<option>1962</option>
+										<option>1961</option>
+										<option>1960</option>
+									</select> 
+									年
+									<select class="col-xs-10 col-sm-5">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+									</select> 
+									月
+									<select class="col-xs-10 col-sm-5">
+										<option>1</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>9</option>
+										<option>10</option>
+										<option>11</option>
+										<option>12</option>
+										<option>13</option>
+										<option>14</option>
+										<option>15</option>
+										<option>16</option>
+										<option>17</option>
+										<option>18</option>
+										<option>19</option>
+										<option>20</option>
+										<option>21</option>
+										<option>22</option>
+										<option>23</option>
+										<option>24</option>
+										<option>25</option>
+										<option>26</option>
+										<option>27</option>
+										<option>28</option>
+										<option>29</option>
+										<option>30</option>
+										<option>31</option>
+									</select> 
+									日
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    年龄： </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>18岁</option>
+										<option>19岁</option>
+										<option>20岁</option>
+										<option>21岁</option>
+										<option>22岁</option>
+										<option>23岁</option>
+										<option>24岁</option>
+										<option>25岁</option>
+										<option>26岁</option>
+										<option>27岁</option>
+										<option>28岁</option>
+										<option>29岁</option>
+										<option>30岁</option>
+										<option>31岁</option>
+										<option>32岁</option>
+										<option>33岁</option>
+										<option>34岁</option>
+										<option>35岁</option>
+										<option>36岁</option>
+										<option>37岁</option>
+										<option>38岁</option>
+										<option>39岁</option>
+										<option>40岁</option>
+										<option>41岁</option>
+										<option>42岁</option>
+										<option>43岁</option>
+										<option>44岁</option>
+										<option>45岁</option>
+										<option>46岁</option>
+										<option>47岁</option>
+										<option>48岁</option>
+										<option>49岁</option>
+										<option>50岁</option>
+										<option>51岁</option>
+										<option>52岁</option>
+										<option>53岁</option>
+										<option>54岁</option>
+										<option>55岁</option>
+										<option>56岁</option>
+										<option>57岁</option>
+										<option>58岁</option>
+										<option>59岁</option>
+										<option>60岁</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    婚况 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>未婚</option>
+										<option>离异</option>
+										<option>丧偶</option>
+									</select> 
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    体重 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    民族 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>汉族</option>
+										<option>藏族</option>
+										<option>朝鲜族</option>
+										<option>蒙古族</option>
+										<option>回族</option>
+										<option>满族</option>
+										<option>维吾尔族</option>
+										<option>壮族</option>
+										<option>彝族</option>
+										<option>苗族</option>
+										<option>侗族</option>
+										<option>瑶族</option>
+										<option>白族</option>
+										<option>布依族</option>
+										<option>傣族</option>
+										<option>京族</option>
+										<option>黎族</option>
+										<option>羌族</option>
+										<option>怒族</option>
+										<option>佤族</option>
+										<option>水族</option>
+										<option>畲族</option>
+										<option>土族</option>
+										<option>阿昌族</option>
+										<option>哈尼族</option>
+										<option>高山族</option>
+										<option>哈尼族</option>
+										<option>景颇族</option>
+										<option>珞巴族</option>
+										<option>锡伯族</option>
+										<option>德昂(崩龙)族</option>
+										<option>保安族</option>
+										<option>基诺族</option>
+										<option>门巴族</option>
+										<option>毛南族</option>
+										<option>赫哲族</option>
+										<option>裕固族</option>
+										<option>撒拉族</option>
+										<option>独龙族</option>
+										<option>普米族</option>
+										<option>仫佬族</option>
+										<option>仡佬族</option>
+										<option>东乡族</option>
+										<option>拉祜族</option>
+										<option>土家族</option>
+										<option>纳西族</option>
+										<option>傈僳族</option>
+										<option>布朗族</option>
+										<option>哈萨克族</option>
+										<option>达斡尔族</option>
+										<option>鄂伦春族</option>
+										<option>鄂温克族</option>
+										<option>俄罗斯族</option>
+										<option>塔塔尔族</option>
+										<option>塔吉克族</option>
+										<option>柯尔克孜族</option>
+										<option>乌兹别克族</option>
+										<option>国外</option>
+									</select>                                   
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    生肖 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>鼠</option>
+										<option>牛</option>
+										<option>虎</option>
+										<option>兔</option>
+										<option>龙</option>
+										<option>蛇</option>
+										<option>马</option>
+										<option>羊</option>
+										<option>猴</option>
+										<option>鸡</option>
+										<option>狗</option>
+										<option>猪</option>
+									</select> 
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    星座 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>白羊座</option>
+										<option>金牛座</option>
+										<option>双子座</option>
+										<option>巨蟹座</option>
+										<option>狮子座</option>
+										<option>处女座</option>
+										<option>天秤座</option>
+										<option>天蝎座</option>
+										<option>射手座</option>
+										<option>摩羯座</option>
+										<option>水瓶座</option>
+										<option>双鱼座</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    血型 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>A型</option>
+										<option>B型</option>
+										<option>AB型</option>
+										<option>O型</option>
+										<option>不限</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    学历 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>大专</option>
+										<option>本科</option>
+										<option>研究生</option>
+										<option>博士生</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    是否吸烟 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>不吸烟</option>
+										<option>稍微抽一点儿</option>
+										<option>只在社交场合抽</option>
+										<option>抽的很多</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    是否喝酒 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>不喝酒</option>
+										<option>稍微喝一点</option>
+										<option>只在社交场合喝</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    是否购车 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>有车(有车贷)</option>
+										<option>有车(无车贷)</option>
+										<option>无车</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    厨艺 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>色香味俱全</option>
+										<option>能做几样可口的小菜</option>
+										<option>有待提高</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    家务 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>愿承担大部分家务</option>
+										<option>希望对方承担大部分家务</option>
+										<option>看各自忙闲，协商分担家务</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    较大消费 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>美食</option>
+										<option>服饰</option>
+										<option>化妆</option>
+										<option>健身</option>
+										<option>娱乐</option>
+										<option>旅行</option>
+										<option>社交</option>
+										<option>文化</option>
+										<option>自我提升</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    职业 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    公司类别 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>事业单位</option>
+										<option>国企</option>
+										<option>外资企业</option>
+										<option>私企</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的活动 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>电脑/网络</option>
+										<option>电子游戏</option>
+										<option>与朋友喝酒</option>
+										<option>品茗</option>
+										<option>看电影/电视</option>
+										<option>听音乐</option>
+										<option>乐器演奏</option>
+										<option>烹调</option>
+										<option>摄影</option>
+										<option>下棋/打牌</option>
+										<option>观光旅游</option>
+										<option>逛街购物</option>
+										<option>阅读写作</option>
+										<option>舞会/卡拉OK</option>
+										<option>各种收集活动</option>
+										<option>理财/投资</option>
+										<option>文艺表演</option>
+										<option>聊天</option>
+										<option>家务/手工艺</option>
+										<option>书法/绘画</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的体育运动 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>足球</option>
+										<option>排球</option>
+										<option>篮球</option>
+										<option>骑单车/摩托车</option>
+										<option>乒乓球</option>
+										<option>保龄球</option>
+										<option>健身/跑步</option>
+										<option>钓鱼</option>
+										<option>游泳/冲浪/潜水</option>
+										<option>网球</option>
+										<option>羽毛球</option>
+										<option>高尔夫</option>
+										<option>滑冰/滑雪</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的音乐 </label>
+                                <div class="col-sm-9">
+									<select class="col-xs-10 col-sm-5">
+										<option>中文流行音乐</option>
+										<option>轻音乐</option>
+										<option>民族音乐</option>
+										<option>老歌</option>
+										<option>舞曲</option>
+										<option>歌剧</option>
+										<option>西部乡村</option>
+										<option>交响乐</option>
+										<option>地方戏曲</option>
+										<option>摇滚</option>
+										<option>另类</option>
+										<option>灵歌</option>
+										<option>爵士/蓝调</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的影视节目 </label>
+                                <div class="col-sm-9">
+                                   <select class="col-xs-10 col-sm-5">
+										<option>故事片</option>
+										<option>文艺爱情</option>
+										<option>科幻</option>
+										<option>动作武侠</option>
+										<option>侦探推理</option>
+										<option>实验电影</option>
+										<option>老电影</option>
+										<option>限制级电影</option>
+										<option>儿童/卡通片</option>
+										<option>纪录片</option>
+										<option>西部电影</option>
+										<option>恐怖</option>
+										<option>得奖电影</option>
+										<option>艺术电影</option>
+										<option>音乐歌舞</option>
+										<option>肥皂剧</option>
+										<option>喜剧</option>
+										<option>其他</option>
+										<option>什么都看</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的食物 </label>
+                                <div class="col-sm-9">
+                                   <select class="col-xs-10 col-sm-5">
+										<option>川菜</option>
+										<option>浙江菜</option>
+										<option>湘菜</option>
+										<option>火锅</option>
+										<option>烧烤</option>
+										<option>家常菜</option>
+										<option>路边摊</option>
+										<option>健康食品</option>
+										<option>零食</option>
+										<option>粤菜</option>
+										<option>北方菜</option>
+										<option>面食</option>
+										<option>素食</option>
+										<option>甜食</option>
+										<option>自助餐</option>
+										<option>减肥餐</option>
+										<option>能填饱肚子就好</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的地方 </label>
+                                <div class="col-sm-9">
+                                     <select class="col-xs-10 col-sm-5">
+										<option>都市</option>
+										<option>村庄</option>
+										<option>小镇</option>
+										<option>山区</option>
+										<option>办公室/学校</option>
+										<option>游乐场</option>
+										<option>购物中心</option>
+										<option>我家/我的房间</option>
+										<option>海滨</option>
+										<option>岛屿</option>
+										<option>沙漠</option>
+										<option>雪野</option>
+										<option>图书馆/书店</option>
+										<option>展览馆</option>
+										<option>宗教圣地</option>
+										<option>古迹</option>
+										<option>森林</option>
+										<option>公园</option>
+										<option>咖啡厅/酒吧</option>
+										<option>动物园</option>
+										<option>夜市赶集</option>
+										<option>各种俱乐部</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+							<div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的宠物 </label>
+                                <div class="col-sm-9">
+                                   <select class="col-xs-10 col-sm-5">
+										<option>狗</option>
+										<option>猫</option>
+										<option>鱼</option>
+										<option>兔</option>
+										<option>鸟</option>
+										<option>乌龟</option>
+										<option>蜥蜴</option>
+										<option>鼠</option>
+										<option>蛇</option>
+										<option>另类宠物</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    何时想结婚 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5">
+										<option>认同上闪婚</option>
+										<option>一年内</option>
+										<option>两年内</option>
+										<option>三年内</option>
+										<option>时机成熟就结婚</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    婚后与父母住吗 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5">
+										<option>与自己父母同住</option>
+										<option>不与自己父母同住</option>
+										<option>尊重伴侣意见</option>
+										<option>视情况而定</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    兄弟姐妹 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5">
+										<option>独生子女</option>
+										<option>2</option>
+										<option>3</option>
+										<option>4</option>
+										<option>5</option>
+										<option>6</option>
+										<option>7</option>
+										<option>8</option>
+										<option>更多</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z性别 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5">
+										<option>男</option>
+										<option>女</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z年龄 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5">
+										<option>18-25岁</option>
+										<option>25-30岁</option>
+										<option>30-35岁</option>
+										<option>35-40岁</option>
+										<option>40-45岁</option>
+										<option>45-50岁</option>
+										<option>50-55岁</option>
+										<option>55-60岁</option>
+										<option>不限</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z籍贯 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" >
+										<option>北京</option>
+										<option>上海</option>
+										<option>广州</option>
+										<option>深圳</option>
+										<option>重庆</option>
+										<option>天津</option>
+										<option>广东</option>
+										<option>江苏</option>
+										<option>浙江</option>
+										<option>四川</option>
+										<option>福建</option>
+										<option>山东</option>
+										<option>湖北</option>
+										<option>河北</option>
+										<option>山西</option>
+										<option>内蒙古</option>
+										<option>辽宁</option>
+										<option>吉林</option>
+										<option>黑龙江</option>
+										<option>安徽</option>
+										<option>江西</option>
+										<option>河南</option>
+										<option>广西</option>
+										<option>海南</option>
+										<option>贵州</option>
+										<option>云南</option>
+										<option>西藏</option>
+										<option>陕西</option>
+										<option>甘肃</option>
+										<option>青海</option>
+										<option>宁夏</option>
+										<option>新疆</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z婚况 </label>
+                                <div class="col-sm-9">
+                                   <select class="col-xs-10 col-sm-5" name="workarea" id="keywords">
+										<option>未婚</option>
+										<option>离异</option>
+										<option>丧偶</option>
+										<option>不限</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z学历 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="workarea" id="keywords">
+										<option>大专</option>
+										<option>本科</option>
+										<option>研究生</option>
+										<option>博士生</option>
+										<option>其他</option>
+									</select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+-------------------------------------------------------------------------------------------
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z月收入 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z有无孩子 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z是否购车 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z是否购房 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z身高 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z有无照片 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z体型 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z职业 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z民族 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z是否想要孩子 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z是否吸烟 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z是否喝酒 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="" id="" placeholder=""
+                                           class="col-xs-10 col-sm-5">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info submit" type="button">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+
+                            <!-- PAGE CONTENT ENDS -->
+
+
+                        </form>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+
+    <div class="footer">
+        <div class="footer-inner">
+            <!-- #section:basics/footer -->
+            <div class="footer-content">
+                            <span class="bigger-120">
+                                <small>Copyright &copy; 2015 <a href="http://www.qiawei.com" target="_blank">恰维网络</a> All Rights Reserved.</small>
+                            </span>
+            </div>
+
+            <!-- /section:basics/footer -->
+        </div>
+    </div>
+
+    <a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+        <i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+    </a>
+</div><!-- /.main-container -->
+
+<!-- basic scripts -->
+
+<!--[if !IE]> -->
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='js/jquery.js'>" + "<" + "/script>");
+</script>
+
+<!-- <![endif]-->
+
+<!--[if IE]>
+<script type="text/javascript">
+    window.jQuery || document.write("<script src='js/jquery1x.js'>" + "<" + "/script>");
+</script>
+<![endif]-->
+<script type="text/javascript">
+    if ('ontouchstart' in document.documentElement) document.write("<script src='js/jquery.mobile.custom.js'>" + "<" + "/script>");
+</script>
+<script src="js/bootstrap.js"></script>
+
+<!-- page specific plugin scripts -->
+<script charset="utf-8" src="kindeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="kindeditor/lang/zh_CN.js"></script>
+<script src="js/bootbox.js"></script>
+<!-- ace scripts -->
+<script src="js/ace/elements.scroller.js"></script>
+<script src="js/ace/elements.colorpicker.js"></script>
+<script src="js/ace/elements.fileinput.js"></script>
+<script src="js/ace/elements.typeahead.js"></script>
+<script src="js/ace/elements.wysiwyg.js"></script>
+<script src="js/ace/elements.spinner.js"></script>
+<script src="js/ace/elements.treeview.js"></script>
+<script src="js/ace/elements.wizard.js"></script>
+<script src="js/ace/elements.aside.js"></script>
+<script src="js/ace/ace.js"></script>
+<script src="js/ace/ace.ajax-content.js"></script>
+<script src="js/ace/ace.touch-drag.js"></script>
+<script src="js/ace/ace.sidebar.js"></script>
+<script src="js/ace/ace.sidebar-scroll-1.js"></script>
+<script src="js/ace/ace.submenu-hover.js"></script>
+<script src="js/ace/ace.widget-box.js"></script>
+<script src="js/ace/ace.settings.js"></script>
+<script src="js/ace/ace.settings-rtl.js"></script>
+<script src="js/ace/ace.settings-skin.js"></script>
+<script src="js/ace/ace.widget-on-reload.js"></script>
+<script src="js/ace/ace.searchbox-autocomplete.js"></script>
+<script src="js/jquery-ui.js"></script>
+
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    $(function () {
+        $("#tabs").tabs();
+        var editor = KindEditor.create('textarea[name="content"]', {
+            uploadJson: 'kindeditor/php/upload_json.php',
+            fileManagerJson: 'kindeditor/php/file_manager_json.php',
+            allowFileManager: true,
+            afterBlur: function () {
+                this.sync();
+            }
+        });
+        $(".submit").click(function () {
+            var sid = $("#sid").val();
+            var title = $("#title").val();
+            var content = $("#content").val();
+            if (sid == 0) {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "文章分类必须选择。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+            }
+            if (title == '') {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "文章标题必须填写。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+            }
+            if (content == '') {
+                bootbox.dialog({
+                    title: '友情提示：',
+                    message: "文章内容需要填写。",
+                    buttons: {
+                        "success": {
+                            "label": "确定",
+                            "className": "btn-danger"
+                        }
+                    }
+                });
+                return;
+                return;
+            }
+            $("#form").submit();
+        });
+    });
+</script>
+</body>
+</html>

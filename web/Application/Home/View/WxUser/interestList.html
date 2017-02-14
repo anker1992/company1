@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <link rel="stylesheet" href="__PUBLIC__/csswx/amazeui.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/csswx/interestList.css"/>
+</head>
+<body>
+<div id="main">
+    <div class="header">
+        <h2><a href="{:U('interest',array('phone'=>$_GET['phone'],'uid'=>$_GET['uid']))}" ><span></span>个人标签</a></h2>
+    </div>
+    <form action="{:U('add_label')}" method="post">
+        <input type="hidden" value="{$Think.get.phone}" name="phone">
+        <input type="hidden" value="{$Think.get.uid}" name="uid">
+        <input type="hidden" value="{$best}" name="best">
+        <div class="item-con">
+            <foreach name="new_list" item="list">
+                <if condition="$list['list'] eq null">
+                <else/>
+                    <div class="item">
+                        <if condition="$list['status'] eq 1">
+                            <input type="checkbox" checked="checked" name="label_value[]" value="{$list.list}"/>
+                            <label>{$list.list}</label>
+                            <i class="cur"></i>
+                         <else/>
+                            <input type="checkbox" name="label_value[]" value="{$list.list}"/>
+                            <label>{$list.list}</label>
+                            <i></i>
+                        </if>
+                    </div>
+                </if>
+            </foreach>
+        </div>
+
+        <div class="submit">
+            <input type="submit" value="提交"/>
+        </div>
+    </form>
+</div>
+<script type="text/javascript" src="__PUBLIC__/jswx/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".item-con .item").click(function(){
+            var oInput = $(this).find("input");
+            var oI = $(this).find("i");
+            if(oInput.attr("checked") == "checked"){
+                oInput.removeAttr("checked");
+                oI.removeClass("cur");
+            }else{
+                oInput.attr("checked","checked");
+                oI.addClass("cur");
+            }
+
+        })
+    })
+</script>
+</body>
+</html>

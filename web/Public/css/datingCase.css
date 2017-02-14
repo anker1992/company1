@@ -1,0 +1,115 @@
+@charset "utf-8";
+.datingCase-top span{
+    display: block;
+    height: 222px;
+    width: 100%;
+    min-width: 1230px;
+    background: url("../images/datingCase-top.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.datingCase-top img{
+    position: absolute;
+    top: 91px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    min-width: 1230px;
+    height: 222px;
+}
+
+.datingCase-con .container{
+    padding-top: 30px;
+    width: 1200px;
+    min-width: 1200px;
+    overflow: hidden;
+}
+.datingCase-con .container .list-outer{
+    width: 1225px;
+}
+.datingCase-con .container .list-outer ul li{
+    width: 253px;
+    height: 320px;
+    float: left;
+    margin: 0 20px 20px 0;
+    padding: 15px;
+    border: 1px solid #d9d9d9;
+}
+.datingCase-con .container .list-outer ul li h4{
+    color: #ff6269;
+    font-size: 16px;
+    font-weight: normal;
+}
+.datingCase-con .container .list-outer ul li .info{
+    padding: 8px 0;
+    border-bottom: 1px dashed #bdbdbd;
+    margin-bottom: 10px;
+}
+.datingCase-con .container .list-outer ul li p{
+    font-size: 12px;
+    color: #bdbdbd;
+}
+.datingCase-con .container .list-outer ul li span{
+    font-size: 12px;
+    color: #bdbdbd;
+}
+.datingCase-con .container .list-outer ul li p.state span{
+    color: #ff6269;
+}
+.datingCase-con .container .list-outer ul li .img{
+    width: 253px;
+    height: 169px;
+    overflow: hidden;
+}
+.datingCase-con .container .list-outer ul li .img img{
+    width: 253px;
+    height: 169px;
+}
+.datingCase-con .container .list-outer ul li div.des{
+    height: 80px;
+    margin-top: 5px;
+    overflow: hidden;
+}
+.datingCase-con .container .list-outer ul li div.des p{
+    color: #3e3e3e;
+    line-height: 20px;
+}
+
+
+.datingCase-con .paging-list{
+    margin: 100px 0;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    *clear:both;
+}
+.datingCase-con .paging-list a{
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+    color: #8e8e8e;
+}
+.datingCase-con .paging-list ul{
+    display:inline;
+    *position:relative;
+    *top: -10px;
+    /* display: inline-block;*/
+}
+.datingCase-con .paging-list ul li{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #f2f2f2;
+    color: #8e8e8e;
+    *width:40px;
+    *height:40px;
+    *line-height:40px;
+    *display:inline;
+    margin-right: 10px;
+}
+.datingCase-con .paging-list a:hover,.datingCase-con .paging-list ul li:hover,.datingCase-con .paging-list ul li.cur,.datingCase-con .paging-list a.cur{
+    background-color: #e50012;
+    color: #fff;
+}

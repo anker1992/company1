@@ -1,0 +1,427 @@
+<?php if (!defined('THINK_PATH')) exit();?><!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="/Public/csswx/amazeui.min.css"/>
+    <link rel="stylesheet" href="/Public/csswx/userCenter.css"/>
+    <link rel="stylesheet" href="/Public/csswx/personalData.css"/>
+
+</head>
+<body class="bg-white">
+<div class="main-content">
+    <div class="gray-title-bar">
+        <a href="<?php echo U('WxUser/edit_index',array('phone'=>$phone,'uid'=>$uid));?>">
+            <b class="left"><i class="left-arrow1"></i><i class="left-arrow2"></i></b>
+            <span>基本信息</span>
+        </a>
+    </div>
+    <form action="<?php echo U('WxUser/update',array('phone'=>$phone,'uid'=>$uid));?>" method="post" >
+        <input type="hidden" id="phone" name="phone" value="<?php echo ($phone); ?>">
+        <input type="hidden" id="uid" name="uid" value="<?php echo ($uid); ?>">
+    <div class="user-avatar-box">
+        <?php if($list['touxiang_src'] == '' | $list['touxiang_src'] == 'NULL'): ?><img id="avatar-img" src="/Public/imageswx/icon-avatar.png" alt=""/>
+        <?php else: ?>
+            <img id="avatar-img" src="<?php echo ($list['touxiang_src']); ?>" alt=""/><?php endif; ?>
+        <!--<textarea id="avatar-input" hidden="hidden" name="src" ></textarea>-->
+    </div>
+
+        <div class="user-items-content">
+            <!--姓名-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">姓名</p>
+                <input class="edit-items-inputs" type="text" value="<?php echo ($list["nickname"]); ?>" name="nickname" placeholder="请输入您的姓名"/>
+            </div>
+            <!--生日-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">生日</p>
+                <input class="edit-items-inputs" value="<?php echo ($list["birthday"]); ?>" name="birthday" type="date"/>
+            </div>
+            <!--年龄-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">年龄</p>
+                <select class="edit-items-inputs"  name="age" id="edit-age">
+                    <?php if(!empty($list['age'])): ?><option value="<?php echo ($list["age"]); ?>"><?php echo ($list["age"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="18以下">18以下</option>
+                    <?php $__FOR_START_1432600415__=18;$__FOR_END_1432600415__=61;for($i=$__FOR_START_1432600415__;$i < $__FOR_END_1432600415__;$i+=1){ ?><option value="<?php echo ($i); ?>"><?php echo ($i); ?></option><?php } ?>
+                    <option value="60以上">60以上</option>
+                </select>
+            </div>
+            <!--身高-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">身高</p>
+                <select class="edit-items-inputs"  name="height" id="edit-height">
+                    <?php if(!empty($list['height'])): ?><option value="<?php echo ($list["height"]); ?>"><?php echo ($list["height"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="150以下">150以下</option>
+                    <?php $__FOR_START_232878914__=150;$__FOR_END_232878914__=201;for($i=$__FOR_START_232878914__;$i < $__FOR_END_232878914__;$i+=1){ ?><option value="<?php echo ($i); ?>"><?php echo ($i); ?></option><?php } ?>
+                    <option value="200以上">200以上</option>
+                </select>
+            </div>
+            <!--生肖-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">生肖</p>
+                <select class="edit-items-inputs"  name="tweleveanimals" id="edit-tweleveanimals">
+                    <?php if(!empty($list['tweleveanimals'])): ?><option value="<?php echo ($list["tweleveanimals"]); ?>"><?php echo ($list["tweleveanimals"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="鼠">鼠</option>
+                    <option value="牛">牛</option>
+                    <option value="虎">虎</option>
+                    <option value="兔">兔</option>
+                    <option value="龙">龙</option>
+                    <option value="蛇">蛇</option>
+                    <option value="马">马</option>
+                    <option value="羊">羊</option>
+                    <option value="猴">猴</option>
+                    <option value="鸡">鸡</option>
+                    <option value="狗">狗</option>
+                    <option value="猪">猪</option>
+                </select>
+            </div>
+            <!--星座-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">星座</p>
+                <select class="edit-items-inputs"  name="constellation" id="edit-constellation">
+                    <?php if(!empty($list['constellation'])): ?><option value="<?php echo ($list["constellation"]); ?>"><?php echo ($list["constellation"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="白羊座">白羊座</option>
+                    <option value="金牛座">金牛座</option>
+                    <option value="双子座">双子座</option>
+                    <option value="巨蟹座">巨蟹座</option>
+                    <option value="狮子座">狮子座</option>
+                    <option value="处女座">处女座</option>
+                    <option value="天秤座">天秤座</option>
+                    <option value="天蝎座">天蝎座</option>
+                    <option value="射手座">射手座</option>
+                    <option value="摩羯座">摩羯座</option>
+                    <option value="水瓶座">水瓶座</option>
+                    <option value="双鱼座">双鱼座</option>
+                </select>
+            </div>
+            <!--籍贯-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">籍贯</p>
+                <select class="edit-items-inputs"  name="hukou" id="edit-hukou">
+                    <?php if(!empty($list['hukou'])): ?><option value="<?php echo ($list["hukou"]); ?>"><?php echo ($list["hukou"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="北京">北京</option>
+                    <option value="上海">上海</option>
+                    <option value="广州">广州</option>
+                    <option value="深圳">深圳</option>
+
+                    <option value="重庆">重庆</option>
+                    <option value="天津">天津</option>
+                    <option value="广东">广东</option>
+                    <option value="江苏">江苏</option>
+
+                    <option value="浙江">浙江</option>
+                    <option value="四川">四川</option>
+                    <option value="福建">福建</option>
+                    <option value="山东">山东</option>
+
+                    <option value="湖北">湖北</option>
+                    <option value="河北">河北</option>
+                    <option value="山西">山西</option>
+                    <option value="内蒙古">内蒙古</option>
+
+                    <option value="辽宁">辽宁</option>
+                    <option value="吉林">吉林</option>
+                    <option value="黑龙江">黑龙江</option>
+                    <option value="安徽">安徽</option>
+
+                    <option value="江西">江西</option>
+                    <option value="河南">河南</option>
+                    <option value="湖南">湖南</option>
+                    <option value="广西">广西</option>
+
+                    <option value="海南">海南</option>
+                    <option value="贵州">贵州</option>
+                    <option value="云南">云南</option>
+                    <option value="西藏">西藏</option>
+
+                    <option value="陕西">陕西</option>
+                    <option value="甘肃">甘肃</option>
+                    <option value="青海">青海</option>
+                    <option value="宁夏">宁夏</option>
+
+                    <option value="新疆">新疆</option>
+                </select>
+            </div>
+            <!--常住地-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">所在地</p>
+                <select class="edit-items-inputs"  name="workarea" id="edit-workarea">
+                    <?php if(!empty($list['workarea'])): ?><option value="<?php echo ($list["workarea"]); ?>"><?php echo ($list["workarea"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="北京">北京</option>
+                    <option value="上海">上海</option>
+                    <option value="广州">广州</option>
+                    <option value="深圳">深圳</option>
+
+                    <option value="重庆">重庆</option>
+                    <option value="天津">天津</option>
+                    <option value="广东">广东</option>
+                    <option value="江苏">江苏</option>
+
+                    <option value="浙江">浙江</option>
+                    <option value="四川">四川</option>
+                    <option value="福建">福建</option>
+                    <option value="山东">山东</option>
+
+                    <option value="湖北">湖北</option>
+                    <option value="河北">河北</option>
+                    <option value="山西">山西</option>
+                    <option value="内蒙古">内蒙古</option>
+
+                    <option value="辽宁">辽宁</option>
+                    <option value="吉林">吉林</option>
+                    <option value="黑龙江">黑龙江</option>
+                    <option value="安徽">安徽</option>
+
+                    <option value="江西">江西</option>
+                    <option value="河南">河南</option>
+                    <option value="湖南">湖南</option>
+                    <option value="广西">广西</option>
+
+                    <option value="海南">海南</option>
+                    <option value="贵州">贵州</option>
+                    <option value="云南">云南</option>
+                    <option value="西藏">西藏</option>
+
+                    <option value="陕西">陕西</option>
+                    <option value="甘肃">甘肃</option>
+                    <option value="青海">青海</option>
+                    <option value="宁夏">宁夏</option>
+
+                    <option value="新疆">新疆</option>
+                </select>
+            </div>
+            <!--民族-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">民族</p>
+                <select class="edit-items-inputs"  name="nation" id="edit-nation">
+                    <?php if(!empty($list['nation'])): ?><option value="<?php echo ($list["nation"]); ?>"><?php echo ($list["nation"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="汉族">汉族</option>
+                    <option value="藏族">藏族</option>
+                    <option value="朝鲜族">朝鲜族</option>
+                    <option value="蒙古族">蒙古族</option>
+                    <option value="回族">回族</option>
+                    <option value="满族">满族</option>
+                    <option value="维吾尔族">维吾尔族</option>
+                    <option value="壮族">壮族</option>
+                    <option value="彝族">彝族</option>
+                    <option value="苗族">苗族</option>
+                    <option value="侗族">侗族</option>
+                    <option value="瑶族">瑶族</option>
+                    <option value="白族">白族</option>
+                    <option value="布依族">布依族</option>
+                    <option value="傣族">傣族</option>
+                    <option value="京族">京族</option>
+                    <option value="黎族">黎族</option>
+                    <option value="羌族">羌族</option>
+                    <option value="怒族">怒族</option>
+                    <option value="佤族">佤族</option>
+                    <option value="水族">水族</option>
+                    <option value="畲族">畲族</option>
+                    <option value="土族">土族</option>
+                    <option value="阿昌族">阿昌族</option>
+                    <option value="哈尼族">哈尼族</option>
+                    <option value="高山族">高山族</option>
+                    <option value="景颇族">景颇族</option>
+                    <option value="珞巴族">珞巴族</option>
+                    <option value="锡伯族">锡伯族</option>
+                    <option value="德昂(崩龙)族">德昂(崩龙)族</option>
+                    <option value="保安族">保安族</option>
+                    <option value="基诺族">基诺族</option>
+                    <option value="门巴族">门巴族</option>
+                    <option value="毛南族">毛南族</option>
+                    <option value="赫哲族">赫哲族</option>
+                    <option value="裕固族">裕固族</option>
+                    <option value="撒拉族">撒拉族</option>
+                    <option value="独龙族">独龙族</option>
+                    <option value="普米族">普米族</option>
+                    <option value="仫佬族">仫佬族</option>
+                    <option value="仡佬族">仡佬族</option>
+                    <option value="东乡族">东乡族</option>
+                    <option value="拉祜族">拉祜族</option>
+                    <option value="土家族">土家族</option>
+                    <option value="纳西族">纳西族</option>
+                    <option value="傈僳族">傈僳族</option>
+                    <option value="布朗族">布朗族</option>
+                    <option value="哈萨克族">哈萨克族</option>
+                    <option value="达斡尔族">达斡尔族</option>
+                    <option value="鄂伦春族">鄂伦春族</option>
+                    <option value="鄂温克族">鄂温克族</option>
+                    <option value="俄罗斯族">俄罗斯族</option>
+                    <option value="塔塔尔族">塔塔尔族</option>
+                    <option value="塔吉克族">塔吉克族</option>
+                    <option value="柯尔克孜族">柯尔克孜族</option>
+                    <option value="乌兹别克族">乌兹别克族</option>
+                    <option value="国外">国外</option>
+                </select>
+            </div>
+            <!--学历-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">学历</p>
+                <select class="edit-items-inputs"  name="education" id="edit-education">
+                    <?php if(!empty($list['education'])): ?><option value="<?php echo ($list["education"]); ?>"><?php echo ($list["education"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="大专">大专</option>
+                    <option value="本科">本科</option>
+                    <option value="研究生">研究生</option>
+                    <option value="博士生">博士生</option>
+                    <option value="其他">其他</option>
+                </select>
+            </div>
+            <!--职业-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">职业</p>
+                <select class="edit-items-inputs"  name="profession" id="edit-profession">
+                    <?php if(!empty($list['profession'])): ?><option value="<?php echo ($list["profession"]); ?>"><?php echo ($list["profession"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="销售">销售</option>
+                    <option value="房地产">房地产</option>
+                    <option value="金融">金融</option>
+                    <option value="物流">物流</option>
+                    <option value="IT">IT</option>
+                    <option value="咨询">咨询</option>
+                    <option value="医药/健康">医药/健康</option>
+                    <option value="教育/科研">教育/科研</option>
+                    <option value="文化/艺术">文化/艺术</option>
+                    <option value="影视/娱乐">影视/娱乐</option>
+                    <option value="媒体/公关">媒体/公关</option>
+                    <option value="零售">零售</option>
+                    <option value="学生">学生</option>
+                    <option value="其他">其他</option>
+                </select>
+            </div>
+            <!--月收入-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">月收入</p>
+                <select class="edit-items-inputs"  name="salary" id="edit-salary">
+                    <?php if(!empty($list['salary'])): ?><option value="<?php echo ($list["salary"]); ?>"><?php echo ($list["salary"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="2000元以下">2000元以下</option>
+                    <option value="2000-5000元">2000-5000元</option>
+                    <option value="5000-10000元">5000-10000元</option>
+                    <option value="10000-15000元">10000-15000元</option>
+                    <option value="15000-20000元">15000-20000元</option>
+                    <option value="20000-25000元">20000-25000元</option>
+                    <option value="25000元以上">25000元以上</option>
+                </select>
+            </div>
+            <!--婚姻状况-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">婚姻状况</p>
+                <select class="edit-items-inputs"  name="maritalstatus" id="edit-maritalstatus">
+                    <?php if(!empty($list['maritalstatus'])): ?><option value="<?php echo ($list["maritalstatus"]); ?>"><?php echo ($list["maritalstatus"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="未婚">未婚</option>
+                    <option value="离异">离异</option>
+                    <option value="丧偶">丧偶</option>
+                </select>
+            </div>
+            <!--是否有房-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">是否有房</p>
+                <select class="edit-items-inputs"  name="ifbuyhouse" id="edit-ifbuyhouse">
+                    <?php if(!empty($list['ifbuyhouse'])): ?><option value="<?php echo ($list["ifbuyhouse"]); ?>"><?php echo ($list["ifbuyhouse"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="有房(有房贷)">有房(有房贷)</option>
+                    <option value="有房(无房贷)">有房(无房贷)</option>
+                    <option value="无房">无房</option>
+                </select>
+            </div>
+            <!--购车情况-->
+            <div class="user-center-items1">
+                <p class="edit-items-titles">购车情况</p>
+                <select class="edit-items-inputs"  name="ifbuycar" id="edit-ifbuycar">
+                    <?php if(!empty($list['ifbuycar'])): ?><option value="<?php echo ($list["ifbuycar"]); ?>"><?php echo ($list["ifbuycar"]); ?></option><?php endif; ?>
+                    <option value="">请选择</option>
+                    <option value="有车(有车贷)">有车(有车贷)</option>
+                    <option value="有车(无车贷)">有车(无车贷)</option>
+                    <option value="无车">无车</option>
+                </select>
+            </div>
+        </div>
+        <div style="height: 100px;;"></div>
+        <input class="edit-complete-button" type="submit" value="确定"/>
+    </form>
+</div>
+<article class="htmleaf-container">
+    <div id="clipArea"></div>
+    <div class="foot-use">
+        <div class="uploader1 blue">
+            <input type="button" name="file" class="button" value="打开图库"/>
+            <input id="file" type="file" onchange="setImagePreview();" accept="image/*" multiple/>
+        </div>
+        <button id="clipBtn">保存</button>
+    </div>
+    <div id="view"></div>
+</article>
+
+<script type="text/javascript" src="/Public/jswx/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/Public/jswx/amazeui.min.js"></script>
+<script type="text/javascript" src="/Public/jswx/iscroll-zoom.js"></script>
+<script type="text/javascript" src="/Public/jswx/hammer.js"></script>
+<script type="text/javascript" src="/Public/jswx/jquery.photoClip.js"></script>
+<script type="text/javascript">
+
+
+    $("#clipArea").photoClip({
+        width: 320,
+        height: 320,
+        file: "#file",
+        view: "#view",
+        ok: "#clipBtn"
+    });
+    function setImagePreview() {
+        var preview = document.getElementById("preview");
+        var file_head = document.getElementById("file");
+        var picture = file_head.value;
+//        if (!picture.match(/.jpg|.gif|.png|.bmp|.jpeg|.svg|.tlff|.psd|.swf|.pcx|.dxf|.wmf|.emf|.lic|.eps|.tga/i))
+//            return alert("您上传的图片格式不正确，请重新选择！");
+        if (preview && file_head.files && file_head.files[0])
+            preview.style.display = "block",
+                    preview.style.width = "63px",
+                    preview.style.height = "63px",
+                    preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);
+        //return document.getElementById("DivUp").style.display = "block";
+    }
+
+    $("#avatar-img").click(function () {
+        $(".htmleaf-container").show();
+    });
+    $(function () {
+        $("#clipBtn").click(function () {
+
+            $("#avatar-img").attr("src", imgsource);
+
+
+            //$("#avatar-input").val(imgsource);
+
+            $(".htmleaf-container").hide();
+
+            var uid = $('#uid').val();
+            var phone = $('#phone').val();
+            $.ajax({
+                cache: true,
+                type: "POST",
+                url: "<?php echo U('add_av_img');?>",
+                data:{src:imgsource,'uid':uid,'phone':phone},
+                async: true,
+                error: function (request) {
+                },
+                success: function (data) {
+                    
+                }
+            });
+        });
+    });
+
+</script>
+</body>
+</html>

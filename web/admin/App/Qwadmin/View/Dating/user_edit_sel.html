@@ -1,0 +1,562 @@
+<include file="Public/head"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form class="form-horizontal" id="form" method="post" action="{:U('Dating/update')}" enctype="multipart/form-data">
+
+                            <!-- PAGE CONTENT BEGINS -->
+                            <input type="hidden" name="id" value="{$_GET['id']}" id="id"/>
+                            <!--真实姓名-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-0">
+                                    真实姓名（可不填） </label>
+                                <div class="col-sm-9">
+                                    <input readonly type="text" name="truename" id="sid" class="col-xs-10 col-sm-5" value="{$lsit.truename}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--昵称-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    昵称（必填）  </label>
+                                <div class="col-sm-9">
+                                    <input readonly type="text" name="nickname" id="title" placeholder="昵称"
+                                           class="col-xs-10 col-sm-5" value="{$list.nickname}">
+                                </div>
+                            </div>
+                            <!--头像-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    头像  </label>
+                                <div class="col-sm-2"><img src="{$list['touxiang_src']}" alt="" style="height:100px;"></div>
+                            </div>
+                            <!--手机-->
+                            <d1iv class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1">
+                                    手机 </label>
+                                <div class="col-sm-9">
+                                    <input readonly type="text" name="phone" class="col-xs-10 col-sm-5" value="{$list.gl_phone}">
+                                </div>
+                            </d1iv>
+                            <div class="space-4"></div>
+                            <!--工作地区-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    工作地区 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="workarea" id="">
+                                        <option value="{$list.workarea}">{$list.workarea}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--籍贯-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-3">
+                                    户口 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="hukou">
+                                        <option value="{$list.hukou}">{$list.hukou}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--月收入-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-4">
+                                    月收入 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="salary">
+                                        <option value="{$list.salary}">{$list.salary}</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="space-4"></div>
+                            <!--身高-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    身高 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="height">
+                                        <option value="{$list.height}">{$list.height}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--有无孩子-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    有无孩子 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="ifhaschild">
+                                        <option value="{$list.ifhaschild}">{$list.ifhaschild}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--性别-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    性别 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="sex">
+                                        <if condition="$list['sex'] eq 1">
+                                            <option value="1">男</option>
+                                        </if>
+                                        <if condition="$list['sex'] eq 0">
+                                            <option value="0">女</option>
+                                        </if>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--生日-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    生日 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="year">
+                                        <option value="{$list.year}年">{$list.year}</option>
+                                    </select>
+                                    <select class="col-xs-10 col-sm-5" name="month">
+                                        <option value="{$list.month}">{$list.month}</option>
+                                    </select>
+                                    <select class="col-xs-10 col-sm-5" name="day">
+                                        <option value="{$list.day}">{$list.day}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--年龄-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    年龄 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="age">
+                                        <option value="{$list.age}">{$list.age}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--婚况-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    婚况 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="maritalstatus">
+                                        <option value="{$list.maritalstatus}">{$list.maritalstatus}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--体重-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    体重 </label>
+                                <div class="col-sm-9">
+                                    <input readonly type="text" name="weight" placeholder=""
+                                           class="col-xs-10 col-sm-5" value="{$list.weight}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--民族-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    民族 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="nation">
+                                        <option value="{$list.nation}">{$list.nation}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--生肖-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    生肖 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="tweleveanimals">
+                                        <option value="{$list.tweleveanimals}">{$list.tweleveanimals}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--星座-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    星座 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="constellation">
+                                        <option value="{$list.constellation}">{$list.constellation}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--血型-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    血型 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="bloodtype">
+                                        <option value="{$list.bloodtype}">{$list.bloodtype}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--学历-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    学历 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="education">
+                                        <option value="{$list.education}">{$list.education}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--是否吸烟-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    是否吸烟 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="ifsmoke">
+                                        <option value="{$list.ifsmoke}">{$list.ifsmoke}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--是否喝酒-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    是否喝酒 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="ifdrink">
+                                        <option value="{$list.ifdrink}">{$list.ifdrink}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--是否购房-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    是否购房 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="ifbuyhouse">
+                                        <option value="{$list.ifbuyhouse}">{$list.ifbuyhouse}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!--是否购车-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    是否购车 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="ifbuycar">
+                                        <option value="{$list.ifbuycar}">{$list.ifbuycar}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--厨艺-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    厨艺 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="cookingskils">
+                                        <option value="{$list.cookingskils}">{$list.cookingskils}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--家务-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    家务 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="housework">
+                                        <option value="{$list.housework}">{$list.housework}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--较大消费-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    较大消费 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="greaterconsumption">
+                                        <option value="{$list.greaterconsumption}">{$list.greaterconsumption}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--职业-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    职业 </label>
+                                <div class="col-sm-9">
+                                    <select class="edit-items-inputs"  name="profession" id="edit-profession">
+                                        <if condition="!empty($list['profession'])">
+                                            <option value="{$list.profession}">{$list.profession}</option>
+                                        </if>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--公司类别-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    公司类别 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="companytype">
+                                        <option value="{$list.companytype}">{$list.companytype}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--喜欢的活动-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的活动 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="loveactivity">
+                                        <option value="{$list.loveactivity}">{$list.loveactivity}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--喜欢的体育运动-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的体育运动 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="lovesport">
+                                        <option value="{$list.lovesport}">{$list.lovesport}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--喜欢的音乐-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的音乐 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="lovemusic">
+                                        <option value="{$list.lovemusic}">{$list.lovemusic}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--喜欢的影视节目-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的影视节目 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="lovefilmprogram">
+                                        <option value="{$list.lovefilmprogram}">{$list.lovefilmprogram}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--喜欢的食物-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的食物 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="lovefood">
+                                        <option value="{$list.lovefood}">{$list.lovefood}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--喜欢的地方-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的地方 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="lovespace">
+                                        <option value="{$list.lovespace}">{$list.lovespace}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--喜欢的宠物-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    喜欢的宠物 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="lovepet">
+                                        <option value="{$list.lovepet}">{$list.lovepet}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--何时想结婚-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    何时想结婚 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="whenmarry">
+                                        <option value="{$list.whenmarry}">{$list.whenmarry}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--婚后与父母住吗-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    婚后与父母住吗 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="livewithparents">
+                                        <option value="{$list.livewithparents}">{$list.livewithparents}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--兄弟姐妹-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    兄弟姐妹 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="brotherandsister">
+                                        <option value="{$list.brotherandsister}">{$list.brotherandsister}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--z年龄-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z年龄 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="zage">
+                                        <option value="{$list.zage}">{$list.zage}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--z所在地-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z所在地 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="zworkarea">
+                                        <option value="{$list.zworkarea}">{$list.zworkarea}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--z婚况-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z婚况 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="zmarry">
+                                        <option value="{$list.zmarry}">{$list.zmarry}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--z学历-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z学历 </label>
+                                <div class="col-sm-9">
+                                    <select class="col-xs-10 col-sm-5" name="zeducation">
+                                        <option value="{$list.zeducation}">{$list.zeducation}</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--z月收入-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z月收入 </label>
+                                <select class="col-xs-10 col-sm-5" name="zsalary">
+                                    <option value="{$list.zsalary}">{$list.zsalary}</option>
+                                </select>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--z有无孩子-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z有无孩子 </label>
+                                <select class="col-xs-10 col-sm-5" name="zifhaschild">
+                                    <option value="{$list.zifhaschild}">{$list.zifhaschild}</option>
+                                </select>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--z是否购房-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z是否购房 </label>
+                                <select class="col-xs-10 col-sm-5" name="zifbuyhouser">
+                                    <option value="{$list.zifbuyhouser}">{$list.zifbuyhouser}</option>
+                                </select>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--z身高-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    z身高 </label>
+                                <select class="col-xs-10 col-sm-5" name="zheight">
+                                    <option value="{$list.zheight}">{$list.zheight}</option>
+                                </select>
+                            </div>
+                            <div class="space-4"></div>
+
+                        </form>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+                <hr />
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    $(function () {
+        $("#tabs").tabs();
+        var editor = KindEditor.create('textarea[name="content"]', {
+            uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+            fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+            allowFileManager: true,
+            afterBlur: function () {
+                this.sync();
+            }
+        });
+        $(".submit").click(function () {
+            var sid = $("#sid").val();
+            var title = $("#title").val();
+            var content = $("#content").val();
+            $("#form").submit();
+        });
+    });
+</script>
+</body>
+</html>

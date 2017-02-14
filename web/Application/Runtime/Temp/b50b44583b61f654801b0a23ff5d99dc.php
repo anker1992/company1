@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:6:"吉吉";s:8:"workarea";s:0:"";s:6:"height";s:7:"170-175";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-19/585775d4af135.png";s:11:"best_person";s:19:"清纯可爱,逛街";s:10:"best_movie";s:19:"动作武侠,青春";s:10:"best_music";s:13:"电子,二胡";s:11:"best_writer";s:12:"马克吐温";s:9:"best_food";s:9:"北方菜";s:11:"best_sports";s:13:"网球,台球";s:14:"tweleveanimals";s:3:"牛";s:13:"constellation";s:0:"";s:10:"profession";s:6:"保密";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"25000元以上";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:13:"5000-10000元";s:14:"zmaritalstatus";N;}
+?>

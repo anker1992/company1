@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:9:"卫斯理";s:8:"workarea";s:0:"";s:6:"height";s:7:"170-175";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-19/5857418d792ab.png";s:11:"best_person";s:6:"旅游";s:10:"best_movie";s:19:"动作武侠,动画";s:10:"best_music";s:9:"重金属";s:11:"best_writer";s:19:"钱钟书,刘慈欣";s:9:"best_food";s:9:"江浙菜";s:11:"best_sports";s:16:"乒乓球,网球";s:14:"tweleveanimals";s:3:"兔";s:13:"constellation";s:9:"天秤座";s:10:"profession";s:6:"媒体";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"20000-25000元";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"10000-15000元";s:14:"zmaritalstatus";N;}
+?>

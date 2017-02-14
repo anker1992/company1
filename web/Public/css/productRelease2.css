@@ -1,0 +1,196 @@
+@charset "utf-8";
+.part1{
+    padding: 90px 0 20px 0;
+    margin-top: 80px;
+}
+.part1 ul li{
+    width: 360px;
+    float: left;
+    margin-right: 20px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #7e7e7e;
+}
+.part1 ul li.cur{
+    border-color: #ff6269;
+}
+.part1 ul li a{
+    color: #797979;
+    font-size: 22px;
+}
+.part1 ul li.cur a{
+    color: #ff6269;
+}
+
+.part2 .container{
+    width: 660px;
+    min-width: 660px;
+    margin: 0 auto;
+}
+.part2 ul li{
+    margin-top: 50px;
+}
+.part2 ul li h3{
+    color: #000;
+    font-size: 24px;
+    font-weight: normal;
+    margin-bottom: 40px;
+}
+.part2 ul li h3 i{
+    color: #e60012;
+    font-weight: bold;
+    margin-right: 8px;
+}
+.part2 ul li .tag{
+    color: #000;
+    font-size: 18px;
+    width: 150px;
+    float: left;
+    line-height: 40px;
+}
+.part2 ul li .tag i{
+    color: #e60012;
+    margin-right: 5px;
+}
+.part2 ul li .type-box{
+    float: left;
+    position: relative;
+    width: 215px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+.part2 ul li .type-box .type-con{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 215px;
+    height: 40px;
+}
+.part2 ul li .type-box .type-con input{
+    font-size: 16px;
+    position: absolute;
+    width: 195px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+}
+.part2 ul li .type-box .type-con i{
+    position: absolute;
+    top: 16px;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-color: #bebebe transparent transparent;
+    border-width: 8px 5px;
+    border-style: solid;
+}
+.part2 ul li .type-box .type-list{
+    display: none;
+    position: absolute;
+    top: 42px;
+    left: -1px;
+    width: 100%;
+    height: 100px;
+    overflow: auto;
+    background-color: #fff;
+    z-index: 3;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+.part2 ul li .type-box .type-list a{
+    color: #3e3e3e;
+    font-size: 16px;
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    padding-left: 10px;
+    background-color: #fff;
+}
+
+.part2 ul li .mb40{
+    margin-bottom: 40px;
+}
+.part2 ul li .title{
+    font-size: 16px;
+    width: 430px;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+.part2 ul li textarea{
+    width: 430px;
+    height: 125px;
+    padding: 10px;
+    line-height: 25px;
+    resize: none;
+    color: #c2c2c2;
+    font-size: 16px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+.part2 ul li .linkman input,.part2 ul li .tel input{
+    font-size: 16px;
+    width: 430px;
+    height: 40px;
+    padding: 0 10px;
+    line-height: 40px;
+    border: 1px solid #c0c0c0;
+    border-radius: 5px;
+}
+.part2 ul li.btn{
+    padding-top: 70px;
+}
+.part2 ul li label{
+    color: #e60012;
+    display: block;
+    padding-left: 150px;
+}
+.part2 ul li.btn .submit{
+    display: block;
+    margin:  0 auto 100px;
+    width: 180px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #ff6269;
+    border-radius: 10px;
+}
+
+.info-body{
+    display: none;
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#33000000,endColorstr=#33000000);
+}
+.info-body .info-box{
+    width: 565px;
+    height: 115px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -82px 0 0 -312px;
+    padding: 50px 30px 0;
+    background-color: #fff;
+    border: 1px solid #cfcfcf;
+}
+.info-body .info-box span{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.info-body .info-box p{
+    color: #000;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+}

@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:2:"11";s:8:"nickname";s:6:"思思";s:8:"workarea";s:6:"北京";s:6:"height";s:3:"164";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-12/584e635c91caa.jpg";s:11:"best_person";s:53:"清纯可爱,气质优雅,诚信,孝顺,旅游,烹饪";s:10:"best_movie";s:13:"喜剧,青春";s:10:"best_music";s:64:"流行,民谣,流行,轻音乐,钢琴,影视原声,清新,治愈";s:11:"best_writer";s:0:"";s:9:"best_food";s:50:"江浙菜,火锅,烧烤,粤菜,韩国料理,港式";s:11:"best_sports";s:13:"跑步,健身";s:14:"tweleveanimals";s:3:"羊";s:13:"constellation";s:9:"金牛座";s:10:"profession";s:18:"市场活动执行";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:6:"无车";s:10:"ifbuyhouse";s:6:"无房";s:6:"salary";s:13:"5000-10000元";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"25000元以上";s:14:"zmaritalstatus";s:6:"未婚";}
+?>

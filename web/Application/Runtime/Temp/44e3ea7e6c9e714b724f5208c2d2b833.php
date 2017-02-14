@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:9:"Steven沈";s:8:"workarea";s:6:"北京";s:6:"height";s:7:"175-180";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-14/58510247cf06e.png";s:11:"best_person";s:19:"旅游,书法绘画";s:10:"best_movie";s:6:"犯罪";s:10:"best_music";s:13:"钢琴,二胡";s:11:"best_writer";s:12:"托尔斯泰";s:9:"best_food";s:12:"意大利菜";s:11:"best_sports";s:6:"游泳";s:14:"tweleveanimals";s:3:"马";s:13:"constellation";s:9:"狮子座";s:10:"profession";s:6:"保密";s:9:"education";s:9:"研究生";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:6:"无房";s:6:"salary";s:14:"25000元以上";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"10000-15000元";s:14:"zmaritalstatus";N;}
+?>

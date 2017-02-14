@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:6:"琳琳";s:8:"workarea";s:6:"北京";s:6:"height";s:7:"160-165";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-12/584e73a3dc475.jpg";s:11:"best_person";s:33:"气质优雅,旅游,逛街,韩剧";s:10:"best_movie";s:32:"文艺爱情,老电影,纪录片";s:10:"best_music";s:19:"民谣,影视原声";s:11:"best_writer";s:12:"安妮宝贝";s:9:"best_food";s:16:"川湘菜,火锅";s:11:"best_sports";s:13:"瑜伽,滑雪";s:14:"tweleveanimals";s:3:"兔";s:13:"constellation";s:9:"狮子座";s:10:"profession";s:12:"行政专员";s:9:"education";s:6:"大专";s:8:"ifbuycar";s:6:"无车";s:10:"ifbuyhouse";s:0:"";s:6:"salary";s:13:"5000-10000元";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"10000-15000元";s:14:"zmaritalstatus";N;}
+?>

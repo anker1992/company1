@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:6:"天天";s:8:"workarea";s:0:"";s:6:"height";s:7:"180-185";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-19/585774b9efd40.png";s:11:"best_person";s:22:"活泼女汉子,摄影";s:10:"best_movie";s:13:"犯罪,战争";s:10:"best_music";s:13:"古筝,歌剧";s:11:"best_writer";s:9:"张大春";s:9:"best_food";s:9:"法国菜";s:11:"best_sports";s:13:"骑行,爬山";s:14:"tweleveanimals";s:3:"马";s:13:"constellation";s:9:"射手座";s:10:"profession";s:6:"影视";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"25000元以上";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:13:"5000-10000元";s:14:"zmaritalstatus";N;}
+?>

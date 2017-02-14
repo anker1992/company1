@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:6:"珈锋";s:8:"workarea";s:6:"北京";s:6:"height";s:7:"180-185";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-15/5851f00aa5ca6.png";s:11:"best_person";s:26:"靠谱,顾家,自己创业";s:10:"best_movie";s:25:"文艺爱情,艺术电影";s:10:"best_music";s:13:"摇滚,清新";s:11:"best_writer";s:13:"余华,韩寒";s:9:"best_food";s:13:"火锅,海鲜";s:11:"best_sports";s:6:"网球";s:14:"tweleveanimals";s:3:"蛇";s:13:"constellation";s:9:"白羊座";s:10:"profession";s:6:"保密";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"10000-15000元";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"10000-15000元";s:14:"zmaritalstatus";N;}
+?>

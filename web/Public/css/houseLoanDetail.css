@@ -1,0 +1,410 @@
+.hl-top-part1{
+    width: 100%;
+    margin-top: 30px;
+}
+.hl-top-part1-title{
+    width: 100%;
+    height: 50px;
+    border-bottom: 3px solid #ff6269;
+}
+.hl-top-part1-title p{
+    display: inline-block;
+    font-size: 24px;
+    color: #3e3e3e;
+    font-weight: bold;
+}
+.hl-top-part1-title img{
+    float: right;
+    width: 130px;
+    height: 30px;
+    margin-top: 5px;
+}
+.hl-top-part1-content{
+    width: 100%;
+    /*height: 500px;*/
+    position: relative;
+}
+.wxsq-button{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    display: block;
+    width: 110px;
+    height: 25px;
+    background: url("../images/icon-wxsq.png") no-repeat;
+}
+.hl-top-part1-content p{
+    line-height: 20px;
+}
+.text-content-link{
+    color: #ff6269;
+    margin-left: 20px;
+}
+.pt15{
+    padding-top: 15px;
+}
+.part1-content-table{
+    border-collapse:collapse;
+    margin: 15px 0;
+}
+/*.part1-content-table tr th,{*/
+    /**/
+/*}*/
+.part1-content-table tr th,.part1-content-table tr td{
+    border: 1px solid #dedede;
+    padding: 5px 20px;
+    text-align: center;
+}
+.hl-top-part1-content>span{
+    color: #cbcbcb;
+}
+.red-text{
+    color: #ff6269;
+}
+.hl-top-part1-content>.text-beizhu{
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.hl-top-part2{
+    width: 100%;
+    margin-top: 30px;
+}
+.hl-top-part2-title{
+    width: 100%;
+    height: 30px;
+    font-size: 18px;
+    color: #000000;
+    line-height: 30px;
+    border-bottom: 1px solid #ff6269;
+}
+.part2-items{
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid #f3f3f3;
+    position: relative;
+}
+.part2-items>.part2-tx{
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    border: 1px solid #f3f3f3;
+    display: inline-block;
+    vertical-align: middle;
+}
+.part2-items>.part2-text{
+    display: inline-block;
+    height: 50px;
+    line-height: 25px;
+    margin-top: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.wyzx-button{
+    position: absolute;
+    right: 0;
+    top: 30px;
+    display: block;
+    width: 110px;
+    height: 25px;
+    background: url("../images/icon-wyzx.png") no-repeat;
+}
+.detail-box-title-bar{
+    height: 50px;
+    border-bottom: 1px solid #f3f3f3;
+    line-height: 50px;
+
+}
+
+.blue-text{
+    color: #94c9ff;
+    font-size: 20px;
+    line-height: 50px;
+}
+.title-bar-right{
+    display: inline-block;
+    float: right;
+}
+.title-bar-right img{
+    vertical-align: middle;
+    margin-right: 10px;
+}
+.detail-box-content{
+    margin:10px;
+}
+.hl-detail-parts{
+    line-height: 30px;
+    font-size: 14px;
+}
+.content-qa{
+    border-bottom: 1px solid #f3f3f3;
+}
+.content-qa dt{
+    border-bottom: 1px dashed #f3f3f3;
+}
+.content-qa dt,.content-qa dd{
+    padding: 10px;
+}
+.content-qa dt a,.content-qa dd p{
+    display: inline-block;
+    width:75%;
+}
+.content-qa dt a,.content-qa dt span{
+    color: #3e3e3e;
+}
+.content-qa dd p,.content-qa dd span{
+    color: #868484;
+}
+.content-qa dt span,.content-qa dd span{
+    display: inline-block;
+    width:14%;
+    text-align: right;
+    vertical-align: top;
+    margin-left: 10%;
+}
+.detail-qa-button-box{
+    width: 100%;
+    text-align: center;
+}
+.detail-qa-button-box a{
+    display: block;
+}
+.red-button{
+    background: #ff6269;
+    color: #fff;
+    width: 90px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    margin: 15px auto;
+}
+.no-border{
+    border: none!important;
+    margin-top: 30px!important;
+}
+.right-items-title-hl{
+    height: 50px;
+    border-bottom: 1px solid #f0f0f0;
+    line-height: 50px;
+    font-size: 18px;
+}
+.right-items-title-hl i{
+    background: url("../images/icon-fl-right.png")no-repeat;
+    display: inline-block;
+    width: 22px;
+    height: 20px;
+    vertical-align: initial;
+    margin-right: 10px;
+}
+.right-items-title-hl i.fang{
+    background-position: 0 0;
+}
+.right-items-title-hl i.zan{
+    background-position: 0 -21px;
+}
+.right-items-title-hl i.zhi{
+    background-position: 0 -41px;
+}
+.right-items-title-hl i.lian{
+    background-position: 0 -61px;
+}
+.right-items-content-hl{
+    padding: 20px 0;
+    text-align: left;
+}
+.right-items-content-hl a:hover{
+    color: #ff6269;
+}
+.tools>a{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 130px;
+    margin-right: 10px;
+    line-height: 25px;
+}
+.links a{
+    float: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80px;
+    margin-right: 13px;
+    line-height: 25px;
+}
+.a-text{
+    text-align: left;
+    display: block;
+    line-height: 30px;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.email-popup-title{
+    text-align: left;
+    height:40px;
+    border-bottom: 1px solid #ff6269;
+    margin: 10px 20px;
+    font-size: 24px;
+}
+.email-popup-container{
+    margin: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+.email-popup-content{
+    height: 100px;
+}
+.email-popup-hd{
+    display: inline-block;
+    margin-right: 10px;
+    font-size: 16px;
+}
+.email-popup-input{
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+    height: 30px;
+    width: 200px;
+    padding: 0 5px;
+}
+.email-popup-button{
+    background: #ff6269;
+    display: inline-block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 5px;
+    color: #fff;
+    margin-left: 10px;
+}
+.apply-popup-title{
+    height: 40px;
+    background: #f4f4f4;
+    border-bottom: 1px solid #eaeaea;
+}
+.apply-popup-content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.apply-popup-container-l{
+    width: 500px;
+    min-height: 480px;
+    text-align: left;
+    margin-left: 20px;
+    padding-top: 30px;
+    border-right: 1px solid #f0f0f0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.apply-popup-container-r{
+    width: 220px;
+    height: 100%;
+    padding: 0 20px;
+    text-align: left;
+    line-height: 25px;
+    color: #8c8c8c;
+}
+.apply-popup-container-l .input-items{
+    /*padding: 20px 0;*/
+    height: 70px;
+}
+.apply-popup-container-l .input-items span{
+    width: 80px;
+    line-height: 30px;
+    display: inline-block;
+    text-align: right;
+    margin-right: 10px;
+}
+.input-items .long-input{
+    width: 340px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+}
+.input-items .long-input:focus,.input-items .yanzhengma-input:focus{
+    border: 1px solid #ff6269;
+}
+.input-items .yanzhengma-input{
+    width: 150px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 5px;
+    border: 1px solid #f0f0f0;
+    border-radius: 5px;
+}
+.input-items .yanzhengma-lb{
+    width: 80px;
+    height: 30px;
+    display: inline-block;
+    background: #38bbf2;
+    vertical-align: top;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+.input-items .input-dxyz{
+    display: inline-block;
+    width: 169px;
+    height: 33px;
+    background: url("../images/btn-dxyz.png")no-repeat;
+}
+.input-items .input-yyyz{
+    display: inline-block;
+    width: 169px;
+    height: 33px;
+    margin-left: 10px;
+    background: url("../images/btn-yyyz.png")no-repeat;
+}
+.input-items .apply-submit-btn{
+    width: 340px;
+    height: 30px;
+    line-height: 30px;
+    color: #fff;
+    background: #ff6269;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.input-items .error-text{
+    margin-left: 95px;
+    color: #ff6269;
+    font-size: 12px;
+    /*display: none;*/
+}
+.input-items .mind-gray-text{
+    margin-left: 95px;
+    color: #aeadad;
+    font-size: 12px;
+}
+.apply-completed{
+    text-align: center;
+    color: #ff6269;
+    font-size: 25px;
+    line-height: 300px;
+}
+.apply-completed-box{
+    display: none;
+}
+.error-email{
+    font-size: 12px;
+    color: #ff6269;
+    display: none;
+    text-align: left;
+    text-indent: 110px;
+}
+.error-email1{
+    font-size: 12px;
+    color: #ff6269;
+    display: none;
+    text-align: left;
+    text-indent: 100px;
+}

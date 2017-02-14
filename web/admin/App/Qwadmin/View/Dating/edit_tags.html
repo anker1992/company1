@@ -1,0 +1,126 @@
+<include file="Public/head"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <form class="form-horizontal" id="form" method="post" action="{:U('Dating/update_tags')}" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="{$_GET['id']}" id="id"/>
+                            <h1 style="margin-bottom: 40px;">添加/修改 兴趣爱好</h1>
+                            <div class="col-md-10" style="margin-bottom: 50px;">
+                                <div style="margin-bottom: 40px;">
+                                    <h3 style="margin-bottom: 20px;">个人标签</h3>
+                                    <div style="font-size:16px;">已选标签：<span>{$info_tags.best_person}</span></div><br/>
+                                <foreach name="person" item="value">
+                                    <input type="checkbox" id="p{$value}" value="{$value}" name="person[]"><label
+                                        for="p{$value}" style="font-size:17px;color:#ca993d;background-color:#f8f2c0;margin-right:20px;">{$value}</label>
+                                </foreach></div>
+
+                                <div style="margin-bottom: 40px;">
+                                <h3 style="margin-bottom: 20px;">我喜欢的电影</h3>
+                                    <div style="font-size:16px;">已选标签：<span>{$info_tags.best_movie}</span></div><br/>
+                                <foreach name="movie" item="value">
+                                    <input type="checkbox" id="p{$value}" value="{$value}" name="movie[]"><label
+                                        for="p{$value}" style="font-size:17px;color:#c75096;background-color:#fde7f4;margin-right:20px;">{$value}</label>
+                                </foreach>
+                                </div>
+
+                                <div style="margin-bottom: 40px;">
+                                <h3 style="margin-bottom: 20px;">我喜欢的音乐</h3>
+                                    <div style="font-size:16px;">已选标签：<span>{$info_tags.best_music}</span></div><br/>
+                                <foreach name="music" item="value">
+                                    <input type="checkbox" id="p{$value}" value="{$value}" name="music[]"><label
+                                        for="p{$value}" style="font-size:17px;color:#5a85d1;background-color:#e7effd;margin-right:20px;">{$value}</label>
+                                </foreach>
+                                </div>
+
+                                <div style="margin-bottom: 40px;">
+                                <h3 style="margin-bottom: 20px;">我喜欢的作者</h3>
+                                    <div style="font-size:16px;">已选标签：<span>{$info_tags.best_writer}</span></div><br/>
+                                <foreach name="writer" item="value">
+                                    <input type="checkbox" id="p{$value}" value="{$value}" name="writer[]"><label
+                                        for="p{$value}" style="font-size:17px;color:#ce6e41;background-color:#fdeee7;margin-right:20px;">{$value}</label>
+                                </foreach>
+                                </div>
+
+                                <div style="margin-bottom: 40px;">
+                                <h3 style="margin-bottom: 20px;">我喜欢的美食</h3>
+                                    <div style="font-size:16px;">已选标签：<span>{$info_tags.best_food}</span></div><br/>
+                                <foreach name="food" item="value">
+                                    <input type="checkbox" id="p{$value}" value="{$value}" name="food[]"><label
+                                        for="p{$value}" style="font-size:17px;color:#cd4545;background-color:#f9dbdb;margin-right:20px;">{$value}</label>
+                                </foreach>
+                                </div>
+
+                                <div style="margin-bottom: 40px;">
+                                <h3 style="margin-bottom: 20px;">我喜欢的运动</h3>
+                                    <div style="font-size:16px;">已选标签：<span>{$info_tags.best_sports}</span></div><br/>
+                                <foreach name="sports" item="value">
+                                    <input type="checkbox" id="p{$value}" value="{$value}" name="sports[]"><label
+                                        for="p{$value}" style="font-size:17px;color:#368a6b;background-color:#d6f0e6;margin-right:20px;">{$value}</label>
+                                </foreach>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info submit" type="button">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </form>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+                <hr />
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    $(function () {
+        $("#tabs").tabs();
+        var editor = KindEditor.create('textarea[name="content"]', {
+            uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+            fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+            allowFileManager: true,
+            afterBlur: function () {
+                this.sync();
+            }
+        });
+        $(".submit").click(function () {
+            var sid = $("#sid").val();
+            var title = $("#title").val();
+            var content = $("#content").val();
+            $("#form").submit();
+        });
+    });
+</script>
+</body>
+</html>

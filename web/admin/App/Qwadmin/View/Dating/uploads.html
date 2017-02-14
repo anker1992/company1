@@ -1,0 +1,163 @@
+<include file="Public/head"/>
+<link rel="stylesheet" href="/admin/Public/qwadmin/css/personalData.css"/>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+                <div class="row">
+                    <foreach name="photos" item="photos" key="k">
+                        <img src="{$photos['url']}" alt="" style="width:100px;height:100px">&nbsp;&nbsp;
+                    </foreach>
+                </div><br/><br/>
+                <div class="row">
+                <div class="col-xs-12">
+                    <button id="logo">点击选择照片</button>
+                    <button id="upload-btn">一键上传</button>
+                    &nbsp; &nbsp; &nbsp;
+                    （注意：上传图片时原有图片会被删除）
+                    <div id="photo-box">
+
+                    </div>
+
+                    <article class="htmleaf-container" style="width:50%">
+                        <div id="clipArea"></div>
+                        <div class="foot-use">
+                            <div class="uploader1 blue">
+                                <input type="button" name="file" class="button" value="打开图库"/>
+                                <input id="file" type="file" onchange="setImagePreview();" accept="image/*" multiple/>
+                            </div>
+                            <button id="clipBtn">保存</button>
+                        </div>
+                        <div id="view"></div>
+
+                    </article>
+                    <script type="text/javascript" src="/admin/Public/qwadmin/js/jquery-1.10.2.min.js"></script>
+                    <script type="text/javascript" src="/admin/Public/qwadmin/js/iscroll-zoom.js"></script>
+                    <script type="text/javascript" src="/admin/Public/qwadmin/js/hammer.js"></script>
+                    <script type="text/javascript" src="/admin/Public/qwadmin/js/jquery.photoClip.js"></script>
+                    <script type="text/javascript">
+                        var objUrl = '';
+
+                        $("#clipArea").photoClip({
+                            width: 320,
+                            height: 320,
+                            file: "#file",
+                            view: "#view",
+                            ok: "#clipBtn"
+                        });
+                        function setImagePreview() {
+                            var preview = document.getElementById("preview");
+                            var file_head = document.getElementById("file");
+                            var picture = file_head.value;
+                            if (!picture.match(/.jpg|.gif|.png|.bmp|.jpeg|.svg/i))
+                                return alert("您上传的图片格式不正确，请重新选择！");
+                            if (preview && file_head.files && file_head.files[0])
+                                preview.style.display = "block",
+                                        preview.style.width = "63px",
+                                        preview.style.height = "63px",
+                                        preview.src = window.navigator.userAgent.indexOf("Chrome") >= 1 || window.navigator.userAgent.indexOf("Safari") >= 1 ? window.webkitURL.createObjectURL(file_head.files[0]) : window.URL.createObjectURL(file_head.files[0]);
+                            //return document.getElementById("DivUp").style.display = "block";
+                        }
+
+
+                        $("#logo").click(function () {
+                            $(".htmleaf-container").show();
+                        });
+
+                        $(function () {
+                            var imgurl = [];
+                            $("#clipBtn").click(function () {
+                                var img = $("<img style='width: 320px;display: inline-block;margin: 10px;' />");
+                                img.attr("src", imgsource);
+                                $("#photo-box").append(img);
+
+                                imgurl.push(imgsource);
+                                console.log(imgurl);
+                                $(".htmleaf-container").hide();
+                            });
+                            $("#upload-btn").click(function(){
+                                $.ajax({
+                                    cache: true,
+                                    type: "POST",
+                                    url: "{:U('Dating/check_photos',array('mid'=>$mid))}",
+                                    data: {"imgurl": imgurl},
+                                    async: false,
+                                    error: function (request) {
+                                    },
+                                    success: function (data) {
+                                        if(data == '1'){
+                                            window.location.href="{:U('uploads',array('id'=>$mid))}";
+                                        }else{
+                                            alert("上传失败");
+                                        }
+                                    }
+                                });
+                            });
+                        });
+
+                    </script>
+                    <style>
+                        .htmleaf-container {
+                            margin: 0 auto;
+                            text-align: center;
+                            overflow: hidden;
+                            width: 600px;
+                            height: 500px;
+                            position: fixed;
+                            top: 100px;
+                            background-color: #ccc;
+                            display: none;
+                            z-index: 999;
+                            left: 260px;
+                        }
+                    </style>
+                </div>
+                </form>
+
+                </div>
+                </div>
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    $(function () {
+        $("#tabs").tabs();
+        var editor = KindEditor.create('textarea[name="content"]', {
+            uploadJson: '__PUBLIC__/kindeditor/php/upload_json.php',
+            fileManagerJson: '__PUBLIC__/kindeditor/php/file_manager_json.php',
+            allowFileManager: true,
+            afterBlur: function () {
+                this.sync();
+            }
+        });
+        $(".submit").click(function () {
+            var sid = $("#sid").val();
+            var title = $("#title").val();
+            var content = $("#content").val();
+            $("#form").submit();
+        });
+    });
+</script>
+</body>
+</html>

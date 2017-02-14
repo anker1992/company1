@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:4:"ella";s:8:"workarea";s:6:"北京";s:6:"height";s:7:"165-170";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-12/584e731f2dffd.png";s:11:"best_person";s:29:"活泼女汉子,诚信,旅游";s:10:"best_movie";s:36:"喜剧,恐怖惊悚,青春,老电影";s:10:"best_music";s:25:"华语,电子,jazz,清新";s:11:"best_writer";s:38:"马尔克斯,博尔赫斯,村上春树";s:9:"best_food";s:33:"川湘菜,火锅,烧烤,家常菜";s:11:"best_sports";s:20:"骑行,健身,滑雪";s:14:"tweleveanimals";s:3:"蛇";s:13:"constellation";s:9:"天蝎座";s:10:"profession";s:6:"保密";s:9:"education";s:0:"";s:8:"ifbuycar";s:6:"无车";s:10:"ifbuyhouse";s:0:"";s:6:"salary";s:13:"5000-10000元";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"10000-15000元";s:14:"zmaritalstatus";N;}
+?>

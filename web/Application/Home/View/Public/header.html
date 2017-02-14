@@ -1,0 +1,54 @@
+
+
+
+<div class="header">
+    <div class="container clearfix">
+        <div class="head-left left">
+            <div class="head-logo">
+                <a href="{:U('Index/index')}"><img src="__PUBLIC__/images/logo.png" alt=""/></a>
+            </div>
+            <ul>
+                <!-- <li><a href="index.php" target="_self">首页</a></li> -->
+                <li><a href="{:U('Freemarket/freeMarket')}">自由市场</a></li>
+                <li><a href="{:U('Rongzi/financeproducts')}">智能投顾</a></li>
+                <li><a href="{:U('Daikuan/personalloan')}">智能信贷</a></li>
+                <li><a href="{:U('Dating/datingindex')}">相亲交友</a></li>
+                <li>
+                    <a href="javascript:;">关于我们</a>
+                    <ol>
+                        <li><a href="{:U('Static/aboutUs')}">公司简介</a></li>
+                        <li><a href="{:U('Static/contactUs')}">联系我们</a></li>
+                        <li><a href="{:U('Static/adService')}">主营业务</a></li>
+                        <li><a href="{:U('Static/joinUs')}">加入我们</a></li>
+                    </ol>
+                </li>
+            </ul>
+        </div>
+        <div class="head-right right">
+            <ol>
+                <!-- <li class="search"><a href="javascript:void(0)"><i></i>搜索</a></li>-->
+                <?php
+                  if(cookie('think_user_name')) {?>
+                <li class="login"><a href="###"><i></i><?php echo cookie('think_user_name'); ?></a></li>
+                <li class="login"><a href="<?php echo U('User/logout'); ?>"><i></i>退出</a></li>
+                <?php }else{ ?>
+
+                <li class="login login2"><a href="<?php echo U('User/login'); ?>"><i></i>登录</a></li>
+                <li class="register login2"><a href="<?php echo U('User/register'); ?>"><i></i>注册</a></li>
+                <?php
+                 }?>
+            </ol>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function jiaoyou(){
+        alert("相亲交友模块暂时未融到框架里");
+    }
+    function zhaopin(){
+        alert("招聘模块暂时未融到框架里");
+    }
+</script>
+<script language="javascript" type="text/javascript" src="http://js.users.51.la/19027900.js"></script>
+<noscript><a href="http://www.51.la/?19027900" target="_blank"><img alt="&#x6211;&#x8981;&#x5566;&#x514D;&#x8D39;&#x7EDF;&#x8BA1;" src="http://img.users.51.la/19027900.asp" style="border:none" /></a></noscript>
+

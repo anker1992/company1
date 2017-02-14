@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:6:"札幌";s:8:"workarea";s:6:"北京";s:6:"height";s:7:"170-175";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-19/585754992617b.png";s:11:"best_person";s:29:"玉树临风,正直,养宠物";s:10:"best_movie";s:19:"犯罪,恐怖惊悚";s:10:"best_music";s:10:"RAP,钢琴";s:11:"best_writer";s:22:"马克吐温,海明威";s:9:"best_food";s:12:"韩国料理";s:11:"best_sports";s:9:"跆拳道";s:14:"tweleveanimals";s:3:"蛇";s:13:"constellation";s:9:"射手座";s:10:"profession";s:15:"自由职业者";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"20000-25000元";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"10000-15000元";s:14:"zmaritalstatus";N;}
+?>

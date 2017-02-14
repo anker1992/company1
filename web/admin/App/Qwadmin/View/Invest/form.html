@@ -1,0 +1,453 @@
+<include file="Public/head"/>
+<link href="./Public/ueditor/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+<style type="text/css">
+    h1{
+        font-family: "微软雅黑";
+        font-weight: normal;
+    }
+    .btn {
+        display: inline-block;
+        *display: inline;
+        padding: 4px 12px;
+        margin-bottom: 0;
+        *margin-left: .3em;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333333;
+        text-align: center;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        *background-color: #e6e6e6;
+        background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+        background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+        background-repeat: repeat-x;
+        border: 1px solid #cccccc;
+        *border: 0;
+        border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+        border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+        border-bottom-color: #b3b3b3;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#ffe6e6e6', GradientType=0);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+        *zoom: 1;
+        -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn:hover,
+    .btn:focus,
+    .btn:active,
+    .btn.active,
+    .btn.disabled,
+    .btn[disabled] {
+        color: #333333;
+        background-color: #e6e6e6;
+        *background-color: #d9d9d9;
+    }
+
+    .btn:active,
+    .btn.active {
+        background-color: #cccccc \9;
+    }
+
+    .btn:first-child {
+        *margin-left: 0;
+    }
+
+    .btn:hover,
+    .btn:focus {
+        color: #333333;
+        text-decoration: none;
+        background-position: 0 -15px;
+        -webkit-transition: background-position 0.1s linear;
+        -moz-transition: background-position 0.1s linear;
+        -o-transition: background-position 0.1s linear;
+        transition: background-position 0.1s linear;
+    }
+
+    .btn:focus {
+        outline: thin dotted #333;
+        outline: 5px auto -webkit-focus-ring-color;
+        outline-offset: -2px;
+    }
+
+    .btn.active,
+    .btn:active {
+        background-image: none;
+        outline: 0;
+        -webkit-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+        -moz-box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .btn.disabled,
+    .btn[disabled] {
+        cursor: default;
+        background-image: none;
+        opacity: 0.65;
+        filter: alpha(opacity=65);
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+</style>
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <form class="form-horizontal" action="{:U('update')}" method="post" enctype="multipart/form-data">
+                            <input type="hidden" value="{$inv_id}" name="inv_id">
+                            <!--手机号-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-1"> 手机号 </label>
+                                <div class="col-sm-9">
+                                    <if condition="$list['inv_phone']">
+                                    <input type="text" name="inv_phone" id="title" class="rcol-xs-10 col-sm-5"
+                                           value="{$list.inv_phone}" readonly="readonly">
+                                    <else />
+                                        <input type="text" name="inv_phone" id="title" class="rcol-xs-10 col-sm-5"
+                                               placeholder="请输入手机号，必填">
+                                    </if>
+                                    <span class="help-inline col-xs-12 col-sm-7">
+                                        <span class="middle"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--真实姓名-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 真实姓名 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="inv_name" id="name" placeholder="请输入真实姓名"
+                                           class="col-xs-10 col-sm-5" value="{$list.inv_name}">
+                                    <span class="help-inline col-xs-12 col-sm-7">
+												<span class="middle"></span>
+											</span>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--个人头像-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2">
+                                    个人头像 </label>
+                                <div class="col-sm-9">
+                                    <span  class="col-xs-1"><img src="{$list.inv_logo}" alt="" style="height:75px;width:75px;"></span>
+                                    <input type="file" name="inv_logo" id="icon" class="col-xs-10 col-sm-5" value="{$list.inv_logo}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--所在公司-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 所在公司 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="inv_in_company" id="ceo_name" placeholder="所在公司名称"
+                                           class="col-xs-10 col-sm-5" value="{$list.inv_in_company}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--公司logo-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 公司logo </label>
+                                <div class="col-sm-9">
+                                    <span  class="col-xs-1"><img src="{$list.inv_in_logo}" alt="" style="height:75px;width:75px;"></span>
+                                    <input type="file" name="inv_in_logo" id="icon" placeholder="请上传所在公司的logo"
+                                           class="col-xs-10 col-sm-5" value="{$list.inv_in_logo}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--所在公司简介-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 公司介绍 </label>
+                                <div class="col-sm-9">
+                                    <textarea name="inv_in_com" id="tips" placeholder="公司介绍" class="col-xs-10 col-sm-5"
+                                              rows="5">{$list.inv_in_com}</textarea>
+                                    <br /><br /><br /><br /><br /><br /><br />
+                                    <div>（100字以内）</div>
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--约见费用-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 约见费用 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="inv_yue_money" id="yuemoney" placeholder="请输入您被约见的费用"
+                                           class="col-xs-10 col-sm-5" value="{$list.inv_yue_money}">元/次<br /><br />
+                                            注：（约见费用=约见人所要的费用+平台佣金）
+                                            比如：约见人所要的费用是400元
+                                            平台佣金是200元
+                                            那此处的约见费用就是400+200=600元
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--职位类型-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 职位类型 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="inv_type" id="o" placeholder="职位类型" class="col-xs-10 col-sm-5"
+                                           value="{$list.inv_type}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--关注领域-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 关注领域 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="inv_field" id="o" class="col-xs-10 col-sm-5" value="{$list.inv_field}"><br/><br/>
+                                    例如：VR/AR/教育/医疗/科技/互联网/金融，中间用“/”隔开
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--单笔投资-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 单笔投资 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="inv_min_money" id="o" class="col-xs-1 col-sm-1"
+                                           value="{$list.inv_min_money}">
+                                    <span class="col-sm-1" style="width:4%;margin-top:3px;font-size:18px;">~</span>
+                                    <input type="text" name="inv_max_money" id="o" class="col-xs-1 col-sm-1"
+                                           value="{$list.inv_max_money}">万元
+                                </div>
+                            </div>
+                            <div class="space-4"></div><br/>
+                            <!--工作经历1-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 工作经历1 </label>
+                                <div class="col-sm-9">
+                                    <span  class="col-xs-1" style="width:8.5%;">公司logo:</span>
+                                    <span  class="col-xs-1"><img src="{$list.inv_logo_one}" alt="" style="height:75px;width:75px;"></span>
+                                    <input type="file" name="inv_logo_one" id="icon" placeholder="请上传所在公司的logo"
+                                           class="col-xs-1 col-sm-5"><br/><br/>
+                                    <span  class="col-xs-1" style="width:8.5%;">公司名称:</span>
+                                    <input type="text" name="inv_company_one" id="o" placeholder="请输入公司名称" class="col-xs-10 col-sm-4"
+                                           value="{$list.inv_company_one}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div><br/>
+                            <!--工作经历2-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 工作经历2 </label>
+                                <div class="col-sm-9">
+                                    <span  class="col-xs-1" style="width:8.5%;">公司logo:</span>
+                                    <span  class="col-xs-1"><img src="{$list.inv_logo_two}" alt="" style="height:75px;width:75px;"></span>
+                                    <input type="file" name="inv_logo_two" id="icon" placeholder="请上传所在公司的logo"
+                                           class="col-xs-1 col-sm-5"><br/><br/>
+                                    <span  class="col-xs-1" style="width:8.5%;">公司名称:</span>
+                                    <input type="text" name="inv_company_two" id="o" placeholder="请输入公司名称" class="col-xs-10 col-sm-4"
+                                           value="{$list.inv_company_two}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--约见时间-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 约见时间 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="inv_yue_time" id="url" placeholder="约见时间"
+                                           class="col-xs-10 col-sm-5" value="{$list.inv_yue_time}" onClick="WdatePicker({dateFmt:'yyyy-MM-dd'});">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <!--约见地点-->
+                            <div class="form-group">
+                                <label class="col-sm-1 control-label no-padding-right" for="form-field-2"> 约见地点 </label>
+                                <div class="col-sm-9">
+                                    <input type="text" name="inv_yue_address" id="url" placeholder="约见地点"
+                                           class="col-xs-10 col-sm-5" value="{$list.inv_yue_address}">
+                                </div>
+                            </div>
+                            <div class="space-4"></div>
+                            <div class="col-md-offset-2 col-md-9">
+                                <button class="btn btn-info" type="submit">
+                                    <i class="icon-ok bigger-110"></i>
+                                    提交
+                                </button>
+
+                                &nbsp; &nbsp; &nbsp;
+                                <button class="btn" type="reset">
+                                    <i class="icon-undo bigger-110"></i>
+                                    重置
+                                </button>
+                            </div>
+                        </form>
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script src="./Public/DatePicker/WdatePicker.js"></script>
+<script type="text/javascript">
+    $(function () {
+        var radio_type= $('#inv_type_hide').val();
+//        alert(radio_round);
+        $("#radio-inv_type input[type=radio][name=inv_type][value='"+radio_type+"']").attr("checked",'checked');
+
+        var editor = KindEditor.create('textarea[name="tips"]', {
+            resizeType: 1,
+            allowPreviewEmoticons: false,
+            allowImageUpload: false,
+            items: [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist', '|', 'emoticons', 'link']
+        });
+        $(".btn.btn-info").click(function () {
+            var title = $("#title").val();
+            if (title == '') {
+                bootbox.alert({
+                    buttons: {
+                        ok: {
+                            label: '确定',
+                            className: 'btn-myStyle'
+                        }
+                    },
+                    message: '手机号不能为空。',
+                    title: "友情提示",
+                });
+                return false;
+            }
+
+        })
+
+    })
+
+    //实例化编辑器
+    var um = UM.getEditor('myEditor');
+    um.addListener('blur',function(){
+        $('#focush2').html('编辑器失去焦点了')
+    });
+    um.addListener('focus',function(){
+        $('#focush2').html('')
+    });
+    //按钮的操作
+    function insertHtml() {
+        var value = prompt('插入html代码', '');
+        um.execCommand('insertHtml', value)
+    }
+    function isFocus(){
+        alert(um.isFocus())
+    }
+    function doBlur(){
+        um.blur()
+    }
+    function createEditor() {
+        enableBtn();
+        um = UM.getEditor('myEditor');
+    }
+    function getAllHtml() {
+        alert(UM.getEditor('myEditor').getAllHtml())
+    }
+    function getContent() {
+        var arr = [];
+        arr.push("使用editor.getContent()方法可以获得编辑器的内容");
+        arr.push("内容为：");
+        arr.push(UM.getEditor('myEditor').getContent());
+        alert(arr.join("\n"));
+    }
+    function getPlainTxt() {
+        var arr = [];
+        arr.push("使用editor.getPlainTxt()方法可以获得编辑器的带格式的纯文本内容");
+        arr.push("内容为：");
+        arr.push(UM.getEditor('myEditor').getPlainTxt());
+        alert(arr.join('\n'))
+    }
+    function setContent(isAppendTo) {
+        var arr = [];
+        arr.push("使用editor.setContent('欢迎使用umeditor')方法可以设置编辑器的内容");
+        UM.getEditor('myEditor').setContent('欢迎使用umeditor', isAppendTo);
+        alert(arr.join("\n"));
+    }
+    function setDisabled() {
+        UM.getEditor('myEditor').setDisabled('fullscreen');
+        disableBtn("enable");
+    }
+
+    function setEnabled() {
+        UM.getEditor('myEditor').setEnabled();
+        enableBtn();
+    }
+
+    function getText() {
+        //当你点击按钮时编辑区域已经失去了焦点，如果直接用getText将不会得到内容，所以要在选回来，然后取得内容
+        var range = UM.getEditor('myEditor').selection.getRange();
+        range.select();
+        var txt = UM.getEditor('myEditor').selection.getText();
+        alert(txt)
+    }
+
+    function getContentTxt() {
+        var arr = [];
+        arr.push("使用editor.getContentTxt()方法可以获得编辑器的纯文本内容");
+        arr.push("编辑器的纯文本内容为：");
+        arr.push(UM.getEditor('myEditor').getContentTxt());
+        alert(arr.join("\n"));
+    }
+    function hasContent() {
+        var arr = [];
+        arr.push("使用editor.hasContents()方法判断编辑器里是否有内容");
+        arr.push("判断结果为：");
+        arr.push(UM.getEditor('myEditor').hasContents());
+        alert(arr.join("\n"));
+    }
+    function setFocus() {
+        UM.getEditor('myEditor').focus();
+    }
+    function deleteEditor() {
+        disableBtn();
+        UM.getEditor('myEditor').destroy();
+    }
+    function disableBtn(str) {
+        var div = document.getElementById('btns');
+        var btns = domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            if (btn.id == str) {
+                domUtils.removeAttributes(btn, ["disabled"]);
+            } else {
+                btn.setAttribute("disabled", "true");
+            }
+        }
+    }
+    function enableBtn() {
+        var div = document.getElementById('btns');
+        var btns = domUtils.getElementsByTagName(div, "button");
+        for (var i = 0, btn; btn = btns[i++];) {
+            domUtils.removeAttributes(btn, ["disabled"]);
+        }
+    }
+</script>
+
+</body>
+</html>

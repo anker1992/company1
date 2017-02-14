@@ -1,0 +1,316 @@
+@charset "utf-8";
+.banner1-top{
+
+}
+.banner1-top span{
+    margin-top: 80px;
+    width: 100%;
+    height: 570px;
+    background: url("../images/banner1-top.jpg") no-repeat center;
+    min-width: 1230px;
+    display: block;
+}
+
+.container{
+    width: 1215px;
+}
+
+.part-title{
+    padding: 70px 0;
+    text-align: center;
+}
+.part-title p{
+    font-size: 18px;
+    text-indent: 75px;
+    color: #000;
+}
+.part-title span{
+    font-size: 2em;
+}
+.part-title i{
+    display: inline-block;
+    width: 80px;
+    height: 3px;
+    vertical-align: middle;
+    margin: 10px;
+    background: url("../images/banner1-line.jpg") no-repeat 0;
+}
+
+.banner1-part1{
+    height: 955px;
+    background-color: #e4e3e3;
+}
+.banner1-part1 .part1-con{
+    cursor: pointer;
+    width: 1215px;
+    height: 624px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.banner1-part1 .shade{
+    position: absolute;
+    width: 100%;
+    height: 0;
+    filter:Alpha(opacity=50);
+    background:#000\9;
+    background-color: rgba(0,0,0,0.5)!important;
+    bottom: 0;
+    left: 0;
+}
+.banner1-part1 .shade p{
+    color: #FFFFFF;
+    font-size: 18px;
+    line-height: 90px;
+    text-align: center;
+}
+
+
+.banner1-part2{
+    margin-top: 50px;
+}
+.banner1-part2 .banner1-carousel1{
+    position: relative;
+    width: 1215px;
+    height: 360px;
+}
+.banner1-part2 .banner1-carousel1 ul{
+    position: relative;
+    width: 1215px;
+    height: 360px;
+    margin: 0 auto;
+}
+.banner1-part2 .banner1-carousel1 ul li{
+    float: left;
+    position: absolute;
+    top: 150px;
+    left: 1230px;
+    z-index: 0;
+}
+.banner1-part2 .banner1-carousel1 ul li img{
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+.banner1-part2 .banner1-carousel1 ul li.l1{
+    width: 550px;
+    height: 360px;
+    left: 332px;
+    top: 0;
+    z-index: 3;
+}
+.banner1-part2 .banner1-carousel1 ul li.l2{
+    width: 500px;
+    height: 320px;
+    left: 715px;
+    top: 20px;
+    z-index: 2;
+}
+.banner1-part2 .banner1-carousel1 ul li.l3{
+    width: 300px;
+    height: 200px;
+    left: 715px;
+    top: 20px;
+    z-index: 1;
+}
+.banner1-part2 .banner1-carousel1 ul li.l5{
+    width: 300px;
+    height: 200px;
+    left: 332px;
+    top: 20px;
+    z-index: 1;
+}
+.banner1-part2 .banner1-carousel1 ul li.l6{
+    width: 500px;
+    height: 320px;
+    left: 0;
+    top: 20px;
+    z-index: 2;
+}
+.banner1-part2 .banner1-carousel1 span{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    display: inline-block;
+    width: 30px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: #000000;
+    z-index: 10;
+    background: rgba(255,255,255,0.3);
+    background-color: #fff\9;
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=30);
+}
+.banner1-part2 .banner1-carousel1 span:hover{
+    background: rgba(255,255,255,0.6);
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+}
+.banner1-part2 .banner1-carousel1 .prev{
+    left: 0;
+}
+.banner1-part2 .banner1-carousel1 .next{
+    right: 0;
+}
+
+.banner1-part2 p{
+    padding: 35px 20px 0;
+    font-size: 18px;
+    text-align: center;
+    color: #000;
+}
+
+.banner1-part3 .part-title p{
+    text-indent: 200px;
+}
+.banner1-part3 .part3-content{
+    height: 460px;
+    border: 1px solid #000;
+    margin-bottom: 50px;
+}
+.banner1-part3 .part3-content .pic-box{
+    float: left;
+    width: 735px;
+    height: 100%;
+    overflow: hidden;
+}
+.banner1-part3 .part3-content .pic-box a img{
+    width: 735px;
+    height: 460px;
+    display: block;
+}
+.banner1-part3 .part3-content .pic-list{
+    margin-left: 735px;
+    width: 493px;
+}
+.banner1-part3 .part3-content .pic-list li{
+    cursor: pointer;
+    height: 92px;
+    background-color: #e4e3e3;
+}
+.banner1-part3 .part3-content .pic-list li.on{
+    background-color: #f00;
+}
+.banner1-part3 .part3-content .pic-list li i{
+    float: left;
+    display: inline-block;
+    width: 147px;
+    background: url("../images/banner1-news-list.png") no-repeat;
+    margin: 0 14px;
+    vertical-align: middle;
+}
+.banner1-part3 .part3-content .pic-list li.li1 i{
+    margin-top: 30px;
+    height: 30px;
+    background-position: 0 0;
+}
+.banner1-part3 .part3-content .pic-list li.li2 i{
+    margin-top: 30px;
+    height: 40px;
+    background-position: 0 -90px;
+}
+.banner1-part3 .part3-content .pic-list li.li3 i{
+    margin-top: 15px;
+    height: 70px;
+    background-position: 0 -176px;
+}
+.banner1-part3 .part3-content .pic-list li.li4 i{
+    margin-top: 18px;
+    height: 55px;
+    background-position: 0 -270px;
+}
+.banner1-part3 .part3-content .pic-list li.li5 i{
+    margin-top: 16px;
+    height: 60px;
+    background-position: 0 -350px;
+}
+.banner1-part3 .part3-content .pic-list li p{
+    color: #000;
+    font-size: 16px;
+    padding-top: 25px;
+    margin:0 50px 0 180px;
+}
+.banner1-part3 .part3-content .pic-list li.on p{
+    color: #fff;
+}
+.banner1-part3 p,.banner1-part4 p{
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+.banner1-part4{
+    width: 100%;
+    min-width: 1230px;
+    height: 610px;
+    background-color: #e4e3e3;
+}
+.banner1-part4 .part-title p{
+    text-indent: 170px;
+    padding: 0;
+}
+.banner1-part4 .part4-banner{
+    width: 1140px;
+    margin: 0 auto;
+    position: relative;
+}
+.banner1-part4 .part4-banner-con{
+    width: 1140px;
+    overflow: hidden;
+    height: 255px;
+    position: relative;
+}
+.banner1-part4 ul{
+    width: 2880px;
+    position: absolute;
+}
+.banner1-part4 ul li{
+    float: left;
+    width: 180px;
+    height: 255px;
+    margin-right: 60px;
+}
+.banner1-part4 ul li img{
+    display: block;
+    width: 178px;
+    height: 222px;
+}
+.banner1-part4 ul li.on img{
+    border: 1px solid #f00;
+}
+.banner1-part4 ul li p{
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    color: #000;
+    font-size: 14px;
+    padding: 0;
+}
+.banner1-part4 ul li.on p{
+    color: #fff;
+    background-color: #f00;
+}
+.banner1-part4 .btn span{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 26px;
+    height: 30px;
+    background: url("../images/contact-btn.png") no-repeat;
+}
+.banner1-part4 .btn span.left{
+    background-position: 0 -60px;
+    left: -40px;
+}
+.banner1-part4 .btn span.right{
+    background-position: -24px -60px;
+    right: -40px;
+}

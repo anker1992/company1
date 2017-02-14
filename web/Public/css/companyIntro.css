@@ -1,0 +1,180 @@
+@charset "utf-8";
+.container{
+    width: 1210px;
+    margin: 0 auto;
+}
+.intro-head{
+    background: url("../images/company-intro-head.png") no-repeat;
+    height: 210px;
+    background-size: 100% 100%;
+    min-width: 1230px;
+    padding-top: 40px;
+    position: relative;
+}
+.intro-head .intro-head-con{
+    background: rgba(0,0,0,0.15);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#26000000,endColorstr=#26000000);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#19000000,endColorstr=#19000000)\9 \0;
+    padding: 40px 0 0 50px;
+    height: 130px;
+}
+.intro-head .intro-head-con img{
+    float: left;
+    margin-right: 35px;
+}
+.intro-head .intro-head-con .introduce{
+    float: left;
+}
+.intro-head .intro-head-con .introduce h2{
+    font-size: 26px;
+    line-height: 2em;
+    margin-bottom: 5px;
+    font-weight: normal;
+    color: #000;
+}
+.intro-head .intro-head-con .introduce p span{
+    width: 75px;
+    height: 28px;
+    display: inline-block;
+    line-height: 28px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+    margin-right: 15px;
+}
+
+.intro-middle{
+    background-color: #f0f0f0;
+}
+.intro-middle .container{
+    background-color: #fff;
+    position: relative;
+    top: -40px;
+}
+.intro-middle .intro-middle-left{
+    width: 755px;
+    padding: 50px 50px 100px;
+    border-right: 1px solid #f0f0f0;
+}
+.intro-middle .intro-middle-left h3{
+    font-size: 22px;
+    font-weight: normal;
+    color: #000;
+    margin-bottom: 20px;
+    padding-left: 7px;
+    border-left: 7px solid #e50012;
+}
+.intro-middle .intro-middle-left .article p{
+    color: #000;
+    text-indent: 2em;
+    line-height: 2em;
+}
+.intro-middle .intro-middle-left .company-introduce p.showmore{
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 12px;
+    text-align: center;
+}
+.intro-middle .intro-middle-left .company-introduce p.showmore:hover{
+    color: #e50012;
+}
+.intro-middle .intro-middle-left h3 span{
+    color: #6c6c6c;
+    font-size: 20px;
+}
+
+.intro-middle .intro-middle-left .recruit-post{
+    margin-top: 35px;
+}
+.intro-middle .intro-middle-left .recruit-post dl{
+    padding: 20px 0;
+    border-bottom: 1px dashed #ccc;
+}
+.intro-middle .intro-middle-left .recruit-post dl.last{
+    border-bottom: none;
+}
+.intro-middle .intro-middle-left .recruit-post dl dt{
+    float: left;
+}
+.intro-middle .intro-middle-left .recruit-post dl dt span a{
+    display: block;
+    color: #e50012;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+.intro-middle .intro-middle-left .recruit-post dl dt p{
+    color: #000;
+}
+.intro-middle .intro-middle-left .recruit-post dl dd{
+    float: right;
+    width: 80px;
+    height: 25px;
+    margin-top: 20px;
+    background-color: #e50012;
+    border-radius: 5px;
+    text-align: center;
+}
+.intro-middle .intro-middle-left .recruit-post dl dd a{
+    color: #fff;
+    line-height: 25px;
+}
+.intro-middle .paging-list{
+    margin: 50px 0 40px 0;
+    text-align: center;
+    *clear:both;
+}
+.intro-middle .paging-list a{
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #fff;
+    color: #e50012;
+}
+.intro-middle .paging-list ul{
+    display:inline;
+    /* display: inline-block;*/
+}
+.intro-middle .paging-list ul li{
+    display: inline-block;
+    cursor: pointer;
+    background-color: #fff;
+    *width:40px;
+    *display:inline;
+    margin-right: 10px;
+}
+.intro-middle .paging-list ul li a{
+    color: #e50012;
+    margin-right: 0;
+}
+.intro-middle .paging-list span{
+    padding: 10px 5px;
+    display: inline-block;
+}
+.intro-middle .paging-list a:hover,.intro-middle .paging-list ul li:hover a,.intro-middle .paging-list ul li.cur a{
+    background-color: #e50012;
+    color: #fff;
+}
+
+.intro-middle .intro-middle-right{
+    width: 325px;
+    padding-top: 50px;
+}
+.intro-middle .intro-middle-right h3{
+    color: #000;
+    font-size: 22px;
+    padding-left: 7px;
+    border-left: 7px solid #e50012;
+    font-weight: normal;
+    margin-bottom: 25px;
+}
+.intro-middle .intro-middle-right h3 i{
+    width: 160px;
+    height: 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+.intro-middle .intro-middle-right p{
+    color: #000;
+    line-height: 3em;
+}

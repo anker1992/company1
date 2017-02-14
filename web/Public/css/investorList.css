@@ -1,0 +1,250 @@
+@charset "utf-8";
+.investorList-top span{
+    display: block;
+    width: 100%;
+    height: 262px;
+    min-width: 1230px;
+    margin-top: 80px;
+    background: url("../images/investorList-top.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.investorList-top span img{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    min-width: 1230px;
+    height: 262px;
+    z-index: 4;
+}
+
+.investorList-part1{
+    padding: 60px 0 50px;
+}
+.investorList-part1 h2{
+    color: #000;
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 10px;
+    border-left: 8px solid #e60012;
+    margin-bottom: 50px;
+    line-height: 32px;
+}
+.investorList-part1 .investorList-part1-con{
+    position: relative;
+    height: 324px;
+}
+.investorList-part1 .investorList-part1-con .carousel{
+    position: absolute;
+    top: 0;
+    left: 30px;
+    width: 1170px;
+    height: 324px;
+    overflow: hidden;
+}
+.investorList-part1 .investorList-part1-con .carousel dl{
+    position: absolute;
+    width: 2580px;
+    height: 324px;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd{
+    float: left;
+    width: 348px;
+    height: 322px;
+    border: 1px solid #b0b0b0;
+    margin-right: 60px;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd1{
+    height: 130px;
+    border-bottom: 1px solid #b0b0b0;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd1 img{
+    float: left;
+    margin-top: 5px;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd1 .dd1-right{
+    width: 200px;
+    float: left;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd1 .dd1-right h4{
+    font-size: 16px;
+    color: #000;
+    font-weight: normal;
+    margin: 25px 0 15px;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd1 .dd1-right p{
+    font-size: 16px;
+    color: #000;
+    line-height: 18px;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd2{
+    height: 134px;
+    padding: 0 15px;
+    border-bottom: 1px solid #b0b0b0;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd2 p{
+    color: #000;
+    font-size: 16px;
+    line-height: 2em;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd2 p a{
+    color: #e60012;
+    font-size: 16px;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd3{
+    display: table;
+    height: 55px;
+    padding: 0 15px;
+}
+.investorList-part1 .investorList-part1-con .carousel dl dd .dd3 p{
+    display: table-cell;
+    vertical-align: middle;
+    color: #000;
+    font-size: 16px;
+}
+.investorList-part1 .investorList-part1-con .btn span{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    width: 14px;
+    height: 33px;
+    background: url("../images/investorList-btn.jpg") no-repeat;
+}
+.investorList-part1 .investorList-part1-con .btn span.btnLeft{
+    left: 0;
+    background-position: 0 0;
+}
+.investorList-part1 .investorList-part1-con .btn span.btnRight{
+    right: 0;
+    background-position: -14px 0;
+}
+
+
+.investorList-part2 h2{
+    color: #000;
+    font-size: 24px;
+    font-weight: normal;
+    padding-left: 10px;
+    border-left: 8px solid #e60012;
+    margin-bottom: 50px;
+    line-height: 32px;
+}
+.investorList-part2 ul li.head{
+    background-color: #e9e9e9;
+    height: 36px;
+    line-height: 36px;
+    border: none;
+}
+.investorList-part2 .head h4 span{
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+    display: inline-block;
+    text-align: center;
+}
+.w400{
+    width: 400px;
+}
+.w258{
+    width: 258px;
+}
+.w190{
+    width: 190px;
+}
+.investorList-part2 ul li{
+    height: 89px;
+    border: 1px solid #e9e9e9;
+    margin-bottom: 8px;
+}
+.investorList-part2 ul li .floatL{
+    float: left;
+    height: 89px;
+}
+.investorList-part2 ul li .floatL img{
+    float: left;
+    vertical-align: middle;
+    margin: 17px 15px;
+}
+.investorList-part2 ul li .floatL .td1{
+    width: 315px;
+    margin-top: 15px;
+    float: left;
+}
+.investorList-part2 ul li .floatL .td1 h5{
+    color: #000;
+    font-size: 14px;
+    font-weight: normal;
+    margin-bottom: 6px;
+}
+.investorList-part2 ul li .floatL .td1 p{
+    font-size: 14px;
+    color: #000;
+    line-height: 16px;
+    height: 32px;
+    overflow: hidden;
+}
+.investorList-part2 ul li .floatLC{
+    float: left;
+    display: table;
+    height: 89px;
+    text-align: center;
+}
+.investorList-part2 ul li .floatLB{
+    float: left;
+    display: table;
+    height: 89px;
+}
+.investorList-part2 ul li .floatLC p,.investorList-part2 ul li .floatLB p{
+    display: table-cell;
+    vertical-align: middle;
+    color: #000;
+    font-size: 14px;
+}
+.investorList-part2 ul li .pd45 p{
+    padding-left: 34px;
+}
+.investorList-part2 ul li .pd65 p{
+    padding-left: 65px;
+}
+
+
+.investorList-part2 .paging-list{
+    margin: 70px auto 50px;
+    text-align: center;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    *clear:both;
+}
+.investorList-part2 .paging-list a{
+    display: inline-block;
+    padding: 10px 15px;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+    color: #8e8e8e;
+}
+.investorList-part2 .paging-list ul{
+    display:inline;
+    *position:relative;
+    *top: -10px;
+    /* display: inline-block;*/
+}
+.investorList-part2 .paging-list ul li{
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px 15px;
+    height: 20px;
+    background-color: #f2f2f2;
+    color: #8e8e8e;
+    *width:40px;
+    *height:40px;
+    *line-height:40px;
+    *display:inline;
+    margin-right: 10px;
+}
+.investorList-part2 .paging-list a:hover,.investorList-part2 .paging-list ul li:hover,.investorList-part2 .paging-list ul li.cur,.investorList-part2 .paging-list a.cur{
+    background-color: #e50012;
+    color: #fff;
+}

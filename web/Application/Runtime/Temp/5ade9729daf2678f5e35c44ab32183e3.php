@@ -1,0 +1,3 @@
+<?php
+//000000000060a:3:{i:0;a:5:{s:2:"id";s:2:"76";s:8:"nickname";s:6:"荣荣";s:12:"touxiang_src";s:53:"/Public/wx/wxuser-avatar/2016-12-19/5857594ad02d3.jpg";s:9:"education";s:9:"研究生";s:8:"workarea";s:6:"北京";}i:1;a:5:{s:2:"id";s:3:"201";s:8:"nickname";s:0:"";s:12:"touxiang_src";s:53:"/Public/wx/wxuser-avatar/2016-12-24/585e20b279bbf.jpg";s:9:"education";s:6:"本科";s:8:"workarea";s:0:"";}i:2;a:5:{s:2:"id";s:3:"203";s:8:"nickname";s:6:"韶阳";s:12:"touxiang_src";s:53:"/Public/wx/wxuser-avatar/2016-12-22/585b70200abe5.jpg";s:9:"education";s:0:"";s:8:"workarea";s:6:"上海";}}
+?>

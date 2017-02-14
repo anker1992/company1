@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title></title>
+    <link rel="stylesheet" href="__PUBLIC__/css/common.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/css/infoRelease.css"/>
+</head>
+<body>
+<!--header 开始-->
+<include file="Public:header"/>
+<!--header结束-->
+
+<div class="part1">
+    <div class="container clearfix">
+        <div class="part1-left">
+            <h2>{$one.title}<br></h2>
+            <p><span>{$one.releasetime}</span></p>
+            <p><span>联系人：<em>{$one.name}</em></span></p>
+            <p>
+                <a href="{:U('Rongzi/liuyan',array('id'=>$one['id']))}">马上交谈</a>
+                <!-- <a href="javascript:;">给我留言</a>-->
+            </p>
+        </div>
+        <div class="part1-right">
+            <h2><?php echo $_rows['name'] ?></h2>
+            <ul class="clearfix">
+                <li>
+                    <p>咨询电话：<span class="red">{$one.phone}</span></p>
+                    <p class="clearfix">
+                        <a href="{:U('Rongzi/liuyan',array('id'=>$one['id']))}">留言咨询</a>
+                        <!--<a class="last" href="javascript:;">投资预约</a>-->
+                    </p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="part2">
+    <div class="container clearfix">
+        <div class="part2-left">
+            <h2>产品详情：</h2>
+            <ul>
+                <li>
+                    <h4>产品描述：</h4>
+                    <div class="content">
+                        <p>{$one.describ}。</p>
+                    </div>
+                </li>
+                <li>
+                    <h4>备注：</h4>
+                    <div class="content">
+                        <p>无</p>
+                    </div>
+                </li>
+                <li>
+                    <h4>项目计划书预览：</h4>
+                    <div class="content">
+
+                    </div>
+                    <div class="check">
+                        <?php if(empty($pdf['name'])){ ?>
+                        <a href="javascript:;" onclick="alert('没有上传');">点击查看项目计划书</a>
+                        <?php }else{ ?>
+                        <a href="__PUBLIC__/pdf/{$pdf.name}" target="_black">点击查看项目计划书</a>
+                        <?php } ?>
+
+                    </div>
+
+                </li>
+            </ul>
+        </div>
+        <div class="part2-right">
+            <h2>猜你喜欢</h2>
+            <ul>
+                <foreach name="like" item="like">
+                    <li><a href="infoRelease.php?id=<?php echo $love_rows['id'] ?>">
+                        <h4 title="">{$like.name}<span title="">{$like.expectedreturn}</span></h4>
+                        <p><span>产品期限：{$like.term}</span><span class="rate">预期收益率</span></p>
+                    </a>
+                    </li>
+                </foreach>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--footer开始-->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="attention">
+            <img src="__PUBLIC__/images/weixin.png" alt=""/>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="tel"><span></span>010—58690663</li>
+                <li class="email"><span></span>weihehuo@163.com</li>
+                <li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+                <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer结束-->
+
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".head-left ul li").hover(function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"block"
+                })
+            }else{
+                $(this).addClass("active").siblings().removeClass("active");
+            }
+        },function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"none"
+                })
+            }else{
+                $(this).removeClass("active");
+            }
+        })
+    });
+
+    $(function(){
+        var height1 = $(".part2-left").outerHeight();
+        var height2 = $(".part2-right").outerHeight();
+        var diff = height1 - height2;
+        console.log(diff);
+        $(".part2-right ul").css("padding-bottom",diff+"px");
+    });
+</script>
+
+</body>
+</html>

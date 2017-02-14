@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <link rel="stylesheet" href="__PUBLIC__/csswx/amazeui.min.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/csswx/userCenter.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/csswx/heart-person-list.css"/>
+</head>
+<body class="bg-white">
+<div class="main-content">
+
+    <div class="gray-title-bar">
+        <a href="{:U('WxUser/userCenter',array('uid'=>$uid,'phone'=>$phone))}">
+            <b class="left"><i class="left-arrow1"></i><i class="left-arrow2"></i></b>
+            <span>我心动的人</span>
+        </a>
+    </div>
+    <foreach name="list" item="list">
+    <div class="heart-person-list-items">
+        <img class="heart-list-avatar" src="{$list.touxiang_src}" alt=""/>
+        <div class="main-heart-items-head">
+            <a href="{:U('WxList/personalInfo',array('id'=>$list['id'],'uid'=>$uid,'phone'=>$phone,'heart'=>1))}">
+            <div class="head-box1">
+                <span class="head-name">{$list.nickname}</span>
+            </div>
+            </a>
+            <div class="head-box2">
+                <span class="fl">{$list.education}</span>
+
+                <div class="fr">
+                    <img class="icon-position-img" src="__PUBLIC__/imageswx/icon-position.png" alt=""/>
+                    <span>{$list.workarea}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </foreach>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/jswx/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="__PUBLIC__/jswx/amazeui.min.js"></script>
+</body>
+</html>

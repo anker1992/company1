@@ -1,0 +1,232 @@
+@charset "utf-8";
+.seminarPage-top span{
+    margin-top: 80px;
+    width: 100%;
+    min-width: 1230px;
+    height: 573px;
+    display: block;
+    background: url("../images/seminarPage-top.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+.seminarPage-top img{
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    min-width: 1230px;
+    height: 573px;
+}
+
+.seminarPage-part1{
+    padding-top: 45px;
+}
+.seminarPage-part1 ul{
+    text-align: center;
+}
+.seminarPage-part1 ul li{
+    width: 218px;
+    height: 177px;
+    display: inline-block;
+    margin: 35px 12px 0;
+}
+.seminarPage-part1 ul li div,.seminarPage-part1 ul li a{
+    display: inline-block;
+    width: 218px;
+    height: 177px;
+    position: relative;
+    /*transition: width 0.5s,height 0.5s,border 1s;*/
+}
+.seminarPage-part1 ul li a i{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-box-shadow: inset 0 0 0 0px #bcbcbc;
+    -moz-box-shadow: inset 0 0 0 0px #bcbcbc;
+    box-shadow: inset 0 0 0 0px #bcbcbc;
+    -webkit-transition: all 0.25s;
+    -moz-transition: all 0.25s;
+    -ms-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all 0.25s;
+}
+.seminarPage-part1 ul li a:hover i{
+    -webkit-box-shadow: inset 0 0 0 8px #bcbcbc;
+    -moz-box-shadow: inset 0 0 0 8px #bcbcbc;
+    box-shadow: inset 0 0 0 8px #bcbcbc;
+}
+
+.seminarPage-part2{
+    padding-bottom: 100px;
+}
+.seminarPage-part2 h3{
+    color: #3e3e3e;
+    font-size: 20px;
+    font-weight: normal;
+    letter-spacing: 3px;
+    padding-left: 8px;
+    border-left: 6px solid #e60012;
+    margin: 40px 0 25px;
+}
+.seminarPage-part2 p{
+    color: #3e3e3e;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+.seminarPage-part2 p span{
+    font-size: 16px;
+    color: #e60012;
+}
+.seminarPage-part2 ul li{
+    cursor: pointer;
+    color: #3e3e3e;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+.seminarPage-part2 ul li i{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+.seminarPage-part2 ul li:hover i{
+    background-color: #cecece;
+}
+
+
+.seminarPage-part3{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-width: 1230px;
+    height: 60px;
+    line-height: 60px;
+    background-color: blanchedalmond;
+}
+.seminarPage-part3 p{
+    float: left;
+    color: #3e3e3e;
+    font-size: 16px;
+    margin-left: 90px;
+}
+.seminarPage-part3 .part3-right{
+    float: right;
+    margin-right: 90px;
+}
+.seminarPage-part3 .part3-right span.signUp{
+    cursor: pointer;
+    font-size: 16px;
+    display: inline-block;
+    width: 128px;
+    height: 23px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 3px;
+    margin-right: 25px;
+    background-color: #fff;
+    border: 1px solid #c9c9c9;
+    border-radius: 5px;
+}
+.seminarPage-part3 .part3-right span a{
+    color: #e60012;
+    font-size: 16px;
+}
+
+
+.signUp-body,.success-body{
+    display: none;
+    width: 100%;
+    position: fixed;
+    top: 80px;
+    bottom: 60px;
+    left: 0;
+    background: rgba(81,81,81,.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#80515151,endColorstr=#80515151);
+}
+.signUp-body .signUp-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -189px;
+    margin-top: -205px;
+    width: 378px;
+    height: 410px;
+    background-color: #fff;
+}
+.signUp-body .signUp-box h3{
+    font-size: 18px;
+    letter-spacing: 3px;
+    font-weight: normal;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    background-color: #f2f2f2;
+    border-bottom: 1px solid #c7c7c7;
+}
+.signUp-body .signUp-box h3 span{
+    cursor: pointer;
+    float: right;
+    margin-right: 10px;
+ }
+.signUp-body .signUp-box ul{
+    margin: 0 55px 0 45px;
+}
+.signUp-body .signUp-box ul li{
+    margin-top: 20px;
+    text-align: center;
+}
+.signUp-body .signUp-box ul li label{
+    color: #3e3e3e;
+    font-size: 16px;
+    letter-spacing: 3px;
+    width: 70px;
+    text-align: left;
+    display: inline-block;
+}
+.signUp-body .signUp-box ul li input{
+    width: 180px;
+    height: 23px;
+    line-height: 23px;
+    padding: 0 10px;
+    display: inline-block;
+    border: 1px solid #c9c9c9;
+}
+.signUp-body .signUp-box ul li .submit{
+    cursor: pointer;
+    display: inline-block;
+    width: 140px;
+    height: 25px;
+    line-height: 25px;
+    background-color: #e0e0e0;
+    margin-top: 10px;
+}
+.signUp-body .signUp-box ul li .submit:hover{
+    color: #fff;
+    background-color: #e60012;
+}
+
+.success-body .success-box{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -217px;
+    margin-top: -113px;
+    width: 435px;
+    height: 225px;
+    background-color: #fff;
+    text-align: center;
+}
+.success-body .success-box p{
+    color: #3e3e3e;
+    font-size: 16px;
+    line-height: 30px;
+    padding-top: 80px;
+}

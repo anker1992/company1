@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:6:"薛羽";s:8:"workarea";s:0:"";s:6:"height";s:7:"175-180";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-19/5857428da6cad.png";s:11:"best_person";s:32:"清纯可爱,气质优雅,正直";s:10:"best_movie";s:25:"悬疑推理,奇幻魔幻";s:10:"best_music";s:19:"钢琴,古典音乐";s:11:"best_writer";s:16:"张大春,路遥";s:9:"best_food";s:16:"西餐,自助餐";s:11:"best_sports";s:16:"瑜伽,跆拳道";s:14:"tweleveanimals";s:3:"龙";s:13:"constellation";s:9:"狮子座";s:10:"profession";s:6:"金融";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"20000-25000元";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:13:"5000-10000元";s:14:"zmaritalstatus";N;}
+?>

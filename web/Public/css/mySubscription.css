@@ -1,0 +1,248 @@
+@charset "utf-8";
+.container{
+    width: 1210px;
+    margin: 0 auto;
+}
+
+.mySub-content{
+    margin-top: 10px;
+}
+.mySub-content .mySub-content-left{
+    width: 835px;
+}
+.mySub-content .mySub-content-left h2{
+    color: #000;
+    font-size: 20px;
+    font-weight: normal;
+    margin: 25px 0;
+}
+.mySub-content .mySub-content-left p{
+    font-size: 16px;
+    color: #000;
+}
+
+.mySub-content .mySub-content-left h4{
+    color: #de5c5c;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 5px 15px;
+    background-color: #ffe4e4;
+    position: relative;
+    margin-bottom: 45px;
+    display: inline-block;
+}
+.mySub-content .mySub-content-left h4::before{
+    content: "";
+    position: absolute;
+    left: -1px;
+    bottom: -20px;
+    width: 0;
+    height: 0;
+    border-color: #ead2d2 #ead2d2 transparent transparent;
+    border-style: solid;
+    border-width: 10px 15px;
+}
+.mt45{
+    margin-top: 45px;
+}
+.mySub-content .mySub-content-left .email-box .email,.mySub-content .mySub-content-left .post-box .post-con,.mySub-content .mySub-content-left .salary-box .salary-con{
+    width: 380px;
+    height: 45px;
+    display: inline-block;
+    line-height: 45px;
+    padding: 0 5px;
+    border: 1px solid #ffe4e4;
+    margin-right: 80px;
+    position: relative;
+}
+.mySub-content .mySub-content-left .post-box .post-con,.mySub-content .mySub-content-left .salary-box .salary-con{
+    display: block;
+}
+
+.mySub-content .mySub-content-left label{
+    color: #000;
+    padding: 13px 10px;
+    display: inline-block;
+    margin-right: 50px;
+}
+.mySub-content .mySub-content-left label input{
+    display: none;
+}
+.mySub-content .mySub-content-left label.cur{
+    border: 1px solid #ffe4e4;
+}
+
+.mySub-content .mySub-content-left .post-box .post-con i,.mySub-content .mySub-content-left .salary-box .salary-con i{
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    border-style: solid;
+    border-color: #DCDCDC transparent transparent transparent;
+    border-width: 8px;
+}
+.mySub-content .mySub-content-left .post-box{
+    width: 380px;
+    position: relative;
+}
+.mySub-content .mySub-content-left .post-box input{
+    width: 380px;
+    height: 45px;
+    line-height: 45px;
+}
+.mySub-content .mySub-content-left .post-box .post-list{
+    position: absolute;
+    display: none;
+    background-color: #fff;
+    width: 392px;
+    z-index: 10;
+}
+.mySub-content .mySub-content-left .post-box .post-list ul li{
+    line-height: 20px;
+    position: relative;
+}
+.mySub-content .mySub-content-left .post-box .post-list ul li span{
+    cursor: pointer;
+    display: block;
+    padding-left: 15px;
+    color: #000;
+}
+.mySub-content .mySub-content-left .post-box .post-list ul li span:hover{
+    background-color: #c9c9c9;
+}
+.mySub-content .mySub-content-left .post-box .post-list ul li div{
+    margin: 5px 0 5px 30px;
+    display: none;
+}
+.mySub-content .mySub-content-left .post-box .post-list ul li div a{
+    width: 100px;
+    float: left;
+}
+.mySub-content .mySub-content-left .post-box .post-list ul li div a:hover{
+    color: #e50012;
+}
+.mySub-content .mySub-content-left .work-box label{
+    color: #000;
+    padding: 13px 10px;
+    display: inline-block;
+    margin-right: 50px;
+}
+.mySub-content .mySub-content-left .work-box label.cur{
+    border: 1px solid #ffe4e4;
+}
+.mySub-content .mySub-content-left .work-box label input{
+    display: none;
+}
+.mySub-content .mySub-content-left .salary-box{
+    position: relative;
+}
+.mySub-content .mySub-content-left .salary-con input{
+    width: 380px;
+    height: 45px;
+    line-height: 45px;
+}
+.mySub-content .mySub-content-left .salary-list{
+    position: absolute;
+    display: none;
+    width: 392px;
+    height: 100px;
+    background-color: #fff;
+    overflow: auto;
+}
+.mySub-content .mySub-content-left .salary-list a{
+    display: block;
+    height: 20px;
+    line-height: 20px;
+}
+.mySub-content .mySub-content-left .salary-list a:hover{
+    background-color: #c9c9c9;
+}
+
+.mySub-content .mySub-content-left .btn{
+    margin: 80px 0 150px;
+}
+.mySub-content .mySub-content-left .btn input{
+    cursor: pointer;
+    width: 60px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #e50012;
+    background-color: transparent;
+}
+.mySub-content .mySub-content-left .btn input.cur{
+    color: #fff;
+    background-color: #e50012;
+}
+
+.mySub-content .mySub-content-right{
+    width: 345px;
+    overflow: hidden;
+}
+.mySub-content .mySub-content-right ul{
+    width: 360px;
+}
+.mySub-content .mySub-content-right ul li{
+    text-align: center;
+    width: 75px;
+    height: 65px;
+    padding-top: 10px;
+    border: 1px solid #e50012;
+    float: left;
+    margin-right: 12px;
+}
+.mySub-content .mySub-content-right ul li a{
+    color: #000;
+    font-size: 16px;
+}
+.mySub-content .mySub-content-right ul li a i{
+    display: block;
+    height: 40px;
+    margin: 0 auto;
+    background: url("../images/personal-icon1.png") no-repeat;
+}
+.mySub-content .mySub-content-right ul li.mySub-r01 i{
+    width: 40px;
+    background-position: 1px 0;
+}
+.mySub-content .mySub-content-right ul li.mySub-r02 i{
+    width: 39px;
+    background-position: -39px 0;
+}
+.mySub-content .mySub-content-right ul li.mySub-r03 i{
+    width: 40px;
+    background-position: -78px 0;
+}
+.mySub-content .mySub-content-right ul li.mySub-r04 i{
+    width: 32px;
+    background-position: -118px 0;
+}
+
+.mySub-content .mySub-content-right .mySub-part2{
+    margin-top: 35px;
+    width: 286px;
+    height: 268px;
+    padding: 24px 35px 0;
+    background: url("../images/mySub-bg.png") no-repeat;
+}
+.mySub-content .mySub-content-right .mySub-part2 ol li{
+    color: #000;
+    line-height: 22px;
+    margin-top: 25px;
+}
+.mySub-content .mySub-content-right .mySub-part2 ol li i{
+    width: 44px;
+    height: 43px;
+    display: inline-block;
+    float: left;
+    margin-right: 20px;
+    vertical-align: middle;
+    background: url("../images/mySub-icon01.png") no-repeat;
+}
+.mySub-content .mySub-content-right .mySub-part2 ol li.search i{
+    margin-top: 2px;
+    background-position: 0 0;
+}
+.mySub-content .mySub-content-right .mySub-part2 ol li.email i{
+    margin-top: 12px;
+    background-position: 0 -44px;
+}

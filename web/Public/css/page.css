@@ -1,0 +1,78 @@
+#page_num{
+    height: 20px;
+    clear: both;/*取消浮动*/
+    padding: 20px 0;
+    position: relative;/*为了下面绝对定位*/
+}
+#page_num ul{
+    position: absolute;
+    right: 50px;
+    height: 20px;
+}
+#page_num ul li{
+    float: left;
+    width: 26px;
+    height: 20px;
+}
+#page_num ul li a{
+    display: block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    border: 1px solid #333;
+    text-align: center;
+    text-decoration: none;
+}
+#page_num ul li a:hover,#page_num ul li a.selected{
+    background: #666;
+    font-weight: bolid;
+    color: #fff;
+}
+
+/*#page_text{
+    height: 20px;
+    clear: both;
+    padding: 20px 0;
+}
+#page_text ul{
+    text-align: center;
+}
+#page_text ul li{
+    display: inline;
+}
+#page_text ul li a {
+    color: red;
+    text-decoration: none;
+}
+#page_text ul li a:hover {
+    color:green ;
+    text-decoration: underline;
+}*/
+
+
+
+
+#page_text{
+	padding-top:25px;
+	text-align:center;
+	height:40px;
+}
+#page_text ul{
+	display:inline-block;
+}
+#page_text ul li{
+	display:inline-block;
+}
+#page_text span,#page_text ul li a{
+	display:inline-block;
+	cursor:pointer;
+	font-size:12px;
+	padding:10px 12px;
+	background-color:#fff;
+	margin-right:10px;
+}
+#page_text ul li a.selected,#page_text ul li a:hover,#page_text span:hover{
+	color:#fff;
+	background-color:#f00;
+}
+

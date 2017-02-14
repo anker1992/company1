@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"0";s:8:"nickname";s:9:"李浩楠";s:8:"workarea";s:0:"";s:6:"height";s:7:"180-185";s:12:"touxiang_src";s:55:"/Public/dating/user-avatar/2016-12-19/58577ae3184c2.png";s:11:"best_person";s:28:"气质优雅,活泼女汉子";s:10:"best_movie";s:13:"科幻,枪战";s:10:"best_music";s:6:"民谣";s:11:"best_writer";s:9:"刘慈欣";s:9:"best_food";s:6:"烧烤";s:11:"best_sports";s:6:"网球";s:14:"tweleveanimals";s:3:"蛇";s:13:"constellation";s:0:"";s:10:"profession";s:6:"销售";s:9:"education";s:6:"本科";s:8:"ifbuycar";s:17:"有车(无车贷)";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"25000元以上";s:9:"zworkarea";s:6:"北京";s:7:"zsalary";s:14:"10000-15000元";s:14:"zmaritalstatus";N;}
+?>

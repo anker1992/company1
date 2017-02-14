@@ -1,0 +1,115 @@
+@charset "utf-8";
+.part1{
+
+}
+.part1-con{
+    margin: 200px 0 120px 0;
+    width: 100%;
+    min-width: 1230px;
+    height: 40px;
+    background-color: #ededed;
+}
+.part1 .part1-con img{
+    width: 615px;
+    height: 95px;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+    top: -28px;
+}
+
+.part2{
+
+}
+.part-title{
+    height: 1px;
+    width: 100%;
+    background-color: #000;
+    margin-bottom: 80px;
+}
+.part-title p{
+    width: 284px;
+    background-color: #fff;
+    margin: 0 auto;
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+    position: relative;
+    top: -15px;
+}
+.part2 .part2-con,.part3 .part3-con,.part4 .part4-con{
+    width: 1210px;
+    margin: 0 auto;
+    zoom: 1;
+}
+.part4 .part4-con{
+    margin-bottom: 150px;
+}
+
+.part-left {
+    width: 603px;
+    height: 542px;
+    float: left;
+    display: inline-block;
+}
+.part-right{
+    padding: 25px 0;
+    margin-left:603px;
+}
+.part-right .part-right-con{
+    background-color: #ededed;
+    padding: 35px 20px;
+    color:#000;
+    height: 420px;
+}
+.part-right h3{
+    line-height: 2em;
+    font-size: 20px;
+}
+.part-right h4{
+    line-height: 2em;
+    font-size: 12px;
+    margin-bottom: 15px;
+}
+.part-right p{
+    font-size: 16px;
+    line-height: 2.5em;
+}
+.part2 .part-right-con ul{
+    width: 270px;
+    margin: 40px auto 0;
+    overflow: hidden;
+}
+.part2 .part-right-con ul li{
+    width: 110px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #949494;
+    float: left;
+    margin-right: 25px;
+}
+.part2 .part-right-con ul li.cur{
+    background-color: #f00;
+}
+.part2 .part-right-con ul li a{
+    font-size: 16px;
+    color: #fff;
+}
+
+.part-title1{
+    margin: 70px 0;
+}
+.part-title1 p{
+    font-size: 24px;
+    color: #000;
+    text-align: center;
+}
+.part-title1 p i{
+    display: inline-block;
+    width: 15px;
+    height: 33px;
+    margin-right: 15px;
+    vertical-align: middle;
+    background: url("../images/aboutUs-icon.png") no-repeat;
+}

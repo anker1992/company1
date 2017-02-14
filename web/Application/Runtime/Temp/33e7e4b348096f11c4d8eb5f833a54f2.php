@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:2:"35";s:8:"nickname";s:34:"ꉂ ೭(˵¯̴͒ꇴ¯̴͒˵)౨”";s:8:"workarea";s:6:"上海";s:6:"height";s:0:"";s:12:"touxiang_src";s:53:"/Public/wx/wxuser-avatar/2016-12-22/585b70200abe5.jpg";s:11:"best_person";s:46:"清纯可爱,自己创业,逛街,摄影,烹饪";s:10:"best_movie";s:13:"枪战,犯罪";s:10:"best_music";s:51:"民谣,朋克,钢琴,流行,重金属,朋克,电子";s:11:"best_writer";s:6:"金庸";s:9:"best_food";s:29:"家常菜,粤菜,日本料理";s:11:"best_sports";s:6:"冲浪";s:14:"tweleveanimals";s:0:"";s:13:"constellation";s:9:"金牛座";s:10:"profession";s:0:"";s:9:"education";s:0:"";s:8:"ifbuycar";s:0:"";s:10:"ifbuyhouse";s:0:"";s:6:"salary";s:0:"";s:9:"zworkarea";s:0:"";s:7:"zsalary";s:0:"";s:14:"zmaritalstatus";s:0:"";}
+?>

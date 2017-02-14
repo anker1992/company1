@@ -1,0 +1,52 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>微合伙文化传媒有限公司_微合伙科技有限公司_金融社交圈_金融趴官网_微合伙</title>
+    <link rel="stylesheet" href="/Public/css/loginNew.css"/>
+    <link rel="stylesheet" href="/Public/css/common.css"/>
+</head>
+<body>
+<img class="login-bg" src="/Public/images/loginbg.png" alt=""/>
+<img class="login-text" src="/Public/images/logintext.png" alt=""/>
+
+<div class="content-box">
+    <div class="login-box">
+        <div class="login-bar-title">
+            <p class="title-1">会员登录</p>
+
+            <p class="title-2">没有账户？<a href="<?php echo U('User/register');?>">免费注册</a></p>
+        </div>
+        <form action="<?php echo U('User/login_add');?>" method="post">
+            <input class="username-input" name="phone" type="text" placeholder="请输入已验证手机号"/>
+            <input class="password-input" name="password" type="password" placeholder="请输入密码"/>
+            <a class="forget-password" href="">忘记密码</a>
+            <p class="tip"><span></span></p>
+            <input type="submit" class="login-button" value="登录"/>
+        </form>
+    </div>
+</div>
+<script type="text/javascript" src="/Public/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    /*注册的验证*/
+    $(function () {
+        $(".login-button").click(function () {
+            var phone = $(".username-input").val();
+            var pass = $(".password-input").val();
+            var phoneKey = /^1[3|4|5|7|8|9]\d{9}$/.test(phone);
+            yzm1 = $("#yz-input").val();
+            yzm2 = $("#yzm").text();
+            if (phone == "") {
+                $(".tip span").text("请输入您的手机号！");
+            } else if (!phoneKey) {
+                $(".tip span").text("请正确填写您的手机号！");
+            } else if (pass == "") {
+                $(".tip span").text("请填写您的密码！");
+            } else {
+                $(".tip span").text("");
+            }
+        });
+    });
+</script>
+</body>
+</html>

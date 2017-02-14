@@ -1,0 +1,3 @@
+<?php
+//000000000060a:21:{s:3:"uid";s:1:"7";s:8:"nickname";s:6:"荣荣";s:8:"workarea";s:6:"北京";s:6:"height";s:3:"169";s:12:"touxiang_src";s:53:"/Public/wx/wxuser-avatar/2016-12-19/5857594ad02d3.jpg";s:11:"best_person";s:38:"娇媚柔美,清纯可爱,气质优雅";s:10:"best_movie";s:0:"";s:10:"best_music";s:0:"";s:11:"best_writer";s:0:"";s:9:"best_food";s:0:"";s:11:"best_sports";s:0:"";s:14:"tweleveanimals";s:3:"虎";s:13:"constellation";s:9:"白羊座";s:10:"profession";s:9:"房地产";s:9:"education";s:9:"研究生";s:8:"ifbuycar";s:6:"无车";s:10:"ifbuyhouse";s:17:"有房(无房贷)";s:6:"salary";s:14:"15000-20000元";s:9:"zworkarea";s:6:"云南";s:7:"zsalary";s:14:"20000-25000元";s:14:"zmaritalstatus";s:6:"离异";}
+?>

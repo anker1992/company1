@@ -1,0 +1,60 @@
+[ 2017-01-22T09:19:33+08:00 ] 127.0.0.1 /
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001229s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001604s ]
+SQL: SHOW COLUMNS FROM `free_post` [ RunTime:0.0334s ]
+SQL: SELECT `free_id`,`free_title`,`free_make_time` FROM `free_post` ORDER BY free_top_status desc,free_make_time desc LIMIT 16   [ RunTime:0.0205s ]
+SQL: SHOW COLUMNS FROM `marry_basic` [ RunTime:0.0355s ]
+SQL: SELECT `id`,`nickname`,`maritalstatus`,`touxiang_src` FROM `marry_basic` WHERE ( nickname != '' and touxiang_src != '' ) ORDER BY register_time desc LIMIT 12   [ RunTime:0.0027s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.008352s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.008404s ]
+NOTIC: [8] Use of undefined constant 银行 - assumed '银行' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 105 行.
+NOTIC: [8] Use of undefined constant 资管信托 - assumed '资管信托' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant 基金产品 - assumed '基金产品' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 115 行.
+NOTIC: [8] Use of undefined constant 保险产品 - assumed '保险产品' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 120 行.
+NOTIC: [8] Use of undefined constant P2P产品 - assumed 'P2P产品' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 125 行.
+NOTIC: [8] Use of undefined constant 另类投资 - assumed '另类投资' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 130 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069692s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069736s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001335s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001384s ]
+
+[ 2017-01-22T09:19:34+08:00 ] 127.0.0.1 HTTP://www.lrr.local/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000787s ]
+SQL: SHOW COLUMNS FROM `free_post` [ RunTime:0.0051s ]
+SQL: SELECT `free_id`,`free_title`,`free_make_time` FROM `free_post` ORDER BY free_top_status desc,free_make_time desc LIMIT 16   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `marry_basic` [ RunTime:0.0054s ]
+SQL: SELECT `id`,`nickname`,`maritalstatus`,`touxiang_src` FROM `marry_basic` WHERE ( nickname != '' and touxiang_src != '' ) ORDER BY register_time desc LIMIT 12   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000839s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000886s ]
+NOTIC: [8] Use of undefined constant 银行 - assumed '银行' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 105 行.
+NOTIC: [8] Use of undefined constant 资管信托 - assumed '资管信托' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 110 行.
+NOTIC: [8] Use of undefined constant 基金产品 - assumed '基金产品' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 115 行.
+NOTIC: [8] Use of undefined constant 保险产品 - assumed '保险产品' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 120 行.
+NOTIC: [8] Use of undefined constant P2P产品 - assumed 'P2P产品' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 125 行.
+NOTIC: [8] Use of undefined constant 另类投资 - assumed '另类投资' D:\WWW\web\Application\Runtime\Cache\Home\2a94b8bda04ff446dcedd42276fc99ee.php 第 130 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010777s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010808s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000664s ]
+

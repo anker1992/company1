@@ -1,0 +1,474 @@
+@charset "utf-8";
+.content .container{
+    width: 1210px;
+    min-width: 1210px;
+}
+.content .content-left{
+    width: 835px;
+}
+.content .content-left .content-left-top{
+    display: block;
+    position: relative;
+    width: 835px;
+    height: 168px;
+    background: url("../images/datingPersonal-top.jpg") no-repeat;
+}
+.content .content-left .content-left-top .content-img{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    bottom: -100px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    behavior: url("../js/PIE.htc");
+    background: rgba(255,255,255,0.6);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#99ffffff,endColorstr=#99ffffff);
+    box-shadow: 0 0 4px 4px #c9c9c9;
+}
+.content .content-left .content-left-top .content-img img{
+    margin: 6px 5px;
+}
+.content .content-left .content-left-top .content-img .shade{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#b3ffffff,endColorstr=#b3ffffff);
+}
+.content .content-left .content-left-top .content-img p{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: #000;
+    font-size: 20px;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+}
+.content .content-left .content-left-top .content-img input{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 120px;
+    height: 120px;
+    cursor: pointer;
+    padding: 0;
+    border: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.content .edit span i,.content .edit i,.content .content-right i{
+    background: url("../images/personal-icon1.png") no-repeat;
+}
+
+/*edit样式区域开始*/
+.content .content-left .edit{
+    cursor: pointer;
+   /* display: block;*/
+    font-size: 16px;
+    line-height: 30px;
+    color: #e50012;
+    margin-right: 20px;
+}
+.content .content-left .edit i{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-position: -288px 1px;
+}
+/*edit样式区域结束*/
+
+/*简要介绍样式开始*/
+.content .content-left .brief{
+    margin-top: 80px;
+    text-align: center;
+}
+.content .content-left .edit{
+    position: relative;
+}
+.content .content-left .edit span{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 16px;
+    color: #e50012;
+}
+.content .content-left .brief-head-edit span{
+    right: 7px;
+}
+.content .content-left .brief .brief-head{
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+}
+.content .content-left .brief .brief-head h3{
+    font-size: 28px;
+    color: #000;
+    font-weight: 400;
+}
+
+.content .content-left .brief .brief-head-edit input{
+    font-size: 16px;
+    width: 235px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    border: 1px solid #cdcdcd;
+    border-radius: 5px;
+}
+
+.content .content-left .brief .brief-content p{
+    color: #000;
+    line-height: 25px;
+    margin-top: 15px;
+}
+.content .content-left .brief .brief-content p span{
+    color: #000;
+    margin-right: 8px;
+}
+
+/*各个专题的公共头部样式开始*/
+.content .content-left .special-head{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.content .content-left .special-title{
+    float: left;
+    margin-left: 70px;
+}
+.content .content-left .special-head .title{
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    behavior: url("../js/PIE.htc");
+}
+.content .content-left .special-head .before,.content .content-left .special-head .after{
+    width: 255px;
+    height: 0;
+    border: 1px solid #ededed;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -10px;
+    *margin-top:0;
+}
+.content .content-left .special-head .before{
+    margin-right: 20px;
+}
+.content .content-left .special-head .after{
+    margin-left: 20px;
+}
+
+
+.mt45{
+    margin-top: 45px;
+}
+.mt50{
+    margin-top: 50px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mb20{
+    margin-bottom: 20px;
+    height: 31px;
+    line-height: 31px;
+}
+.content .content-left .personalState .personalState-left,.content .content-left .personalState .personalState-right{
+    width: 417px;
+    float: left;
+}
+.content .content-left label{
+    display: inline-block;
+    font-size: 16px;
+    width: 90px;
+}
+.content .content-left .personalState .personalState-left div,.content .content-left .personalState .personalState-right div,.content .content-left .personalState .personalState-left span,.content .content-left .personalState .personalState-right span{
+    color: #000;
+    font-size: 16px;
+}
+
+.content .content-left .common-box{
+    position: relative;
+    top: 8px;
+    display: inline-block;
+    width: 155px;
+    height: 25px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+.content .content-left .common-box .common-con{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 155px;
+    height: 25px;
+}
+.content .content-left .common-box input{
+    position: absolute;
+    width: 135px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+}
+.content .content-left .common-box i{
+    position: absolute;
+    right: 7px;
+    top: 8px;
+    width: 0;
+    height: 0;
+    border-color: #bebebe transparent transparent;
+    border-width: 8px 5px;
+    border-style: solid;
+}
+.content .content-left .common-box .common-list{
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 27px;
+    left: -1px;
+    height: 100px;
+    overflow: auto;
+    background-color: #fff;
+    z-index: 5;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+.content .content-left .common-box .common-list a{
+    color: #3e3e3e;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    background-color: #fff;
+}
+.content .content-left .common-box .common-list a:hover{
+    background-color: #e5e5e5;
+}
+.content .content-left input{
+    font-size: 14px;
+    width: 135px;
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.content .content-left .personalState .hometown-list,.content .content-left .personalState .living-list,.content .content-left .area1-list{
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 360px;
+    z-index: 3;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+}
+.content .content-left .personalState .hometown-list h3,.content .content-left .personalState .living-list h3,.content .content-left .area1-list h3{
+    font-size: 14px;
+    color: #000;
+    font-weight: normal;
+    padding-left: 15px;
+    height: 40px;
+    line-height: 40px;
+    background-color: #f2f2f2;
+}
+.content .content-left .personalState .hometown-list a,.content .content-left .personalState .living-list a,.content .content-left .area1-list a{
+    width: 45px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    display: block;
+    float: left;
+    margin: 0 10px 3px 0;
+    color: #3e3e3e;
+}
+.content .content-left .personalState .hometown-list a:hover,.content .content-left .personalState .living-list a:hover,.content .content-left .area1-list a:hover{
+    color: #fff;
+    background-color: #ff6269;
+}
+.content .content-left .list1,.content .content-left .list2,.content .content-left .list3{
+    padding: 10px 15px;
+}
+.content .content-left .list2{
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #ccc;
+}
+
+.content .content-left .familyState .familyState-show p,.content .content-left .interest .interest-show p{
+    color: #000;
+    font-size: 16px;
+    line-height: 45px;
+}
+.content .content-left .familyState .familyState-edit textarea,.content .content-left .interest .interest-edit textarea{
+    color: #ccc;
+    width: 805px;
+    padding: 20px 15px;
+    height: 85px;
+    border: 1px solid #bbb;
+    border-radius: 5px;
+    resize: none;
+}
+
+
+.content .content-left .matingIntent .matingIntent-left,.content .content-left .matingIntent .matingIntent-right{
+    width: 417px;
+    float: left;
+}
+.content .content-left .matingIntent .matingIntent-left p,.content .content-left .matingIntent .matingIntent-right p{
+    margin-bottom: 20px;
+}
+.content .content-left .matingIntent .matingIntent-left div,.content .content-left .matingIntent .matingIntent-right div,.content .content-left .matingIntent .matingIntent-left span,.content .content-left .matingIntent .matingIntent-right span{
+    color: #000;
+    font-size: 16px;
+}
+.content .content-left .photo{
+    margin-bottom: 50px;
+}
+.content .content-left .photo-upload{
+    position: relative;
+    width: 828px;
+    height: 170px;
+    border: 1px solid #bfbfbf;
+    border-radius: 5px;
+}
+.content .content-left .photo-upload img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -60px;
+    width: 121px;
+    height: 101px;
+}
+.content .content-left .photo-upload input{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -50px 0 0 -60px;
+    width: 121px;
+    height: 101px;
+    padding: 0;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.content .content-left .photo-show img{
+    width: 200px;
+    height: 150px;
+    float: left;
+    margin-right: 20px;
+}
+
+
+.content .content-left .save{
+    cursor: pointer;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 7px;
+    background-color: #e60012;
+    margin: 110px auto 70px;
+}
+
+.content .content-right{
+    width: 300px;
+}
+.content .content-right .content-right-top{
+    width: 300px;
+    height: 130px;
+    padding-top: 40px;
+    text-align: center;
+    background-color: #ff872f;
+}
+.content .content-right p{
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.content .content-right p.dynamic{
+    position: relative;
+    width: 160px;
+    height: 30px;
+    line-height: 30px;
+    margin: 15px auto;
+    text-align: center;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+.content .content-right p.dynamic a{
+    color: #fff;
+    font-size: 18px;
+}
+.content .content-right p.dynamic span{
+    position: absolute;
+    top: -15px;
+    right: -10px;
+    width: 33px;
+    height: 30px;
+    background: url("../images/heart1.png") no-repeat;
+}
+.content .content-right .checkMe{
+    padding-top: 40px;
+}
+.content .content-right .checkMe h3{
+    color: #000;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 40px;
+}
+.content .content-right .checkMe-con a{
+    width: 0;
+    height: 0;
+}
+.content .content-right .checkMe-con img{
+    display: block;
+    margin: 0 auto 25px;
+    width: 120px;
+    height: 120px;
+    padding: 5px;
+    border-radius: 50%;
+    behavior: url("../js/PIE.htc");
+    background: rgba(255,255,255,0.6);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#99ffffff,endColorstr=#99ffffff);
+    box-shadow: 0 0 4px 4px #c9c9c9;
+}
+.content .content-right .checkMe ul{
+    width: 64px;
+    margin: 0 auto;
+}
+.content .content-right .checkMe ul li{
+    cursor: pointer;
+    float: left;
+    width: 20px;
+    height: 5px;
+    background-color: #eee;
+    margin: 0 6px;
+}
+.content .content-right .checkMe ul li.cur{
+    background-color: #d6d6d6;
+}

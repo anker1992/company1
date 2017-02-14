@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>微合伙文化传媒有限公司_微合伙科技有限公司_金融社交圈_金融趴官网_微合伙</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/common.css"/>
+    <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/postlist.css">   
+</head>
+<body>
+<!--header 开始-->
+<include file="Public:header"/>
+<!--header结束-->
+<div class="content">
+   <div class="container flea-market-list">
+        <div class="list-search clearfix">
+            <div class="search-title">搜索</div>
+            <input type="text" name="search" value="">
+            <a class="search-btn" href="{:U('Freemarket/freemarket',array('title'=>'1'))}"></a>
+        </div>
+        <div class="title-top-bar">
+            <a class="title-top-bar-a" href="#">全部</a>&nbsp;&nbsp;|&nbsp;&nbsp;            
+            <a class="title-top-bar-a" href="#">热帖</a>
+            <a class="red-btn" href="{:U('Freemarket/freeMarketPost')}">发新帖</a>
+        </div>        
+        <dl class="list-dl">
+            <dt class="title-bar list-items clearfix">
+                <ul>
+                    <li class="list-w-10 align-center">阅读</li>
+                    <li class="list-w-10 align-center">评论</li>
+                    <li class="list-w-40 align-center">标&nbsp;&nbsp;题</li>
+                    <li class="list-w-20 align-center">作者</li>
+                    <li class="list-w-20 align-center">发布日期</li>
+                </ul>
+            </dt>
+            <foreach name="list" item="list">
+            <dd class="list-items clearfix">
+                <ul>
+                    <li class="list-w-10 align-center">{$list.free_click_num}</li>
+                    <li class="list-w-10 align-center">{$list.free_comment_num}</li>
+                    <li class="list-w-40 t-indent-5">
+                        <if condition="$list['free_top_status'] eq 1">
+                            <input type="button" style="color: red" value="置顶">
+                        </if>
+                        <if condition="$list['free_highlight'] eq 1">
+                            <a href="{:U('Freemarket/freeMarketDetail',array('free_id'=>$list['free_id']))}" style="color: red">{$list.free_title}</a>
+                        <else/>
+                            <a href="{:U('Freemarket/freeMarketDetail',array('free_id'=>$list['free_id']))}">{$list.free_title}</a>
+                        </if>
+                    </li>
+                    <li class="list-w-20 align-center">
+                        <if condition="$list['user_id'] eq '-1'">
+                            管理员
+                        <else/>
+                            {$list.phone|substr=0,3}****{$list.phone|substr=7}
+                        </if>
+                    </li>
+                    <li class="list-w-20 align-center">{$list.free_make_time|date="Y-m-d",###}</li>
+                </ul>
+            </dd>
+            </foreach>
+        </dl>        
+   </div>
+   <div class="fenye-box">
+       <ul>
+           <li>{$page}</li>
+       </ul>
+    </div>
+    <br/>
+    <br/>
+    <br/>
+
+</div>
+<!--footer开始-->
+<div class="footer" id="footer">
+    <div class="container">
+        <div class="attention">
+            <img src="__PUBLIC__/images/weixin.png" alt=""/>
+            <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="tel"><span></span>010—58690663</li>
+                <li class="email"><span></span>weihehuo@163.com</li>
+                <li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+                <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--footer结束-->
+
+</body>
+</html>

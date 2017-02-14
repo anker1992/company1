@@ -1,0 +1,215 @@
+@charset "utf-8";
+.contact-content{
+    margin-top: 80px;
+}
+.top{
+    position: relative;
+    width: 100%;
+    min-width: 1230px;
+    height: 290px;
+    padding-top: 60px;
+    background: url("../images/contact-top.jpg") no-repeat center -10px;
+    background-size: 100% 100%;
+}
+.top p{
+    width: 1210px;
+    margin: 0 auto;
+    font-size: 40px;
+    color: #fff;
+    text-shadow:#304b5e 4px 3px 2px;
+    text-align: center;
+    padding: 70px 0;
+    border: 1px solid #ededed;
+    filter:glow(color=#304b5e,strength=2,direction=45);
+    /*filter:progid:DXImageTransform.Microsoft.MotionBlur(strength=2, direction=45);*/
+    *zoom:1;
+}
+
+.contact-content .micro-partner{
+    padding: 35px 20px 0 0 ;
+}
+.contact-content .micro-partner ul{
+    overflow: hidden;
+    padding-bottom: 25px;
+}
+.contact-content .micro-partner ul li{
+    float: left;
+    margin-right: 20px;
+}
+.contact-content .micro-partner ul li h2{
+    cursor: pointer;
+    font-size: 20px;
+    color: #cbcbcb;
+}
+.contact-content .micro-partner ul li.cur h2{
+   color: #000;
+}
+
+/*轮播图样式代码*/
+.contact-content .micro-partner .banner-box{
+    width: 1210px;
+    height: 420px;
+    position: relative;
+}
+.contact-content .micro-partner .banner-com{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 415px;
+    overflow: hidden;
+}
+.contact-content .micro-partner .banner-box2{
+    display: none;
+}
+.contact-content .micro-partner .banner-com .pic{
+    width: 1030px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.contact-content .micro-partner .banner-com ul{
+    position: relative;
+    width: 1030px;
+    height: 415px;
+}
+.contact-content .micro-partner .banner-com ul li{
+    float: left;
+    position: absolute;
+    top: 10px;
+    left: 1030px;
+    padding: 30px;
+    width: 0;
+    height: 0;
+}
+.contact-content .micro-partner .banner-com ul li img{
+    width: 219px;
+    height: 228px;
+}
+.contact-content .micro-partner .banner-com ul li p{
+    font-size: 16px;
+    line-height: 1.7em;
+    color: #a4a4a4;
+    text-align: center;
+}
+.contact-content .micro-partner .banner-com ul li p.name{
+    font-size: 20px;
+    color: #000;
+}
+.contact-content .micro-partner .banner-box1 ul li.l1,.contact-content .micro-partner .banner-box2 ul li.r1{
+    width: 225px;
+    height: 335px;
+    left: 365px;
+    box-shadow: 0 0 5px 5px #a5a5a5;
+}
+.contact-content .micro-partner .banner-box1 ul li.l6,.contact-content .micro-partner .banner-box2 ul li.r6{
+    width: 225px;
+    height: 335px;
+    left: 0;
+}
+.contact-content .micro-partner .banner-box1 ul li.l2,.contact-content .micro-partner .banner-box2 ul li.r2{
+    width: 225px;
+    height: 335px;
+    left: 730px;
+}
+.contact-content .micro-partner .banner-box1 ul li.l5,.contact-content .micro-partner .banner-box2 ul li.r5{
+    width: 0;
+    height: 0;
+    left: -350px;
+}
+.contact-content .micro-partner .banner-com .btn{
+    position: absolute;
+    width: 1210px;
+    height: 60px;
+    top: 178px;
+}
+.contact-content .micro-partner .banner-com .btn div{
+    cursor: pointer;
+    width: 39px;
+    height: 60px;
+    display: inline-block;
+    background: url("../images/contact-btn.png") no-repeat;
+}
+.contact-content .micro-partner .banner-com .btn .btn-left{
+    background-position: 0 0;
+}
+.contact-content .micro-partner .banner-com .btn .btn-right{
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-position: -39px 0;
+}
+
+/*理财投资人*/
+.contact-content .finance-investor{
+    margin: 50px 0 150px;
+    padding-right: 20px;
+}
+.contact-content .finance-investor .title h2{
+    float: left;
+    font-size: 20px;
+}
+.contact-content .finance-investor .title a{
+    font-size: 12px;
+    color: #FF0000;
+    float: right;
+    position: relative;
+    top: 10px;
+}
+.contact-content .finance-investor ul li{
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 1210px;
+    height: 240px;
+    *height: 210px;
+    border: 2px solid #dadada;
+    margin-top: 40px;
+    padding: 35px 35px 53px 35px;
+    *padding: 35px 35px 0 35px;
+}
+.contact-content .finance-investor ul li.active{
+    border: none;
+    background-color: #a1a1a1;
+}
+.contact-content .finance-investor ul li .img{
+    width: 170px;
+    height: 170px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 170px;
+    color: #830000;
+    background-color: #fff;
+    border: 2px solid #dadada;
+    float: left;
+    display: inline-block;
+    margin-right: 65px;
+}
+.contact-content .finance-investor ul li.active .img{
+    color: #fff;
+    background-color: #a1a1a1;
+    border: 2px solid #fff;
+}
+.contact-content .finance-investor ul li p{
+    width: 890px;
+    padding-top: 15px;
+    line-height: 2em;
+    font-size: 18px;
+    color: #3e3e3e;
+    float: left;
+}
+.contact-content .finance-investor ul li.active p{
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

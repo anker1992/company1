@@ -1,0 +1,264 @@
+@charset "utf-8";
+/* CSS reset */
+*{font-family: "微软雅黑","Microsoft YaHei",sans-serif;font-size: 14px;font-style: normal;}
+html,body{width:100%;color:#3e3e3e;/*-webkit-user-select:none;*/-webkit-text-size-adjust:none;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,label,form,fieldset,legend,input,button,textarea,p,section,blockquote,th,td,strong,a{padding:0;margin:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;outline: none;}
+a{text-decoration: none; color:#676767;}/*此处待添加默认链接颜色*/
+var,em,strong{font-style:normal;font-weight: normal}
+del,ins{text-decoration:none;}
+li{list-style:none;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+q:before,q:after{content:'';}
+abbr,acronym{border:0;font-variant:normal;}
+sup{vertical-align:baseline;}
+sub{vertical-align:baseline;}
+legend{color:#000;}
+input,button,textarea,select,optgroup,option{font-family:inherit; font-size:inherit;font-style:inherit;font-weight:inherit;outline: none;}
+input,button,textarea,select{*font-size:100%;}
+img,input{border: none}
+*:link,*:visited,*:hover,*:active{-webkit-tap-highlight-color:transparent;}
+.left{float: left;}
+.right{float: right;}
+.show{display: block}
+.hide{display: none;}
+/************************** main style ***************************/
+
+/**** clear float style ****/
+.clearfix{*zoom:1;}
+.clearfix:after{
+    display:block;
+    content:"clear";
+    height:0; clear:both;
+    overflow:hidden;
+    visibility:hidden;
+}
+
+/*注册功能样式*/
+.register-box{
+    display: block;
+    position: fixed;
+    top: 100px;
+    left: 50%;
+    margin-left: -245px;
+
+    width: 430px;
+    height: 470px;
+    padding: 20px 30px;
+    background-color: #fff;
+    border: 1px solid #c9c9c9;
+
+    z-index: 999;
+}
+.register-box .close{
+    cursor: pointer;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url("../images/close.png") no-repeat;
+}
+.register-box h2{
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 35px;
+}
+.register-box h2 span{
+    font-size: 24px;
+    font-weight: 200;
+}
+.register-box p{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.register-box p label{
+    font-size: 16px;
+    color: #3e3e3e;
+    margin-right: 20px;
+}
+.register-box p input.reg-text{
+    border: 1px solid #c9c9c9;
+    padding: 8px 10px;
+    width: 230px;
+}
+.register-box p input.reg-text:focus{
+    border-color: #009900;
+    box-shadow: 0 0 1px 1px #00aa87;
+}
+.register-box p input.reg-sub{
+    cursor: pointer;
+    font-size: 16px;
+    width: 230px;
+    height: 40px;
+    margin-top: 30px;
+    color: #fff;
+    background-color: #1b961b;
+    border: 1px solid #35B558;
+}
+
+/*header区域样式*/
+.header{
+    width: 100%;
+    min-width: 1230px;
+    height: 80px;
+    color: #FFFFFF;
+    background-color: #FF0000;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.container{
+    min-width: 1230px;
+    width: 1230px;
+    margin: 0 auto;
+}
+.header .head-left,.header .head-right{
+    height: 80px;
+}
+.header .head-left .head-logo{
+    float: left;
+    margin-top: 20px;
+    height: 62px;
+    line-height: 62px;
+    padding-right: 11px;
+}
+.header .head-left .head-logo p{
+    font-size: 16px;
+}
+.header .head-left ul{
+    float: left;
+    line-height: 80px;
+}
+.header .head-left ul li{
+    float: left;
+    margin-left: 10px;
+    position: relative;
+}
+.header .head-left ul li a{
+    color: #FFFFFF;
+    font-size: 18px;
+    padding: 6px 8px;
+    margin: 0 15px;
+}
+.header .head-left ul li.active a{
+    border-bottom: 2px solid #FFFFFF;
+    padding-bottom: 20px;
+}
+.header .head-left ul li ol{
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 110px;
+}
+.header .head-left ul li ol li{
+    float: none;
+    margin-left: 0;
+    line-height: 40px;
+}
+.header .head-left ul li ol li a{
+    margin: 0;
+    color: #3e3e3e;
+    font-size: 16px;
+    padding: 0 20px;
+    width: 70px;
+    display: block;
+}
+.header .head-left ul li ol li a:hover{
+    border-bottom: none;
+    padding-bottom: 0;
+    color: #f00;
+}
+.header .head-left ul li.active ol li{
+    padding-bottom: 0;
+}
+.header .head-left ul li ol li.active a,.header .head-left ul li.active ol li a{
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.header .head-right li{
+    float: left;
+    padding:20px;
+}
+.header .head-right ol li a{
+    color: #FFFFFF;
+}
+.header .head-right li i{
+    margin: 0 auto;
+    *margin:0;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("../images/head-icon.png") no-repeat;
+}
+.header .head-right li.search i{
+    background-position: 2px 0;
+}
+.header .head-right li.login i{
+    background-position: -65px 0;
+}
+.header .head-right li.register i{
+    background-position: -130px 0;
+}
+
+
+
+/*footer区域样式*/
+.footer{
+    min-width: 1230px;
+    height: 275px;
+    background-color: #ff0000;
+}
+.footer .attention{
+    display: inline-block;
+    float: right;
+    color: #ffffff;
+    padding:32px 73px 0 0;
+}
+.footer .attention img{
+    width: 172px;
+    height: 175px;
+    display: block;
+}
+.footer .attention p{
+    line-height: 3em;
+    letter-spacing: 0.2em;
+    text-align: center;
+}
+.footer .contact{
+    float: left;
+    display: inline-block;
+    padding:40px 0 0 6px;
+}
+.footer .contact ul li{
+    font-size: 12px;
+    color: #ffffff;
+    padding: 10px 0;
+}
+.footer .contact ul li span{
+    background: url("../images/footer-icon.png") no-repeat;
+    width: 26px;
+    height: 28px;
+    display: inline-block;
+    margin-right: 28px;
+    vertical-align: middle;
+}
+.footer .contact ul li.tel span{
+    background-position: 0 2px;
+}
+.footer .contact ul li.email span{
+    background-position: 0 -46px;
+}
+.footer .contact ul li.address span{
+    background-position: 0 -96px;
+}
+.footer .contact ul li.workday span{
+    background-position: 0 -146px;
+}

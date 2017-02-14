@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <title>微合伙文化传媒有限公司_微合伙科技有限公司_金融社交圈_金融趴官网_微合伙</title>
+    <link rel="stylesheet" href="__PUBLIC__/usercss/css/common.css"/>
+    <link rel="stylesheet" href="__PUBLIC__/usercss/css/login1.css"/>
+</head>
+<body>
+
+<div class="login">
+    <div class="container">
+        <div class="outer">
+            <ul class="clearfix">
+                <li class="cur">快速注册</li>
+                <li>现在登录</li>
+            </ul>
+            <div class="one">
+                <div class="login-top">
+                    <img src="__PUBLIC__/usercss/images/login-portrait.png" alt=""/>
+                    <h2>信贷经理</h2>
+                </div>
+                <form action="">
+                    <p class="phone">
+                        <i></i><span>手机号码</span>
+                        <input type="text" name="phone"/>
+                    </p>
+                    <p class="pass">
+                        <i></i><span>密码</span>
+                        <input type="password" name="pass"/>
+                    </p>
+                    <!--<p class="yz w235">-->
+                        <!--<input class="yzm-input" type="text" name="yz"/>-->
+                        <!--<label class="yz-c" id="yzm"></label>-->
+                    <!--</p>-->
+                    <p class="yzm w235 mb0">
+                        <!--<input type="text" name="yzm"/>-->
+                        <input type="text" name="tel" id="tel"/>
+                        <!--<input name="tel" id=tel type="text" />-->
+                        <label><input id="btnSendCode" type="button" value="发送验证码" onclick="sendMessage()" />
+                        </label>
+                    </p>
+                    <p class="tip"><span></span></p>
+                    <p class="reg">
+                        <!--<button class="reg-btn" name="submit">快速注册</button>-->
+                        <a class="reg-btn" name="submit">快速注册</a>
+                    </p>
+                </form>
+            </div>
+            <div class="two hide">
+                <div class="login-top">
+                    <img src="__PUBLIC__/usercss/images/login-portrait.png" alt=""/>
+                    <h2>信贷经理</h2>
+                </div>
+                <form action="">
+                    <p class="phone">
+                        <i></i><span>手机号码</span>
+                        <input type="text" name="phone"/>
+                    </p>
+                    <p class="pass">
+                        <i></i><span>密码</span>
+                        <input type="password" name="pass"/>
+                    </p>
+                    <p class="yz w235 mb0">
+                        <input class="yzm-input1" type="text" name="yz"/>
+                        <label class="yz-c" id="yzm1"></label>
+                    </p>
+                    <p class="tip"><span></span></p>
+                    <p class="log mb0">
+                        <!--<button class="log-btn" name="submit">现在登录</button>-->
+                        <a href="javascript:;" class="log-btn" name="submit">现在登录</a>
+                    </p>
+                    <a href="javascript:;" class="forget-pwd">忘记密码</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/usercss/js/jquery-1.10.2.min.js"></script>
+
+<script type="text/javascript">
+
+    /*-------------------------------------------*/
+
+    var InterValObj; //timer变量，控制时间
+
+    var count = 60; //间隔函数，1秒执行
+
+    var curCount;//当前剩余秒数
+
+    var code = ""; //验证码
+
+    var codeLength = 6;//验证码长度
+
+    function sendMessage() {
+
+        curCount = count;
+
+        var dealType; //验证方式
+
+        tel = $('#tel').val();
+
+        if(tel!=''){
+
+            //验证手机有效性
+
+            var myreg = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+
+            if(!myreg.test($('#tel').val()))
+
+            {
+
+                alert('请输入有效的手机号码！');
+
+                return false;
+
+            }
+
+            tel = $('#tel').val();
+
+            //产生验证码
+
+            for (var i = 0; i < codeLength; i++) {
+
+                code += parseInt(Math.random() * 9).toString();
+
+            }
+
+            //设置button效果，开始计时
+
+            $("#btnSendCode").attr("disabled", "true");
+
+            $("#btnSendCode").val("请在" + curCount + "秒内输入验证码");
+
+            InterValObj = window.setInterval(SetRemainTime, 1000); //启动计时器，1秒执行一次
+
+            //向后台发送处理数据
+
+            $.ajax({
+
+                type: "POST", //用POST方式传输
+
+                dataType: "text", //数据格式:JSON
+
+                url: "{:U('Daikuan/user_register')}", //目标地址(根据实际地址)
+
+                data: "&tel=" + tel + "&code=" + code,
+
+                error: function (XMLHttpRequest, textStatus, errorThrown) { },
+
+                success: function (msg){ }
+
+            });
+
+        }else{
+
+            alert('请填写手机号码');
+
+        }
+
+    }
+
+    //timer处理函数
+
+    function SetRemainTime() {
+
+        if (curCount == 0) {
+
+            window.clearInterval(InterValObj);//停止计时器
+
+            $("#btnSendCode").removeAttr("disabled");//启用按钮
+
+            $("#btnSendCode").val("重新发送验证码");
+
+            code = ""; //清除验证码。如果不清除，过时间后，输入收到的验证码依然有效
+
+        }
+
+        else {
+
+            curCount--;
+
+            $("#btnSendCode").val("请在" + curCount + "秒内输入验证码");
+
+        }
+
+    }
+
+</script>
+
+
+<script type="text/javascript">
+    /*$(function(){
+        $('.login .outer ul li').click(function(){
+            var index = $(this).index();
+            $(this).addClass('cur').siblings().removeClass('cur');
+            $('.outer').children("div").eq(index).removeClass('hide').siblings('div').addClass('hide');
+        })
+    });*/
+    /*注册的验证*/
+    $(function(){
+        var yzm1 = "";
+        var yzm2 = yzm();
+        $("#yzm").text(yzm2);
+        $(".reg-btn").click(function(){
+            var phone = $(".one .phone input").val();
+            var pass = $(".one .pass input").val();
+            var phoneKey = /^1[3|4|5|7|8|9]\d{9}$/.test(phone);
+            yzm1 = $(".yzm-input").val();
+            yzm2 = $("#yzm").text();
+            if(phone == ""){
+                $(".tip span").text("请输入您的手机号！");
+            }else if(!phoneKey){
+                $(".tip span").text("请正确填写您的手机号！");
+            }else if(pass == ""){
+                $(".tip span").text("请填写您的密码！");
+            }else if(pass.length<6||pass.length>20){
+                $('.tip span').text("密码长度要求6~20位字符");
+            }else if(yzm1 == ""){
+                $(".tip span").text("请输入验证码！");
+            }else if(yzm2 !== yzm1){
+                $(".tip span").text("验证码输入不一致！");
+            }else{
+                $(".tip span").text("");
+            }
+        });
+
+        function yzm(){
+            var arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9'];
+            var str = '';
+            for(var i = 0 ; i < 4 ; i ++ )
+                str += ''+arr[Math.floor(Math.random() * arr.length)];
+            return str;
+        }
+   });
+    /*登录的验证*/
+    $(function(){
+        var yzm1 = "";
+        var yzm2 = yzm();
+        $("#yzm1").text(yzm2);
+        $(".log-btn").click(function(){
+            var phone = $(".two .phone input").val();
+            var pass = $(".two .pass input").val();
+            var phoneKey = /^1[3|4|5|7|8|9]\d{9}$/.test(phone);
+            yzm1 = $(".yzm-input1").val();
+            yzm2 = $("#yzm1").text();
+            if(phone == ""){
+                $(".tip span").text("请输入您的手机号！");
+            }else if(!phoneKey){
+                $(".tip span").text("请正确填写您的手机号！");
+            }else if(pass == ""){
+                $(".tip span").text("请填写您的密码！");
+            }else if(pass.length<6||pass.length>20){
+                $('.tip span').text("密码长度要求6~20位字符");
+            }else if(yzm1 == ""){
+                $(".tip span").text("请输入验证码！");
+            }else if(yzm2 !== yzm1){
+                $(".tip span").text("验证码输入不一致！");
+            }else{
+                //alert("no");
+            }
+        });
+
+        function yzm(){
+            var arr = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','0','1','2','3','4','5','6','7','8','9'];
+            var str = '';
+            for(var i = 0 ; i < 4 ; i ++ )
+                str += ''+arr[Math.floor(Math.random() * arr.length)];
+            return str;
+        }
+    })
+</script>
+</body>
+</html>

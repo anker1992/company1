@@ -1,0 +1,692 @@
+@charset "utf-8";
+.container{
+    width: 1210px;
+    margin: 0 auto;
+}
+/*nav样式开始*/
+.nav{
+    font-size: 12px;
+    color: #fdf9f9;
+    background-color: #ef000b;
+    min-width: 1230px;
+    height: 30px;
+}
+.nav .nav-left ul li,.nav .nav-right ul li{
+    float: left;
+    position: relative;
+    line-height: 30px;
+}
+.nav li a{
+    color: #fdf9f9;
+}
+.nav .nav-left ul li a{
+    margin: 0 5px;
+}
+.nav .nav-right ul li a{
+    margin: 0 10px;
+}
+.nav .nav-right ul li ol{
+    width: 76px;
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -38px;
+    top: 30px;
+}
+.nav .nav-right ul li ol li{
+    line-height: 20px;
+    float: none;
+}
+.nav .nav-right ul li ol li a{
+    color: #3e3e3e;
+}
+.nav .nav-right ul li ol li a:hover{
+    color: #e60012;
+}
+/*nav导航样式结束*/
+/*nav1链接样式开始*/
+.nav1{
+    min-width: 1230px;
+    height: 60px;
+}
+.nav1 ul li{
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin-right: 35px;
+}
+.nav1 ul li a{
+    font-size: 18px;
+    color: #7b7b7b;
+    padding: 20px 0 15px 0;
+}
+.nav1 ul li.cur a{
+    color: #000;
+    border-bottom: 3px solid #e50012;
+}
+/*nav1超链接样式结束*/
+/*中间区域左半部分开始*/
+.content .content-left{
+    width: 832px;
+}
+.content .content-left .content-left-top{
+    display: block;
+    position: relative;
+    width: 832px;
+    height: 170px;
+    background: url("../images/personal-top1.jpg") no-repeat;
+}
+.content .content-left .content-left-top img{
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    bottom: -100px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    padding: 5px;
+    behavior: url("../js/PIE.htc");
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 0 4px 4px #c9c9c9;
+}
+
+.content .edit span i,.content .add i,.content .edit span i,.content .add1 i,.content .edit i,.content .content-right i{
+    background: url("../images/personal-icon1.png") no-repeat;
+}
+/*add样式区域开始*/
+.content .content-left .add,.content .content-left .add1{
+    cursor: pointer;
+    float: right;
+    font-size: 16px;
+    line-height: 30px;
+    color: #e50012;
+    margin-right: 20px;
+}
+.content .content-left .add i,.content .content-left .add1 i{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-position: -305px 0;
+}
+/*add样式区域结束*/
+/*edit样式区域开始*/
+.content .content-left .edit{
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    line-height: 30px;
+    color: #e50012;
+    margin-right: 20px;
+}
+.content .content-left .edit i{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 8px;
+    vertical-align: middle;
+    background-position: -288px 1px;
+}
+/*edit样式区域结束*/
+.mt15{
+    margin-top: 15px;
+}
+.mt20{
+    margin-top: 20px;
+}
+.mt40{
+    margin-top: 40px;
+}
+.mt50{
+    margin-top: 50px;
+}
+.mt80{
+    margin-top: 80px;
+}
+.mb70{
+    margin-bottom: 70px;
+}
+/*简要介绍样式开始*/
+.content .content-left .brief{
+    margin-top: 80px;
+    text-align: center;
+}
+.content .content-left .edit{
+    position: relative;
+}
+.content .content-left .edit span{
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 16px;
+    color: #e50012;
+}
+.content .content-left .edit span i{
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    margin-right: 8px;
+    background-position: -288px 1px;
+}
+.content .content-left .brief .brief-head{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #fff5f6;
+    text-align: center;
+}
+.content .content-left .brief .brief-head h3{
+    font-size: 28px;
+    color: #000;
+    font-weight: 400;
+}
+.content .content-left .brief .brief-content p{
+    color: #000;
+    line-height: 25px;
+}
+.content .content-left .brief .brief-content p span{
+    color: #000;
+    margin-right: 8px;
+}
+.content .content-left .brief .brief-content p.personalSummary{
+    color: #000;
+    margin-top: 10px;
+    font-size: 16px;
+}
+/*简要介绍结束*/
+
+/*各个专题的公共头部样式开始*/
+.content .content-left .special-head{
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+}
+.content .content-left .special-title{
+    float: left;
+    margin-left: 70px;
+}
+.content .content-left .special-head .title{
+    display: inline-block;
+    width: 120px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 20px;
+    color: #000;
+    font-weight: 400;
+    background-color: #e7e7e7;
+    border-radius: 10px;
+    behavior: url("../js/PIE.htc");
+}
+.content .content-left .special-head .before,.content .content-left .special-head .after{
+    width: 255px;
+    height: 0;
+    border: 1px solid #ededed;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -10px;
+    *margin-top:0;
+}
+.content .content-left .special-head .before{
+    margin-right: 20px;
+}
+.content .content-left .special-head .after{
+    margin-left: 20px;
+}
+.content .content-left .special-content-part1 .special-content-left h4{
+    color: #000;
+    font-size: 16px;
+    font-weight: normal;
+}
+.content .content-left .special-content-part1 .special-content-left span{
+    font-size: 12px;
+    color: #959595;
+    margin-top: 10px;
+}
+.content .content-left .special-content-part1 .special-content-right .time{
+    font-size: 12px;
+    color: #959595;
+    margin-top: 10px;
+}
+/*各个专题头部公共样式结束*/
+
+
+.content .content-left .description-content,.content .content-left .custom-content{
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    background-color: #fff5f6;
+}
+.content .content-left .description-content .add1,.content .content-left .custom-content .add1{
+    float: none;
+}
+
+.expect .expect-content ul{
+    padding-left: 60px;
+}
+.expect .expect-content ul li{
+    float: left;
+    margin-right: 120px;
+}
+.expect .expect-content ul li i{
+    background: url("../images/personal-icon2.png") no-repeat;
+    width: 18px;
+    height: 19px;
+    margin-right: 10px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.expect .expect-content ul li.position i{
+    background-position: 0 0;
+}
+.expect .expect-content ul li.type i{
+    width: 19px;
+    background-position: -20px 0;
+}
+.expect .expect-content ul li.city i{
+    background-position: -39px -1px;
+}
+.expect .expect-content ul li.salary i{
+    width: 20px;
+    background-position: -58px -1px;
+}
+
+.content .content-right{
+    width: 344px;
+    margin-top: 10px;
+}
+.content .content-right .content-right-part1 ul li{
+    width: 75px;
+    height: 75px;
+    text-align: center;
+    float: left;
+    font-size: 16px;
+    color: #000;
+    border: 1px solid #e50012;
+    margin-right: 12px;
+}
+.content .content-right .content-right-part1 ul li.part1-item4{
+    margin-right: 0;
+}
+.content .content-right .content-right-part1 ul li i{
+    width: 40px;
+    height: 40px;
+    margin: 5px auto 0;
+    display: block;
+}
+.content .content-right .content-right-part1 ul li.part1-item1 i{
+    background-position: 1px 2px;
+}
+.content .content-right .content-right-part1 ul li.part1-item2 i{
+    width: 39px;
+    background-position: -39px 2px;
+}
+.content .content-right .content-right-part1 ul li.part1-item3 i{
+    background-position: -78px 2px;
+}
+.content .content-right .content-right-part1 ul li.part1-item4 i{
+    width: 30px;
+    background-position: -118px 2px;
+}
+
+.content .content-right .content-right-part2{
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+    margin: 15px 0;
+    border: 1px solid #e50012;
+}
+.content .content-right .content-right-part2 span{
+    font-size: 16px;
+    color: #000;
+}
+.content .content-right .content-right-part2 span i{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url("../images/personal-icon2.png") no-repeat;
+    background-position: -77px 0;
+}
+
+.content .content-right .content-right-part3{
+    height: 75px;
+    border: 1px solid #e50012;
+}
+.content .content-right .content-right-part3 .part3-intro{
+    margin: 15px 10px;
+}
+.content .content-right .content-right-part3 .part3-intro p{
+    float: right;
+    font-size: 16px;
+    color: #000;
+}
+.content .content-right .content-right-part3 .part3-intro p.integrity{
+    float: left;
+}
+.content .content-right .content-right-part3 .part3-intro p span{
+    color: #e50012;
+}
+.content .content-right .content-right-part3 .progress-box{
+    margin: 0 10px;
+    height: 7px;
+    border-radius: 7px;
+    behavior: url("../js/PIE.htc");
+    background-color: #ffd6d9;
+}
+.content  .content-right .content-right-part3 .progress-box .progress-con{
+    width: 95%;
+    height: 7px;
+    border-radius: 7px;
+    behavior: url("../js/PIE.htc");
+    background-color: #e50012;
+}
+
+.content  .content-right .content-right-part4{
+    margin-top: 20px;
+}
+.content  .content-right .content-right-part4 ul{
+
+}
+.content  .content-right .content-right-part4 ul li{
+    height: 20px;
+    padding: 15px 0 15px 20px;
+    border-left: 1px solid #ccc;
+}
+.content  .content-right .content-right-part4 ul li a{
+    font-size: 16px;
+}
+.content .content-right .content-right-part4 ul li.cur{
+    border-left-color: #e50012;
+}
+.content  .content-right .content-right-part4 ul li i{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: text-bottom;
+    margin-right: 10px;
+}
+.content  .content-right .content-right-part4 ul li.part4-item1 i{
+    width: 15px;
+    margin-right: 15px;
+    background-position: -149px 0;
+}
+.content  .content-right .content-right-part4 ul li.part4-item2 i{
+    width: 21px;
+    background-position: -164px 0;
+}
+.content  .content-right .content-right-part4 ul li.part4-item3 i{
+    width: 19px;
+    background-position: -185px 0;
+}
+.content  .content-right .content-right-part4 ul li.part4-item4 i{
+    width: 22px;
+    background-position: -203px 0;
+}
+.content  .content-right .content-right-part4 ul li.part4-item5 i{
+    background-position: -227px 0;
+}
+.content  .content-right .content-right-part4 ul li.part4-item6 i{
+    width: 22px;
+    background-position: -246px 0;
+}
+.content  .content-right .content-right-part4 ul li.part4-item7 i{
+    background-position: -268px 0;
+}
+
+
+.content input{
+    border: 1px solid #ccc;
+}
+.brief-edit .username{
+    width: 440px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+    line-height: 40px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 8px;
+    color: #000;
+    behavior: url('../js/PIE.htc');
+}
+.brief-edit .introduce{
+    width: 440px;
+    height: 28px;
+    display: block;
+    line-height: 28px;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 8px;
+    margin: 5px auto;
+    behavior: url('../js/PIE.htc');
+}
+
+.brief-edit .brief-edit-content{
+    height: 770px;
+    padding: 15px 0 0 80px;
+    background-color: #fff5f6;
+}
+.brief-edit .brief-edit-content label,.eduExp-edit label,.eduExp-add label,.workExp-edit label,.workExp-add label,.projectExp-edit label,.projectExp-add label,.description-edit label,.description-add label,.expect-edit label,.custom-edit label,.custom-add label{
+    display: block;
+    font-size: 12px;
+    color: #ccc;
+    padding-bottom: 10px;
+}
+.brief-edit .brief-text1 input,.eduExp-edit .eduExp-text1 input,.eduExp-add .eduExp-text1 input,.workExp-edit .workExp-text1 input,.workExp-add .workExp-text1 input,.projectExp-edit .projectExp-text1 input,.projectExp-add .projectExp-text1 input,.expect-edit .expect-text1 input,.custom-edit .custom-text1 input,.custom-add .custom-text1 input{
+    font-size: 12px;
+    width: 430px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    behavior: url('../js/PIE.htc');
+    padding-left: 10px;
+}
+.brief-edit .brief-text2 input,.eduExp-edit .eduExp-text2 input,.eduExp-add .eduExp-text2 input,.workExp-edit .workExp-text2 input,.workExp-add .workExp-text2 input,.projectExp-edit .projectExp-text2 input,.projectExp-add .projectExp-text2 input,.expect-edit .expect-text2 input{
+    font-size: 12px;
+    width: 165px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    behavior: url('../js/PIE.htc');
+    padding-left: 10px;
+}
+.brief-edit .brief-text3 input,.eduExp-edit .eduExp-text3 input,.eduExp-add .eduExp-text3 input,.workExp-edit .workExp-text3 input,.workExp-add .workExp-text3 input,.projectExp-edit .projectExp-text3 input,.projectExp-add .projectExp-text3 input,.expect-edit .expect-text3 input{
+    font-size: 12px;
+    width: 100px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 5px;
+    behavior: url('../js/PIE.htc');
+    padding-left: 10px;
+}
+.brief-edit .brief-edit-content .showSex ul li{
+    cursor: pointer;
+    float: left;
+    width: 110px;
+    height: 40px;
+    border: 1px solid #ccc;
+    margin-right: 40px;
+    border-radius: 5px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 12px;
+}
+.brief-edit .brief-edit-content .showSex ul li span{
+    display: inline-block;
+    width: 20px;
+    height: 23px;
+    vertical-align: middle;
+    margin-left: 15px;
+    background: url("../images/personal-icon3.png") no-repeat;
+}
+.brief-edit .brief-edit-content .showSex ul li.man span{
+    background-position: 0 0;
+}
+.brief-edit .brief-edit-content .showSex ul li.woman span{
+    background-position: -20px 0;
+}
+.brief-edit .brief-edit-content .showSex ul li.cur{
+    background-color: #f27a84;
+}
+
+.brief-edit .brief-drop-box,.eduExp-edit .brief-drop-box,.brief-drop-box{
+    height: 40px;
+    display: inline-block;
+    margin-right: 35px;
+    position: relative;
+}
+.brief-edit .brief-drop-list,.eduExp-edit .brief-drop-list,.brief-drop-list{
+    height: 90px;
+    overflow: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    behavior: url('../js/PIE.htc');
+    background-color: #fff;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    z-index: 2;
+}
+.brief-edit .brief-drop-box i,.eduExp-edit .brief-drop-box i,.brief-drop-box i{
+    cursor: pointer;
+    width: 0;
+    height: 0;
+    border-width: 8px 5px;
+    border-color: #d3d3d3 transparent transparent transparent;
+    border-style: solid;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+}
+.brief-edit .brief-drop-list a,.eduExp-edit .brief-drop-list a,.brief-drop-list a{
+    color: #000;
+    font-size: 12px;
+    display: block;
+    padding-left: 10px;
+    line-height: 18px;
+}
+.brief-edit .brief-drop-list a:hover,.eduExp-edit .brief-drop-list a:hover,.brief-drop-list a:hover{
+    background-color: #edebeb;
+}
+
+.brief-edit .year-box,.eduExp-edit .education-box,.startYear-box,.endYear-box,.expect-edit .city-box,.eduExp-add .education-box{
+    width: 175px;
+}
+.brief-edit .year-list,.eduExp-edit .education-list,.startYear-list,.endYear-list,.expect-edit .city-list,.eduExp-add .education-list{
+    display: none;
+    width: 173px;
+}
+.brief-edit .month-box,.eduExp-edit .graduation-box,.startMonth-box,.endMonth-box,.expect-edit .type-box,.expect-edit .salary-box,.eduExp-add .graduation-box{
+    width: 110px;
+}
+.brief-edit .month-list,.eduExp-edit .graduation-list,.startMonth-list,.endMonth-list,.expect-edit .type-list,.expect-edit .salary-list,.eduExp-add .graduation-list{
+    display: none;
+    width: 108px;
+}
+.expect-edit .type-list{
+    height: 56px;
+}
+.brief-edit .brief-edit-content .highEdu-box{
+    width: 440px;
+}
+.brief-edit .brief-edit-content .highEdu-list{
+    display: none;
+    width: 438px;
+    height: 75px;
+}
+.brief-edit .brief-edit-content .workYear-box,.brief-edit .brief-edit-content .city-box{
+    width: 440px;
+}
+.brief-edit .brief-edit-content .workYear-list,.brief-edit .brief-edit-content .city-list{
+    display: none;
+    width: 438px;
+}
+
+.brief-edit .btn,.eduExp-edit .btn,.btn{
+    padding-top: 30px;
+}
+.brief-edit .btn a,.eduExp-edit .btn a,.btn a{
+    display: inline-block;
+    font-size: 12px;
+    color: #000;
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    behavior: url('../js/PIE.htc');
+    margin-right: 10px;
+}
+.brief-edit .btn a.cur,.eduExp-edit .btn a.cur,.btn a.cur{
+    color: #fff;
+    background-color: #f27a84;
+}
+.eduExp-edit .btn a.delete,.btn a.delete{
+    float: right;
+    margin-right: 85px;
+}
+.eduExp-edit .btn a.delete:hover,.btn a.delete:hover{
+    color: #f27a84;
+}
+
+.eduExp-edit,.eduExp-add{
+    height: 370px;
+    padding: 15px 0 0 80px;
+    background-color: #fff5f6;
+}
+.eduExp-edit .education,.eduExp-add .education,.startYear-box,.endYear-box,.expect-edit .position,.expect-edit .expCity{
+    display: inline-block;
+    width: 175px;
+    margin-right: 25px;
+}
+.eduExp-edit .graduation,.eduExp-add .graduation,.startMonth-box,.endMonth-box,.expect-edit .type,.expect-edit .expSalary{
+    display: inline-block;
+    width: 110px;
+    margin-right: 0;
+}
+
+.workExp-edit,.projectExp-edit,.workExp-add,.projectExp-add{
+    height: 520px;
+    padding: 15px 0 0 80px;
+    background-color: #fff5f6;
+}
+.workExp-edit .workTime span,.projectExp-edit span,.workExp-add .workTime span,.projectExp-add span{
+    margin: 0 15px;
+}
+.workExp-edit .jobContent textarea,.projectExp-edit .projectContent textarea,.description-edit textarea,.description-add textarea,.expect-edit textarea,.custom-edit textarea,.custom-add textarea,.workExp-add .jobContent textarea,.projectExp-add .projectContent textarea{
+    width: 660px;
+    height: 102px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.description-edit,.description-add{
+    height: 250px;
+    padding: 15px 0 0 80px;
+    background-color: #fff5f6;
+}
+.expect-edit{
+    height: 440px;
+    padding: 15px 0 0 80px;
+    background-color: #fff5f6;
+}
+.custom-edit,.custom-add{
+    height: 350px;
+    padding: 15px 0 0 80px;
+    background-color: #fff5f6;
+}
+
+
+
+/*默认样式，主要是position:fixed实现屏幕绝对定位*/
+#gotoTop{display:none;position:fixed;bottom:275px;right:5%;cursor:pointer;padding:9px 4px;width:40px;text-align:center;border:1px solid #e0e0e0;background:#f04a4b;}
+/*用CSS表达式(expression)来实现ie6下position:fixed效果*/
+#gotoTop{_position:absolute;_top:expression(documentElement.scrollTop + documentElement.clientHeight * 3/4 + "px")}
+/*鼠标进入的反馈效果*/
+#gotoTop.hover{background:#e50012;color:#fff;text-decoration:none;}

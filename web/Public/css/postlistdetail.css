@@ -1,0 +1,273 @@
+.topbutton-bar{
+	padding-top: 30px;
+}
+.topbutton-bar>p{
+	display: inline-block;
+	margin-left: 15px;
+	line-height: 30px;
+}
+.red-tcolor{
+	color:#FF5357;
+}
+.topbutton-bar>.red-btn{
+	margin-right: 15px;
+}
+.container-main-box{
+	margin-bottom: 20px;
+	/*padding:15px;*/
+	/*height:300px;*/
+	/*background: #ccc;*/
+}
+/*left*/
+.container-main-box>.main-left-box{
+	width:830px;
+	/*height:300px;*/
+	margin:15px;
+	float: left;
+	/*background: rgba(121,160,44,0.5);*/
+	box-sizing: border-box;
+	border:1px solid #E0DDD9;
+}
+.container-main-box>.main-left-box>.head-info-bar{
+	height:35px;
+	border-bottom:1px solid #E0DDD9;
+	line-height: 35px;
+	text-indent: 35px;
+}
+.container-main-box>.main-left-box>.main-content{
+	/*background: rgba(121,160,44,0.5);*/
+	width:100%;
+	height:100%;
+	padding:30px;
+	padding-bottom: 0;
+	box-sizing: border-box;
+}
+.main-content>.author-info-box{
+	width:100%;
+	height:90px;
+}
+.main-content>.author-info-box>.author-avatar{
+	width:90px;
+	height:90px;
+	border:1px solid #E9E7E5;
+	float: left;
+}
+.main-content>.author-info-box>.author-info{
+	float: left;
+	margin-left: 30px;
+	color:#BAB5AF;
+}
+.author-info-titlebar img{
+	width:20px;
+	height:20px;
+	/*vertical-align:middle;*/
+}
+.main-content>.author-info-box>.author-info .nicheng{
+	color:#424342;
+	font-size: 20px;
+	font-weight: bold;
+}
+.main-content>.author-info-box>.author-info .yingxiangli{
+	font-size: 20px;
+}
+.main-content>.author-info-box>.author-info i{
+	display: inline-block;
+	width: 19px;
+	height: 18px;
+	background: url("../images/stars.png") no-repeat;
+	background-position: 0 0;
+	vertical-align: middle;
+}
+.article-text-box{
+	margin-top: 25px;
+}
+.article-text-box img{
+	max-width: 80%;
+}
+.article-text-box>p{
+	line-height: 25px;
+	font-size: 16px;
+	margin-top: 20px;
+	color:#545350;
+}
+.article-text-box>.article-title{
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 30px;
+	color: #424342;
+}
+.article-icons-box{
+	text-align: center;
+}
+.article-icons-box a{
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	text-align: center;
+	color:#FF5357;
+	margin: 40px 30px 10px;
+}
+.article-icons-box a.hide{
+	display: none;
+}
+.article-icons-box a i{
+	display: block;
+	width: 45px;
+	height: 45px;
+	margin: 0 auto 20px;
+	background:url('../images/icons.png')no-repeat;
+}
+.article-icons-box .article-icons1 i{
+	background-position: 0 0;
+}
+.article-icons-box .article-icons2 i{
+	background-position: 0 -45px;
+}
+.article-icons-box .article-icons3 i{
+	background-position: 0 -90px;
+}
+.article-icons-box .article-icons4 i{
+	background-position: 0 -135px;
+}
+.article-icons-box .article-icons5 i{
+	background: url("../images/yizan.png");
+}
+.comment-box{
+	display: none;
+	width: 750px;
+	margin: 30px auto;
+}
+.comment-box textarea{
+	width: 730px;
+	height: 100px;
+	border: 1px solid #ff6269;
+	resize: none;
+	border-radius: 5px;
+	padding: 5px 10px;
+	line-height: 20px;
+}
+.comment-box button{
+	width: 100px;
+	height: 30px;
+	display: inline-block;
+	text-align: center;
+	line-height: 30px;
+	background: #ff6269;
+	color: #fff;
+	border-radius: 5px;
+	float: right;
+	margin-top: 10px;
+	border: none;
+}
+
+/*right*/
+.container-main-box>.main-right-box{
+	width:340px;
+	/*height:100%;*/
+	margin:15px;
+	float: right;
+	padding:20px;
+	box-sizing: border-box;
+	border:1px solid #E0DDD9;
+}
+.container-main-box>.main-right-box>.right-head{
+	font-size: 24px;
+}
+.container-main-box>.main-right-box a{
+	margin:15px 0;
+	display: block;
+	color:#424342;
+}
+.container-main-box>.main-right-box a dt{
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	font-size: 16px;
+	line-height: 30px;
+}
+.container-main-box>.main-right-box a dd{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+	font-size: 14px;
+	color:#6B6965;
+}
+
+/*评论*/
+.comment-content{
+	/*background: #ff00ff;*/
+	/*height:800px;*/
+	margin-top: 40px;
+}
+.comment-titlebar{
+	background: #F5F4F3;
+	height:35px;
+	border-bottom: 2px solid #FF5357;
+}
+.comment-titlebar span{
+	color:#fff;
+	font-size: 20px;
+	line-height: 35px;
+	display: inline-block;
+	background: #FF5357;
+	padding:0 20px;
+}
+.comment-titlebar-right{
+	float:right;
+}
+.comment-titlebar-right a{
+	display: inline-block;
+	background: #C5C2BC;
+	padding:2px 8px;
+	border-radius: 5px;
+	color:#fff;
+	margin-top:6px;
+	margin-right: 20px;
+}
+.comment-titlebar-right>.comment-active{
+	background: #FF5357;
+}
+
+.comment-info-box{
+	margin:0 20px;
+
+}
+.comment-info-box>.comment-avatar{
+	width:45px;
+	height:45px;
+	border:1px solid #E9E7E5;
+	float: left;
+	margin-top: 15px;
+}
+.comment-info-box>.comment-info{
+	float: left;
+	margin: 15px 0 0 15px;
+	color:#BAB5AF;
+}
+.comment-info-titlebar i{
+	width:19px;
+	height:18px;
+	display: inline-block;
+	background: url("../images/stars.png") no-repeat;
+	background-position: 0 0;
+}
+.comment-info-titlebar i.two{
+	background-position: -19px 0;
+}
+.comment-info-box>.comment-info .nicheng{
+	color:#424342;
+	font-size: 18px;
+	font-weight: bold;
+}
+.comment-info-box>.comment-info .yingxiangli{
+	font-size: 18px;
+}
+.comment-text{
+	padding:20px 10px 20px 60px;
+	border-bottom: 1px solid #E0DDD9;
+}
+.comment-text p{
+	height: 22px;
+	line-height: 22px;
+}

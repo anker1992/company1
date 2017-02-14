@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <title></title>
+        <link rel="stylesheet" href="__PUBLIC__/css/common.css"/>
+        <style type="text/css">
+.part1{
+    margin: 140px 0;
+}
+.part1 ul{
+    border-bottom: 3px solid #d5d5d5;
+}
+.part1 ul li{
+    float: left;
+    color: #ff6269;
+    font-size: 24px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #ff6269;
+    margin-bottom: -3px;
+}
+.part1 .part1-con{
+    margin-top: 60px;
+}
+.part1 .part1-con .part1-con-left{
+    width: 290px;
+    float: left;
+    padding: 0 50px 80px 100px;
+    border-right: 1px dotted #9e9e9e;
+}
+.part1 .part1-con .part1-con-left h4{
+    font-size: 18px;
+    color: #000;
+    font-weight: normal;
+    margin: 15px 0 20px 0;
+}
+.part1 .part1-con .part1-con-left p{
+    color: #848282;
+    line-height: 23px;
+}
+.part1 .part1-con .part1-con-right{
+    width: 740px;
+    float: right;
+}
+.part1 .part1-con .part1-con-right label{
+    display: block;
+    margin-bottom: 20px;
+}
+.part1 .part1-con .part1-con-right label span{
+    width: 125px;
+    float: left;
+    font-size: 16px;
+    line-height: 35px;
+}
+.part1 .part1-con .part1-con-right label span i{
+    color: #ff6269;
+}
+.part1 .part1-con .part1-con-right label input{
+    width: 470px;
+    height: 35px;
+    line-height: 35px;
+    padding: 0 15px;
+    border: 1px solid #bebebe;
+    border-radius: 5px;
+}
+.part1 .part1-con .part1-con-right label.vt span{
+    vertical-align: top;
+}
+.part1 .part1-con .part1-con-right label textarea{
+    width: 470px;
+    height: 70px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #bebebe;
+    resize: none;
+}
+.part1 .part1-con .part1-con-right p input{
+    color: #fff;
+    font-size: 16px;
+    background-color: #ff6269;
+    border-radius: 5px;
+    display: block;
+    width: 105px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    margin: 0 auto;
+}
+</style>
+</head>
+<body>
+    <!--header 开始-->
+<include file="Public:header"/>
+<!--header结束-->
+
+<div class="part1">
+        <div class="container">
+        <ul class="clearfix">
+        <li>留言咨询：</li>
+</ul>
+<div class="part1-con clearfix">
+        <div class="part1-con-left">
+        <h4>温馨提示：</h4>
+<p>1、留言后商家会尽快与您联系</p>
+<p>2、如果3小时内商家未联系您，我们会为您推荐家类似商家，以保证您得到更全面、更专业的帮助</p>
+<p>3、我们平台不会泄露</p>
+</div>
+<div class="part1-con-right">
+        <form action="{:U('Rongzi/liuyan_action')}" method="post" id="myform" onsubmit="return yz()">
+        <input type="hidden" name="glid" value="{$id}">
+        <label><span>姓名：</span><input name="name" type="text"/></label>
+        <label><span><i>*</i>手机号码：</span><input name="phone" id="phone" type="text"/></label>
+        <label class="vt"><span><i>*</i>留言内容：</span><textarea name="con" id="con"></textarea></label>
+        <p><input type="submit" value="提交" /></p>
+        </form>
+        </div>
+        </div>
+        </div>
+        </div>
+
+            <!--footer开始-->
+        <div class="footer" id="footer">
+        <div class="container">
+        <div class="attention">
+        <img src="__PUBLIC__/images/weixin.png" alt=""/>
+        <p>关注微信公众号</p>
+        </div>
+        <div class="contact">
+        <ul>
+        <li class="tel"><span></span>010—58690663</li>
+<li class="email"><span></span>weihehuo@163.com</li>
+<li class="address"><span></span>北京市朝阳区建外SOHO东区B座2703</li>
+        <li class="workday"><span></span>周一至周五 9:00——18:00</li>
+</ul>
+</div>
+</div>
+</div>
+    <!--footer结束-->
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $(".head-left ul li").hover(function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"block"
+                })
+            }else{
+                $(this).addClass("active").siblings().removeClass("active");
+            }
+        },function(){
+            if($(this).find("ol").size()!==0){
+                $(this).find("ol").css({
+                    display:"none"
+                })
+            }else{
+                $(this).removeClass("active");
+            }
+        });
+
+    });
+    function yz(){
+        var phone=$('#phone').val();
+        var con=$('#con').val();
+        if (phone=='' || con=='') {
+            alert('手机或内容不能为空');
+            return false;
+        }
+    }
+</script>
+</body>
+</html>

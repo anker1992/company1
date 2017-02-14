@@ -1,0 +1,231 @@
+<include file="Public/head"/>
+
+<body class="no-skin">
+<include file="Public/header"/>
+<div class="main-container" id="main-container">
+    <script type="text/javascript">
+        try {
+            ace.settings.check('main-container', 'fixed')
+        } catch (e) {
+        }
+    </script>
+
+    <include file="Public/sidebar"/>
+    <div class="main-content">
+        <div class="main-content-inner">
+            <!-- #section:basics/content.breadcrumbs -->
+            <include file="Public/breadcrumbs"/>
+            <!-- /section:basics/content.breadcrumbs -->
+            <div class="page-content">
+                <include file="Public/set"/>
+
+                <!-- /section:settings.box -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <!-- PAGE CONTENT BEGINS -->
+                        <div class="cf" style="height:100px;">
+
+                            <form action="" method="post">
+                                <input type="hidden" name="p" value="{$Think.get.p}"/>
+                                <a class="btn btn-info col-xs-1" href="{:U('add')}" value="">新增</a>
+                                <div class="col-md-11">
+                                <div class="col-xs-3" style="margin-bottom:20px;">
+                                    <label class="inline">手机号：</label>
+                                    <input type="text" name="proj_phone" value="{:I('proj_phone')}" class="form-control">
+                                </div>
+                                <div class="col-xs-3">
+                                <label class="inline">项目名称：</label>
+                                <input type="text" name="proj_name" value="{:I('proj_name')}" class="form-control">
+                                </div>
+                                <div class="col-xs-3">
+                                <label class="inline">项目类型：</label>
+                                <select name="proj_type" class="form-control">
+                                    <option value="不限" <if condition="I('proj_type') eq ''">selected</if>>不限</option>
+                                    <option value="web产品" <if condition="I('proj_type') eq 'web产品'">selected</if>>web产品</option>
+                                    <option value="app应用" <if condition="I('proj_type') eq 'app应用'">selected</if>>app应用</option>
+                                    <option value="web及app均有" <if condition="I('proj_type') eq 'web及app均有'">selected</if>>web及app均有</option>
+                                    <option value="微信公众号" <if condition="I('proj_type') eq '微信公众号'">selected</if>>微信公众号</option>
+                                    <option value="idea阶段" <if condition="I('proj_type') eq 'idea阶段'">selected</if>>idea阶段</option>
+                                </select>
+                                </div>
+                                </div>
+                                <div class="col-xs-1" style="width:8.33%;height:30px;margin-top:30px;"></div>
+                                <div class="col-md-10" style="margin-bottom:20px;">
+                                <div class="col-xs-3">
+                                    <label class="inline">所属行业：</label>
+                                    <select name="proj_industry" class="form-control">
+                                        <option value="不限" <if condition="I('proj_industry') eq ''">selected</if>>不限</option>
+                                        <option value="汽车交通" <if condition="I('proj_industry') eq '汽车交通'">selected</if>>汽车交通</option>
+                                        <option value="医疗健康" <if condition="I('proj_industry') eq '医疗健康'">selected</if>>医疗健康</option>
+                                        <option value="B2B" <if condition="I('proj_industry') eq 'B2B'">selected</if>>B2B</option>
+                                        <option value="企业服务" <if condition="I('proj_industry') eq '企业服务'">selected</if>>企业服务</option>
+                                        <option value="房产家居" <if condition="I('proj_industry') eq '房产家居'">selected</if>>房产家居</option>
+                                        <option value="旅游户外" <if condition="I('proj_industry') eq '旅游户外'">selected</if>>旅游户外</option>
+                                        <option value="社交" <if condition="I('proj_industry') eq '社交'">selected</if>>社交</option>
+                                        <option value="物流" <if condition="I('proj_industry') eq '物流'">selected</if>>物流</option>
+                                        <option value="农业" <if condition="I('proj_industry') eq '农业'">selected</if>>农业</option>
+                                        <option value="教育" <if condition="I('proj_industry') eq '教育'">selected</if>>教育</option>
+                                        <option value="O2O" <if condition="I('proj_industry') eq 'O2O'">selected</if>>O2O</option>
+                                        <option value="电商" <if condition="I('proj_industry') eq '电商'">selected</if>>电商</option>
+                                        <option value="文娱" <if condition="I('proj_industry') eq '文娱'">selected</if>>文娱</option>
+                                        <option value="消费品" <if condition="I('proj_industry') eq '消费品'">selected</if>>消费品</option>
+                                        <option value="体育" <if condition="I('proj_industry') eq '体育'">selected</if>>体育</option>
+                                        <option value="金融" <if condition="I('proj_industry') eq '金融'">selected</if>>金融</option>
+                                        <option value="智能硬件" <if condition="I('proj_industry') eq '智能硬件'">selected</if>>智能硬件</option>
+                                        <option value="游戏" <if condition="I('proj_industry') eq '游戏'">selected</if>>游戏</option>
+                                        <option value="工具" <if condition="I('proj_industry') eq '工具'">selected</if>>工具</option>
+                                        <option value="VR-AR" <if condition="I('proj_industry') eq 'VR-AR'">selected</if>>VR-AR</option>
+                                        <option value="人工智能" <if condition="I('proj_industry') eq '人工智能'">selected</if>>人工智能</option>
+                                        <option value="媒体门户" <if condition="I('proj_industry') eq '媒体门户'">selected</if>>媒体门户</option>
+                                        <option value="广告营销" <if condition="I('proj_industry') eq '广告营销'">selected</if>>广告营销</option>
+                                        <option value="其他" <if condition="I('proj_industry') eq '其他'">selected</if>>其他</option>
+                                    </select>
+                                </div>
+                                <div class="col-xs-3" style="margin-left:25px;">
+                                    <label class="inline">融资轮次：</label>
+                                    <select name="proj_round" class="form-control">
+                                        <option value="不限" <if condition="I('proj_round') eq ''">selected</if>>不限</option>
+                                        <option value="天使轮" <if condition="I('proj_round') eq '天使轮'">selected</if>>天使轮</option>
+                                        <option value="Pre-A轮" <if condition="I('proj_round') eq 'Pre-A轮'">selected</if>>Pre-A轮</option>
+                                        <option value="A轮" <if condition="I('proj_round') eq 'A轮'">selected</if>>A轮</option>
+                                        <option value="A+轮" <if condition="I('proj_round') eq 'A+轮'">selected</if>>A+轮</option>
+                                        <option value="B轮" <if condition="I('proj_round') eq 'B轮'">selected</if>>B轮</option>
+                                        <option value="B+轮" <if condition="I('proj_round') eq 'B+轮'">selected</if>>B+轮</option>
+                                        <option value="C轮" <if condition="I('proj_round') eq 'C轮'">selected</if>>C轮</option>
+                                        <option value="D轮" <if condition="I('proj_round') eq 'D轮'">selected</if>>D轮</option>
+                                    </select>
+                                </div>
+                                    <!--<input type="submit" value="搜索">-->
+                                <button type="submit" class="btn btn-purple btn-sm" style="margin-top:23px;">
+                                    <span class="ace-icon fa fa-search icon-on-right bigger-110"></span>
+                                    搜索
+                                </button>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="space-4"></div>
+                        <form id="form" method="post" action="{:U('del')}">
+                            <table class="table table-striped table-bordered">
+                                <thead>
+                                <tr>
+                                    <th class="center"><input class="check-all" type="checkbox" value=""></th>
+                                    <th>手机号</th>
+                                    <th class="col-xs-1">项目名称</th>
+                                    <th>项目logo</th>
+                                    <th>约见费用</th>
+                                    <th>融资金额</th>
+                                    <th>融资轮次</th>
+                                    <th>所属行业</th>
+                                    <th>项目类型</th>
+                                    <th>项目介绍</th>
+                                    <th>CEO介绍</th>
+                                    <th>项目官网</th>
+                                    <th>约见时间</th>
+                                    <th>约见地点</th>
+                                    <!--<th>商业计划书</th>-->
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <foreach name="list" item="list">
+                                    <tr>
+                                        <td class="center"><input class="aids" type="checkbox" name="proj_ids[]"
+                                                                  value="{$list['proj_id']}"></td>
+                                        <td>{$list.proj_phone}</td>
+                                        <td><a href="{:U('index',array('proj_id'=>$list['proj_id']))}" title="{$list['proj_name']}">{$list['proj_name']}</a></td>
+                                        <td><img src="{$list.proj_logo}" alt="" style="height: 50px;width:50px;"></td>
+                                        <td>{$list.proj_yue_money}元</td>
+                                        <td>{$list.proj_money}万元</td>
+                                        <td>{$list.proj_round}</td>
+                                        <td>{$list.proj_industry}</td>
+                                        <td>{$list.proj_type}</td>
+                                        <td>{$list.proj_ject}</td>
+                                        <td>{$list.proj_ceo_name}</td>
+                                        <td>{$list.proj_url}</td>
+                                        <td>{$list.proj_yue_time}</td>
+                                        <td>{$list.proj_yue_address}</td>
+                                        <!--<td><a href="{:U('downfile',array('proj_pdf'=>$list['proj_pdf']))}">附件</a></td>-->
+                                        <td><if condition="$list['proj_status'] eq 2"><a href="{:U('recycle',array('proj_id'=>$list['proj_id'],'status'=>1))}"><i
+                                                class="ace-icon fa fa-arrow-up bigger-100"></i>上架</a>&nbsp;&nbsp;</if><if condition="$list['proj_status'] eq 1"><a href="{:U('recycle',array('proj_id'=>$list['proj_id'],'status'=>2))}"><i
+                                                class="ace-icon fa fa-arrow-down bigger-100"></i>下架</a>&nbsp;&nbsp;</if><a href="{:U('edit',array('proj_id'=>$list['proj_id']))}"><i
+                                                class="ace-icon fa fa-pencil bigger-100"></i>修改</a>&nbsp;&nbsp;<a
+                                                href="javascript:;" val="{:U('del',array('proj_ids'=>$list['proj_id']))}" class="del"><i
+                                                class="ace-icon fa fa-trash-o bigger-100 red"></i>删除</a></td>
+                                    </tr>
+                                </foreach>
+                                </tbody>
+                            </table>
+                        </form>
+                        <div class="cf">
+                            <input id="submit" class="btn btn-info" type="button" value="批量删除">
+                        </div>
+                        {$page}
+                        <!-- PAGE CONTENT ENDS -->
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div><!-- /.page-content -->
+        </div>
+    </div><!-- /.main-content -->
+    <include file="Public/footer"/>
+
+</div><!-- /.main-container -->
+
+<include file="Public/footerjs"/>
+<!-- inline scripts related to this page -->
+<script type="text/javascript">
+    $(function () {
+        $(".check-all").click(function () {
+            $(".aids").prop("checked", this.checked);
+        });
+        $(".aids").click(function () {
+            var option = $(".ids");
+            option.each(function (i) {
+                if (!this.checked) {
+                    $(".check-all").prop("checked", false);
+                    return false;
+                } else {
+                    $(".check-all").prop("checked", true);
+                }
+            });
+        });
+        $("#submit").click(function () {
+            bootbox.confirm({
+                title: "系统提示",
+                message: "是否要删除所选项目？",
+                callback: function (result) {
+                    if (result) {
+                        $("#form").submit();
+                    }
+                },
+                buttons: {
+                    "cancel": {"label": "取消"},
+                    "confirm": {
+                        "label": "确定",
+                        "className": "btn-danger"
+                    }
+                }
+            });
+        });
+        $(".del").click(function () {
+            var url = $(this).attr('val');
+            bootbox.confirm({
+                title: "系统提示",
+                message: "是否要删除该项目？",
+                callback: function (result) {
+                    if (result) {
+                        window.location.href = url;
+                    }
+                },
+                buttons: {
+                    "cancel": {"label": "取消"},
+                    "confirm": {
+                        "label": "确定",
+                        "className": "btn-danger"
+                    }
+                }
+            });
+        });
+    })
+</script>
+</body>
+</html>

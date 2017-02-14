@@ -1,0 +1,310 @@
+@charset "utf-8";
+.part1{
+    padding: 90px 0 20px 0;
+    margin-top: 80px;
+}
+.part1 ul li{
+    width: 360px;
+    float: left;
+    margin-right: 20px;
+    padding-bottom: 30px;
+    border-bottom: 3px solid #7e7e7e;
+}
+.part1 ul li.cur{
+    border-color: #ff6269;
+}
+.part1 ul li a{
+    color: #797979;
+    font-size: 22px;
+}
+.part1 ul li.cur a{
+    color: #ff6269;
+}
+
+.part2 h3,.part3 h3,.part4 h3,.part5 h3{
+    margin: 50px 0 30px;
+    color: #000;
+    font-size: 22px;
+    font-weight: normal;
+    letter-spacing: 2px;
+}
+.part2 h3 span{
+    color: #e60012;
+    margin-right: 7px;
+}
+.part2 .part2-con{
+    margin-left: 85px;
+}
+.part2 label{
+    color: #000;
+    font-size: 18px;
+    margin-right: 45px;
+}
+.part2 label input{
+    width: 3px;
+    height: 3px;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.part2 label i{
+    width: 14px;
+    height: 14px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
+    background: url("../images/hairPost-icon2.png") no-repeat;
+    background-position: 0 -14px;
+}
+.part2 label.cur i{
+    background-position: 0 0;
+}
+
+.part3 .part3-con .part3-con-left,.part3 .part3-con .part3-con-right{
+    width: 615px;
+    float: left;
+}
+.part3 .part3-con .part3-con-right label{
+    margin-left: 40px;
+}
+.part3 .part3-con label{
+    color: #000;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 45px;
+}
+.part3 .part3-con label span{
+    color: #000;
+    font-size: 16px;
+    display: inline-block;
+    width: 125px;
+}
+.part3 .part3-con label span i{
+    color: #e60012;
+    margin-right: 8px;
+}
+.part3 .part3-con label input{
+    width: 405px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #cfcfcf;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+.part3 .part3-con label input.w100{
+    width: 120px;
+    margin-right: 20px;
+}
+.part3 .part3-con label input.w755{
+    width: 715px;
+}
+.part3 .part3-con label.alignTop span{
+    vertical-align: top;
+}
+.part3 .part3-con label textarea{
+    width: 715px;
+    height: 150px;
+    padding: 15px 20px;
+    line-height: 30px;
+    resize: none;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
+
+.part4 .part4-con .title,.part4 .part4-con .des{
+    display: block;
+    margin-bottom: 90px;
+}
+.part4 .part4-con .title span,.part4 .part4-con .des span{
+    color: #000;
+    font-size: 16px;
+    display: inline-block;
+    width: 125px;
+}
+.part4 .part4-con .des span{
+    vertical-align: top;
+}
+.part4 .part4-con .title span i,.part4 .part4-con .des span i{
+    color: #e60012;
+    margin-right: 8px;
+}
+.part4 .part4-con .title input{
+    width: 715px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #cfcfcf;
+    padding: 0 20px;
+    border-radius: 5px;
+}
+.part4 .part4-con .des textarea{
+    color: #999;
+    width: 715px;
+    height: 150px;
+    line-height: 30px;
+    border: 1px solid #cfcfcf;
+    padding: 15px 20px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.part4 .part4-con .upload .upload-images{
+    margin-bottom: 30px;
+}
+.part4 .part4-con .upload .upload-images img{
+    width: 125px;
+    height: 110px;
+    margin-right: 20px;
+    float: left;
+}
+.part4 .part4-con .upload .upload-left{
+    width: 580px;
+    float: left;
+}
+.part4 .part4-con .upload .upload-right{
+    width: 630px;
+    float: left;
+}
+.part4 .part4-con .upload .upload-left span,.part4 .part4-con .upload .upload-right span{
+    color: #000;
+    font-size: 16px;
+    width: 190px;
+    float: left;
+}
+.part4 .part4-con .upload .upload-right span{
+    width: 240px;
+}
+.part4 .part4-con .upload .upload-left .upload-left-con,.part4 .part4-con .upload .upload-right .upload-right-con{
+    width: 335px;
+    height: 230px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    float: left;
+}
+.part4 .part4-con .upload .upload-left .upload-left-con h4,.part4 .part4-con .upload .upload-right .upload-right-con h4{
+    color: #999;
+    font-size: 18px;
+    font-weight: normal;
+    width: 315px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+    margin: -1px 0 0 -1px;
+}
+.part4 .part4-con .upload .upload-left .upload-left-con label,.part4 .part4-con .upload .upload-right .upload-right-con label{
+    position: relative;
+    width: 113px;
+    height: 84px;
+    display: block;
+    margin: 35px auto 0;
+}
+.part4 .part4-con .upload .upload-left .upload-left-con label i,.part4 .part4-con .upload .upload-right .upload-right-con label i{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 113px;
+    height: 84px;
+    background: url("../images/productRelease1-icon.png") no-repeat;
+}
+.part4 .part4-con .upload .upload-right .upload-right-con label i{
+    background: url("../images/productRelease1-icon1.png") no-repeat;
+}
+.part4 .part4-con .upload label input{
+    width: 113px;
+    height: 84px;
+    opacity: 0;
+    filter:alpha(opacity=0);
+}
+.part4 .part4-con .upload .upload-left .upload-left-con p,.part4 .part4-con .upload .upload-right .upload-right-con p{
+    color: #d5d5d5;
+    font-size: 18px;
+    margin-top: 18px;
+    text-align: center;
+    width: 335px;
+    padding: 0;
+}
+.part4 .part4-con .upload .upload-left p,.part4 .part4-con .upload .upload-right p{
+    width: 400px;
+    text-align: center;
+    color: #b2b2b2;
+    font-size: 16px;
+    padding: 20px 0 0 155px;
+    clear: both;
+}
+.part4 .part4-con .upload .upload-right p{
+    padding: 20px 0 0 195px;
+}
+
+.part5 label{
+    display: block;
+    margin-bottom: 30px;
+}
+.part5 label span{
+    color: #000;
+    font-size: 16px;
+    width: 125px;
+    float: left;
+    line-height: 40px;
+}
+.part5 label span i{
+    color: #e60012;
+    margin-right: 8px;
+}
+.part5 label input{
+    width: 405px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 20px;
+    border: 1px solid #cfcfcf;
+    border-radius: 5px;
+}
+
+.submit {
+    padding-top: 80px;
+}
+.submit a{
+    display: block;
+    font-size: 18px;
+    color: #fff;
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 0 auto 100px;
+    background-color: #ff6269;
+    border-radius: 5px;
+}
+
+.info-body{
+    display: none;
+    background: rgba(0,0,0,0.2);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    filter:progid:DXImageTransform.Microsoft.gradient(GradientType = 0,startColorstr=#33000000,endColorstr=#33000000);
+}
+.info-body .info-box{
+    width: 565px;
+    height: 115px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -82px 0 0 -312px;
+    padding: 50px 30px 0;
+    background-color: #fff;
+    border: 1px solid #cfcfcf;
+}
+.info-body .info-box span{
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    cursor: pointer;
+}
+.info-body .info-box p{
+    color: #000;
+    font-size: 18px;
+    line-height: 35px;
+    text-align: center;
+}
