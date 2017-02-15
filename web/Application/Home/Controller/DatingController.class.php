@@ -4,12 +4,7 @@ use Think\Controller;
 use Think\Page;
 class DatingController extends Controller
 {
-    /*
-     * 相亲首页 页面展示
-     *
-     * @author Liurongrong 2016.12.06 15:30
-     * @return display
-     */
+    //相亲首页 页面展示
     public function datingindex(){
         if (cookie('think_user_name')) {
             $cookie = cookie('think_user_name');
@@ -24,7 +19,6 @@ class DatingController extends Controller
         $second = array_slice($list,1,4);
         $third = array_slice($list,5,1);
         $fourth = array_slice($list,6,4);
-        //var_dump($third);die;
         $this->assign('first',$first);
         $this->assign('second',$second);
         $this->assign('third',$third);
@@ -32,23 +26,13 @@ class DatingController extends Controller
         $this->display();
     }
 
-    /*
-    * 相亲页面的基本信息 页面展示
-    *
-    * @author Liurongrong,2016.12.06 16:13
-    * @return display
-    */
+    //相亲页面的基本信息 页面展示
     public function datinginfo() {
         A('Public')->is_login();
         $this->display();
     }
 
-    /*
-     * 相亲页面的基本信息的数据录入
-     *
-     * @author Liurongrong 2016.12.06 17:13
-     * @return true or false
-     */
+    //相亲页面的基本信息的数据录入
     public function datinginfo_add() {
         header("Content-Type:text/html;Charset=utf-8");
         //基本信息存入$data
@@ -72,7 +56,6 @@ class DatingController extends Controller
         } else {
             $data['sex'] = 3;
         }
-        //var_dump($data['sex']);die;
         //出生日期拼接存入$data
         $data['birthday'] = I('post.year') .'-' .I('post.month') .'-' .I('post.day');
         $birthday = $data['birthday'];
@@ -91,7 +74,6 @@ class DatingController extends Controller
         //将基本信息添加到数据库
         $info_add = M('marry_basic');
         $list_add = $info_add->add($data);
-        //var_dump($list_add);die;
         //将年龄信息存入marry_expand表中；
         $list['mid'] = $list_add;
         $list['uid'] = cookie('think_user_id');
@@ -104,12 +86,7 @@ class DatingController extends Controller
         }
      }
 
-    /*
-     * 拓展信息（详细信息）页面展示
-     *
-     * @author Liurongrong,2016.12.07 10:00
-     * @return display
-     */
+    //拓展信息（详细信息）
     public function datingexpand()
     {
         header("Content-Type:text/html;Charset=utf-8");
@@ -120,16 +97,13 @@ class DatingController extends Controller
         $basic_info = M('marry_basic');
         $basic = $basic_info->where('gl_phone = %s',array($cookie))->find();
         $mid = $basic['id'];
-//var_dump($basic['id']);die;
         //从marry_expand数据库调出详细信息
         $expand_info = M('marry_expand');
         $expand = $expand_info->where('mid = %d',array($mid))->find();
-//var_dump($expand);die;
         //从marry_photos数据库中调出图片信息
         $photos_info = M('marry_photos');
         $photos = $photos_info->field('id,url')->where('mid = %d',array($mid))->limit(5)->order('id asc')->select();
         $photos_num = sizeof($photos);
-        //var_dump($photos);die;
         $this->assign('mid',$mid);
         $this->assign('basic',$basic);
         $this->assign('expand',$expand);
@@ -138,13 +112,7 @@ class DatingController extends Controller
         $this->display();
     }
 
-    /*
-     * 用户昵称和上传头像 信息录入
-     *
-     * @author Liurongrong 2016.12.07 18:00
-     * @二次修改 上传头像 2016.12.08 15:30
-     * @return true or false
-     */
+    //用户昵称和上传头像 信息录入
     public function check_nickname()
     {
         $info = M('marry_basic');
@@ -164,12 +132,7 @@ class DatingController extends Controller
         $this->result($result);
     }
 
-    /*
-     * 个人状况  信息录入
-     *
-     * @author Liurongrong 2016.12.07 20:00
-     * @return true or false
-     */
+    //个人状况  信息录入
     public function check_selfstatus()
     {
         header("Content-Type:text/html;Charset=utf-8");
@@ -198,8 +161,6 @@ class DatingController extends Controller
         $uid = I('post.uid');
         $mid = intval($_GET['id']);
         $result = $this->save_expand($mid,$data);
-        //var_dump($uid);var_dump($mid);die;
-        //var_dump($result);die;
         //基本信息更新存入marry_basic数据库
         $info_basic = M('marry_basic');
         $basic_result = $info_basic->where('uid = %d',array($uid))->save($data_basic);
@@ -211,12 +172,7 @@ class DatingController extends Controller
         }
     }
 
-    /*
-     * 保存信息到marry_expand数据库
-     *
-     * @author Liurongrong 2016.12.08 13:30
-     * @return int
-     */
+    //保存信息到数据库
     public function save_expand($mid,$data)
     {
         //拓展信息存入marry_expand数据库
@@ -225,7 +181,6 @@ class DatingController extends Controller
         if (empty($list)) {
             $data['uid'] = trim(I('post.uid'));
             $data['mid'] = intval($_GET['id']);
-            //echo 1;
             $result = $info->add($data);
         } else {
             $result = $info->where('mid = %d', array($mid))->save($data);
@@ -243,12 +198,7 @@ class DatingController extends Controller
         }
     }
 
-    /*
-     * 家庭状况 信息录入
-     *
-     * @author Liurongrong 2016.12.08 11:50
-     * @return true or false
-     */
+    //家庭状况
     public function check_family()
     {
         $data = array(
@@ -266,12 +216,7 @@ class DatingController extends Controller
         $this->result($result);
     }
 
-    /*
-     * 择偶意向 信息录入
-     *
-     * @author Liurongrong 14:25
-     * @return true or false
-     */
+    //择偶意向
     public function check_zeou()
     {
         $data = array(
@@ -289,12 +234,7 @@ class DatingController extends Controller
         $this->result($result);
     }
 
-    /*
-    * 兴趣爱好 信息录入
-    *
-    * @author Liurongrong 14:49
-    * @return true or false
-    */
+    //兴趣爱好
     public function check_hobby()
     {
         $data = array(
@@ -311,13 +251,7 @@ class DatingController extends Controller
         $this->result($result);
     }
 
-    /*
-     * 上传照片 信息录入
-     *
-     * @author Liurongrong 2016.12.08  17:10
-     * @二次编辑 Liurongrong 2016.12.09 9:00
-     * @return true or false
-     */
+    //上传照片
     public function check_photos()
     {
         $photos = $this->photos_upload("photos");
@@ -332,22 +266,15 @@ class DatingController extends Controller
                 'upload_time'      =>      time()
             );
         }
-        //var_dump($data);die;
         $info = M('marry_photos');
         $info->where('mid = %d',array($mid))->delete();
         foreach ($data as $value) {
             $result = $info->add($value);
         }
-        //print_r($a);die;
         $this->result($result);
     }
 
-    /*
-     * 搜索页面的展示
-     *
-     * @author Liurongrong 2016.12.07 15:00
-     * @return display;
-     */
+    //搜索页面
     public function datingsearch()
     {
         A('Public')->is_login();
@@ -467,26 +394,16 @@ class DatingController extends Controller
                 $where .= " and level = '".$level."' ";
             }
         }
-        //var_dump($where);die;
         $count = M('marry_basic')->query("select count(*) as total from marry_basic as a LEFT JOIN marry_expand as b ON a.id = b.mid where a.isdelete = 0 and ".$where);
         $p = $this->getpage($count[0]['total'],10);
         $list = M('marry_basic')->query("select * from marry_basic as a LEFT JOIN marry_expand as b ON a.id = b.mid where a.isdelete = 0 and ".$where." order by a.id desc limit ".$p->firstRow." , ".$p->listRows );
-        //var_dump($list['sex']);die;
-        //echo M('marry_basic')->getLastSql();die;
         $this->assign('page',$p->show());
         $this->assign('data',$data);
         $this->assign('list',$list);
         $this->display();
     }
 
-    /*
-     * 分页
-     *
-     * @author Liurongrong 2016.12.10 10:30
-     * @param $count 要分页的总记录数
-     * @param $pagesize  每页查询条数
-     * @return \Think\Page
-     */
+    //分页
     function getpage($count,$pagesize = 10)
     {
         $p = new \Think\Page($count, $pagesize);
@@ -499,10 +416,8 @@ class DatingController extends Controller
         $p->lastSuffix = false;//最后一页不显示为总页数
         return $p;
     }
+
     //上传图片类（单张上传）
-    /*
-     * $name 是上传图片的名字；$imgpath 是上传文件到指定的imgpath目录
-     */
     function img_upload($imgpath){
         $phone = I('post.phone');
         $upload = new \Think\Upload();// 实例化上传类
@@ -531,9 +446,6 @@ class DatingController extends Controller
     }
 
     //上传图片类(多张上传)
-    /*
-     * $name 是上传图片的名字；$imgpath 是上传文件到指定的imgpath目录
-     */
     function photos_upload($imgpath){
         $phone = I('post.phone');
         $upload = new \Think\Upload();// 实例化上传类
@@ -567,12 +479,7 @@ class DatingController extends Controller
         }
     }
 
-    /*
-     * 个人信息详情页 页面展示
-     *
-     * @author Liuronrong 2016.12.09 15:30
-     * @return display
-     */
+    //个人信息详情页
     public function datingintroduce()
     {
         $id = intval($_GET['id']);
@@ -582,7 +489,6 @@ class DatingController extends Controller
         $basic = $info->where('id = %d',array($id))->find();
         $expand = $expand_info->where('mid = %d',array($id))->find();
         $photo_url = $photos->field('url')->where('mid = %d',array($id))->limit(5)->select();
-        //var_dump($photo_url);die;
         $list = array_merge($basic,$expand);
         if ($list['sex'] == 1) {
             $list['sex'] = '男';
@@ -594,12 +500,7 @@ class DatingController extends Controller
         $this->display();
     }
 
-    /*
-     * 情感视界  页面展示
-     *
-     * @author Liurongrong 2016.12.10 14:35
-     * @return display
-     */
+    //情感视界
     public function datingcase()
     {
         $this->display();
